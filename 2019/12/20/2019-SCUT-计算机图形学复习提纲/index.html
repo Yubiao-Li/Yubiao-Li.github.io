@@ -1,0 +1,1007 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+
+    
+
+    
+
+
+
+    <meta charset="utf-8">
+    
+    <meta name="google-site-verification" content="ZJO2ontgtPIhUUi-sjcBT02XwMEIfepFYX1wSv-FS40">
+    
+    
+    <meta name="baidu-site-verification" content="8BjbSAelf8" />
+    
+    
+    <meta name="sogou_site_verification" content="lSs4R7pRIa"/>
+    
+    
+    
+    <title>2019-SCUT-计算机图形学复习提纲 | LYB的部落格 | 念念不忘，必有回响</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#ff00ff">
+    
+    
+    <meta name="keywords" content="复习笔记">
+    <meta name="description" content="图形系统和模型 图形流水线  计算机图形学分为两个阶段：  从模型到屏幕空间的几何建模 在屏幕空间中创建所需的图像   图形流水线分为两个部分 Modeling Pipeline">
+<meta name="keywords" content="复习笔记">
+<meta property="og:type" content="article">
+<meta property="og:title" content="2019-SCUT-计算机图形学复习提纲">
+<meta property="og:url" content="http:&#x2F;&#x2F;yubiao-li.gitee.io&#x2F;2019&#x2F;12&#x2F;20&#x2F;2019-SCUT-%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6%E5%A4%8D%E4%B9%A0%E6%8F%90%E7%BA%B2&#x2F;index.html">
+<meta property="og:site_name" content="LYB的部落格">
+<meta property="og:description" content="图形系统和模型 图形流水线  计算机图形学分为两个阶段：  从模型到屏幕空间的几何建模 在屏幕空间中创建所需的图像   图形流水线分为两个部分 Modeling Pipeline">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;Yubiao-Li&#x2F;cloudimg&#x2F;master&#x2F;data&#x2F;20191220182908.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;Yubiao-Li&#x2F;cloudimg&#x2F;master&#x2F;data&#x2F;20191220184106.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;Yubiao-Li&#x2F;cloudimg&#x2F;master&#x2F;data&#x2F;20191220184248.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;Yubiao-Li&#x2F;cloudimg&#x2F;master&#x2F;data&#x2F;20191220184315.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;Yubiao-Li&#x2F;cloudimg&#x2F;master&#x2F;data&#x2F;20191222221406.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;Yubiao-Li&#x2F;cloudimg&#x2F;master&#x2F;data&#x2F;20191223101912.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;img-blog.csdn.net&#x2F;20180307124330611?watermark&#x2F;2&#x2F;text&#x2F;aHR0cDovL2Jsb2cuY3Nkbi5uZXQveWluaHVuMjAxMg&#x3D;&#x3D;&#x2F;font&#x2F;5a6L5L2T&#x2F;fontsize&#x2F;400&#x2F;fill&#x2F;I0JBQkFCMA&#x3D;&#x3D;&#x2F;dissolve&#x2F;70">
+<meta property="og:image" content="https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;Yubiao-Li&#x2F;cloudimg&#x2F;master&#x2F;data&#x2F;20191223142009.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;Yubiao-Li&#x2F;cloudimg&#x2F;master&#x2F;data&#x2F;20191223142155.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;Yubiao-Li&#x2F;cloudimg&#x2F;master&#x2F;data&#x2F;20191223142253.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;Yubiao-Li&#x2F;cloudimg&#x2F;master&#x2F;data&#x2F;20191223145653.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;Yubiao-Li&#x2F;cloudimg&#x2F;master&#x2F;data&#x2F;20191223151851.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;Yubiao-Li&#x2F;cloudimg&#x2F;master&#x2F;data&#x2F;20191223152126.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;Yubiao-Li&#x2F;cloudimg&#x2F;master&#x2F;data&#x2F;20191223160018.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;Yubiao-Li&#x2F;cloudimg&#x2F;master&#x2F;data&#x2F;20191223163450.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;Yubiao-Li&#x2F;cloudimg&#x2F;master&#x2F;data&#x2F;20191223171548.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;Yubiao-Li&#x2F;cloudimg&#x2F;master&#x2F;data&#x2F;20191223221912.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;Yubiao-Li&#x2F;cloudimg&#x2F;master&#x2F;data&#x2F;20191228142355.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;Yubiao-Li&#x2F;cloudimg&#x2F;master&#x2F;data&#x2F;20191228195233.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;Yubiao-Li&#x2F;cloudimg&#x2F;master&#x2F;data&#x2F;20191228202350.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;Yubiao-Li&#x2F;cloudimg&#x2F;master&#x2F;data&#x2F;20191229104456.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;Yubiao-Li&#x2F;cloudimg&#x2F;master&#x2F;data&#x2F;20191229110902.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;Yubiao-Li&#x2F;cloudimg&#x2F;master&#x2F;data&#x2F;20191229112429.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;Yubiao-Li&#x2F;cloudimg&#x2F;master&#x2F;data&#x2F;20191229153645.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;Yubiao-Li&#x2F;cloudimg&#x2F;master&#x2F;data&#x2F;20191229155614.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;Yubiao-Li&#x2F;cloudimg&#x2F;master&#x2F;data&#x2F;20191229194140.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;Yubiao-Li&#x2F;cloudimg&#x2F;master&#x2F;data&#x2F;20191229194147.png">
+<meta property="og:updated_time" content="2019-12-30T03:20:06.155Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;Yubiao-Li&#x2F;cloudimg&#x2F;master&#x2F;data&#x2F;20191220182908.png">
+    
+        <link rel="alternate" type="application/atom+xml" title="LYB的部落格" href="/atom.xml">
+    
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="stylesheet" href="//unpkg.com/hexo-theme-material-indigo@latest/css/style.css">
+    <script>window.lazyScripts=[]</script>
+
+    <!-- custom head -->
+    
+
+</head>
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu" class="hide" >
+  <div class="inner flex-row-vertical">
+    <a class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/img/brand.jpg)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/avatar.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">LYB</h5>
+          <a href="mailto:805650945@qq.com" target="_blank" rel="noopener" title="805650945@qq.com" class="mail">805650945@qq.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                主页
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-archives"></i>
+                归档
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                标签
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/http:/yubiao-li.gitee.io/resume" target="_blank" >
+                <i class="icon icon-lg icon-user-o"></i>
+                关于我
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://github.com/Yubiao-Li" target="_blank" >
+                <i class="icon icon-lg icon-github"></i>
+                Github
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">2019-SCUT-计算机图形学复习提纲</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="输入感兴趣的关键字">
+            <a class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">2019-SCUT-计算机图形学复习提纲</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2019-12-20T08:19:07.000Z" itemprop="datePublished" class="page-time">
+  2019-12-20
+</time>
+
+
+            
+        </h5>
+    </div>
+
+    
+
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#图形系统和模型"><span class="post-toc-number">1.</span> <span class="post-toc-text">图形系统和模型</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#图形流水线"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">图形流水线</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#modeling-pipeline"><span class="post-toc-number">1.1.1.</span> <span class="post-toc-text">Modeling Pipeline</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#rendering-pipeline"><span class="post-toc-number">1.1.2.</span> <span class="post-toc-text">Rendering Pipeline</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#三色定理"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">三色定理</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#图形学编程"><span class="post-toc-number">2.</span> <span class="post-toc-text">图形学编程</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#opengl-介绍"><span class="post-toc-number">2.1.</span> <span class="post-toc-text">OpenGL 介绍</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#glslopengl-shading-language"><span class="post-toc-number">2.2.</span> <span class="post-toc-text">GLSL(OpenGL Shading Language)</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#opengl图元"><span class="post-toc-number">2.3.</span> <span class="post-toc-text">OpenGL图元</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#vaovertex-array-object"><span class="post-toc-number">2.4.</span> <span class="post-toc-text">VAO(Vertex Array Object)</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#vbovertex-buffer-object"><span class="post-toc-number">2.5.</span> <span class="post-toc-text">VBO(Vertex Buffer Object)</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#几何对象和变换"><span class="post-toc-number">3.</span> <span class="post-toc-text">几何对象和变换</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#基本变换"><span class="post-toc-number">3.1.</span> <span class="post-toc-text">基本变换</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#齐次坐标"><span class="post-toc-number">3.1.1.</span> <span class="post-toc-text">齐次坐标</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#平移"><span class="post-toc-number">3.1.2.</span> <span class="post-toc-text">平移</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#缩放"><span class="post-toc-number">3.1.3.</span> <span class="post-toc-text">缩放</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#旋转"><span class="post-toc-number">3.1.4.</span> <span class="post-toc-text">旋转</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#错切变换"><span class="post-toc-number">3.1.5.</span> <span class="post-toc-text">错切变换</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#投影和视见变换"><span class="post-toc-number">4.</span> <span class="post-toc-text">投影和视见变换</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#投影矩阵"><span class="post-toc-number">4.1.</span> <span class="post-toc-text">投影矩阵</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#投影中心在原点"><span class="post-toc-number">4.1.1.</span> <span class="post-toc-text">投影中心在原点</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#投影中心不在原点"><span class="post-toc-number">4.1.2.</span> <span class="post-toc-text">投影中心不在原点</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#投影规范化"><span class="post-toc-number">4.2.</span> <span class="post-toc-text">投影规范化</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#平行投影"><span class="post-toc-number">4.2.1.</span> <span class="post-toc-text">平行投影</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#透视投影"><span class="post-toc-number">4.2.2.</span> <span class="post-toc-text">透视投影</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#视见变换"><span class="post-toc-number">4.3.</span> <span class="post-toc-text">视见变换</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#视口"><span class="post-toc-number">4.4.</span> <span class="post-toc-text">视口</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#ctmcurrent-transformation-matrix"><span class="post-toc-number">4.5.</span> <span class="post-toc-text">CTM（Current Transformation Matrix）</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#光照和着色"><span class="post-toc-number">5.</span> <span class="post-toc-text">光照和着色</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#光照概念"><span class="post-toc-number">5.1.</span> <span class="post-toc-text">光照概念</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#光照模型"><span class="post-toc-number">5.2.</span> <span class="post-toc-text">光照模型</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#表面定向与材质"><span class="post-toc-number">5.3.</span> <span class="post-toc-text">表面定向与材质</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#法向量"><span class="post-toc-number">5.3.1.</span> <span class="post-toc-text">法向量</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#光的属性"><span class="post-toc-number">5.4.</span> <span class="post-toc-text">光的属性</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#光照着色"><span class="post-toc-number">5.5.</span> <span class="post-toc-text">光照着色</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#constantflat-shading"><span class="post-toc-number">5.5.1.</span> <span class="post-toc-text">Constant(Flat) Shading</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#gouraud-smooth-shading"><span class="post-toc-number">5.5.2.</span> <span class="post-toc-text">Gouraud (Smooth) Shading</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#phong-shading"><span class="post-toc-number">5.5.3.</span> <span class="post-toc-text">Phong Shading</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#全局光照"><span class="post-toc-number">5.6.</span> <span class="post-toc-text">全局光照</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#渲染从顶点到片段"><span class="post-toc-number">6.</span> <span class="post-toc-text">渲染——从顶点到片段</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#线段裁剪算法"><span class="post-toc-number">6.1.</span> <span class="post-toc-text">线段裁剪算法</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#cohen-sutherland-线段裁剪算法"><span class="post-toc-number">6.1.1.</span> <span class="post-toc-text">Cohen-Sutherland 线段裁剪算法</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#梁友栋-barsky-线段裁剪算法"><span class="post-toc-number">6.1.2.</span> <span class="post-toc-text">梁友栋-Barsky 线段裁剪算法</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#多边形填充区域裁剪"><span class="post-toc-number">6.1.3.</span> <span class="post-toc-text">多边形填充区域裁剪</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#光栅化"><span class="post-toc-number">6.2.</span> <span class="post-toc-text">光栅化</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#dda-算法"><span class="post-toc-number">6.2.1.</span> <span class="post-toc-text">DDA 算法</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#行扫描转换bresenham-algorithm"><span class="post-toc-number">6.2.2.</span> <span class="post-toc-text">行扫描转换——Bresenham Algorithm</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#扫描转换多边形扫描线填充算法"><span class="post-toc-number">6.2.3.</span> <span class="post-toc-text">扫描转换多边形——扫描线填充算法</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#隐藏面消除"><span class="post-toc-number">6.3.</span> <span class="post-toc-text">隐藏面消除</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#z-buffer-算法"><span class="post-toc-number">6.3.1.</span> <span class="post-toc-text">z-Buffer 算法</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#画家算法"><span class="post-toc-number">6.3.2.</span> <span class="post-toc-text">画家算法</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#反走样"><span class="post-toc-number">6.4.</span> <span class="post-toc-text">反走样</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#多边形混叠"><span class="post-toc-number">6.5.</span> <span class="post-toc-text">多边形混叠</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#离散技术"><span class="post-toc-number">7.</span> <span class="post-toc-text">离散技术</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#写缓存模式"><span class="post-toc-number">7.1.</span> <span class="post-toc-text">写缓存模式</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#纹理贴图"><span class="post-toc-number">7.2.</span> <span class="post-toc-text">纹理贴图</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#层级建模方法"><span class="post-toc-number">8.</span> <span class="post-toc-text">层级建模方法</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#全局光照-1"><span class="post-toc-number">9.</span> <span class="post-toc-text">全局光照</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#射线追踪"><span class="post-toc-number">9.1.</span> <span class="post-toc-text">射线追踪</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#辐射度算法"><span class="post-toc-number">9.2.</span> <span class="post-toc-text">辐射度算法</span></a></li></ol></li></ol>
+        </nav>
+    </aside>
+
+
+<article id="post-2019-SCUT-计算机图形学复习提纲"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">2019-SCUT-计算机图形学复习提纲</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2019-12-20 16:19:07" datetime="2019-12-20T08:19:07.000Z"  itemprop="datePublished">2019-12-20</time>
+
+            
+
+
+            
+<span id="busuanzi_container_page_pv" title="文章总阅读量" style='display:none'>
+    <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>
+</span>
+
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <h2 id="图形系统和模型">图形系统和模型</h2>
+<h3 id="图形流水线">图形流水线</h3>
+<ul>
+<li>计算机图形学分为两个阶段：
+<ol style="list-style-type: decimal">
+<li><p>从模型到屏幕空间的几何建模</p></li>
+<li><p>在屏幕空间中创建所需的图像</p></li>
+</ol></li>
+</ul>
+<p>图形流水线分为两个部分</p>
+<h4 id="modeling-pipeline">Modeling Pipeline</h4>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://raw.githubusercontent.com/Yubiao-Li/cloudimg/master/data/20191220182908.png" alt="" title="">
+                </div>
+                <div class="image-caption"></div>
+            </figure>
+<ul>
+<li>3D Model Coordinates
+<ul>
+<li>您可以定义模型的各个部分，无论它们的坐标是什么</li>
+<li>您使用建模转换将模型的各个部分放在一起，然后将模型放置在一个世界空间中</li>
+</ul></li>
+<li>3D World Coordinates
+<ul>
+<li>场景的所有部分都被放在同一个3D坐标系统中</li>
+<li>场景是独立于观察者的</li>
+</ul></li>
+<li>3D Eye Coordinate System
+<ul>
+<li>当有一个观察者与一个观察者上下文，这个场景就成为图像</li>
+<li><p>放置在世界空间的一个观察者（或摄像机）拥有一个位置与方向</p>
+<div class="figure">
+<img src="https://raw.githubusercontent.com/Yubiao-Li/cloudimg/master/data/20191220184106.png" />
+
+</div></li>
+</ul></li>
+<li>2D Eye Coordinates
+<ul>
+<li><p>透视投影与正交投影</p>
+<div class="figure">
+<img src="https://raw.githubusercontent.com/Yubiao-Li/cloudimg/master/data/20191220184248.png" />
+
+</div>
+<div class="figure">
+<img src="https://raw.githubusercontent.com/Yubiao-Li/cloudimg/master/data/20191220184315.png" />
+
+</div></li>
+<li><p>将每个点投影到平面上对应的点使得场景被转换到这个坐标系</p></li>
+<li><p>在这个视图中深度信息会丢失</p></li>
+</ul></li>
+<li>2D Screen Coordinates
+<ul>
+<li><p>2D eye coordinates 被放缩到屏幕维度</p></li>
+<li><p>产生的实际坐标值被截断为屏幕上像素地址匹配的整数坐标</p></li>
+</ul></li>
+</ul>
+<h4 id="rendering-pipeline">Rendering Pipeline</h4>
+<blockquote>
+<p>The modeling pipeline 只是在不同的空间映射顶点，所有顶点最终经过处理，在帧缓冲中形成一个图像</p>
+</blockquote>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://raw.githubusercontent.com/Yubiao-Li/cloudimg/master/data/20191222221406.png" alt="" title="">
+                </div>
+                <div class="image-caption"></div>
+            </figure>
+<h3 id="三色定理">三色定理</h3>
+<ul>
+<li>人类视觉系统有两种传感器
+<ul>
+<li>杆状细胞（Rods）：单色，夜视，感知亮度</li>
+<li>锥状细胞（Cones）：颜色敏感</li>
+</ul></li>
+<li><p>人眼对红、绿、蓝最为敏感，人的眼睛像一个三色接收器的体系，大多数的颜色可以通过红、绿、蓝三色按照不同的比例合成产生。同样，绝大多数单色光也可以分解成红、绿、蓝三种色光，这是色度学的最基本的原理，也称三原色原理</p></li>
+<li><p>屏幕是一个发射显示器，而不是反射</p></li>
+</ul>
+<h2 id="图形学编程">图形学编程</h2>
+<h3 id="opengl-介绍"><a href="https://learnopengl-cn.github.io/" target="_blank" rel="noopener">OpenGL</a> 介绍</h3>
+<ul>
+<li>OpenGL是一个状态机，它的函数有两种类型
+<ul>
+<li>图元生成</li>
+<li>状态改变</li>
+</ul></li>
+</ul>
+<h3 id="glslopengl-shading-language">GLSL(OpenGL Shading Language)</h3>
+<ul>
+<li>GLSL是一种类C风格的着色器语言</li>
+</ul>
+<h3 id="opengl图元">OpenGL图元</h3>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://raw.githubusercontent.com/Yubiao-Li/cloudimg/master/data/20191223101912.png" alt="" title="">
+                </div>
+                <div class="image-caption"></div>
+            </figure>
+<h3 id="vaovertex-array-object">VAO(Vertex Array Object)</h3>
+<ul>
+<li>绑定了所有需要的顶点数据（位置，颜色。。。）</li>
+</ul>
+<h3 id="vbovertex-buffer-object">VBO(Vertex Buffer Object)</h3>
+<ul>
+<li>缓冲对象让我们可以一次性传输大量数据到GPU</li>
+</ul>
+<h2 id="几何对象和变换">几何对象和变换</h2>
+<ul>
+<li><p>反射向量 <img src="https://img-blog.csdn.net/20180307124330611?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQveWluaHVuMjAxMg==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" /></p></li>
+<li><p>平面方程 <span class="math display">\[(A,B,C)\cdot (x-x_0,y-y_0,z-z_0) = 0 \]</span></p>
+<p><span class="math display">\[ Ax + By + Cz + D = 0 \]</span></p></li>
+<li>碰撞检测算法
+<ol style="list-style-type: decimal">
+<li><p>比较两个包围球或者包围盒：两个球心距离小于两个半径的和，则可能碰撞</p></li>
+<li><p>可能碰撞时，一个物体的每个三角形与另一个包围体比较，假设是包围球：比较三角形的每个顶点，如果顶点与球心距离小于三角形最长边 + 球的半径，则可能碰撞；或者比较三角形外接圆与包围球，如果外接圆心与球心的距离小于外接圆半径 + 球的半径，则可能碰撞</p></li>
+<li><p>比较两个三角形是否碰撞：一个三角形的每个顶点是否在另一个三角形平面的一边，即<span class="math inline">\(Ax + By + Cz + D &gt; 0\)</span> 或 <span class="math inline">\(Ax + By + Cz + D &lt; 0\)</span>，如果在一边则不会碰撞，否则可能发生碰撞</p></li>
+<li><p>判断一个三角形是否与另一个三角形相交：一个三角形的边<span class="math inline">\(Q_0Q_1\)</span>与另一个三角形平面的交点Q是否在另一个三角形<span class="math inline">\(P_0P_1P_2\)</span>里面，即以下三个不等式同时成立 <span class="math display">\[ N \cdot ((P1-P0) × (Q-P0)) &gt; 0 \]</span></p>
+<p><span class="math display">\[ N \cdot ((P2-P1) × (Q-P1)) &gt; 0 \]</span></p>
+<p><span class="math display">\[ N \cdot ((P0-P2) × (Q-P2)) &gt; 0 \]</span> 则Q在三角形<span class="math inline">\(P_0P_1P_2\)</span>里面</p></li>
+</ol></li>
+</ul>
+<h3 id="基本变换">基本变换</h3>
+<h4 id="齐次坐标">齐次坐标</h4>
+<blockquote>
+<p>我们使用齐次坐标来将所有的转换表示为矩阵，并允许它们很容易地组合在一起：<span class="math inline">\(P&#39; = (M3*(M2 *(M1 *P)))\)</span></p>
+</blockquote>
+<ul>
+<li>在齐次坐标，一个3D点可以表示为$ P = (x,y,z,1)^$</li>
+</ul>
+<h4 id="平移">平移</h4>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://raw.githubusercontent.com/Yubiao-Li/cloudimg/master/data/20191223142009.png" alt="" title="">
+                </div>
+                <div class="image-caption"></div>
+            </figure>
+<ul>
+<li>逆矩阵： $T^{-1}(d_x, d_y, d_z) = T(-d_x, -d_y, -d_z) $</li>
+</ul>
+<h4 id="缩放">缩放</h4>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://raw.githubusercontent.com/Yubiao-Li/cloudimg/master/data/20191223142155.png" alt="" title="">
+                </div>
+                <div class="image-caption"></div>
+            </figure>
+<ul>
+<li>逆矩阵：<span class="math inline">\(S^{-1}(s_x, s_y, s_z)= S(1/s_x, 1/s_y, 1/s_z)\)</span></li>
+</ul>
+<h4 id="旋转">旋转</h4>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://raw.githubusercontent.com/Yubiao-Li/cloudimg/master/data/20191223142253.png" alt="" title="">
+                </div>
+                <div class="image-caption"></div>
+            </figure>
+<ul>
+<li>逆矩阵： $ R^{-1}() = R(-) = R^() $</li>
+</ul>
+<h4 id="错切变换">错切变换</h4>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://raw.githubusercontent.com/Yubiao-Li/cloudimg/master/data/20191223145653.png" alt="" title="">
+                </div>
+                <div class="image-caption"></div>
+            </figure>
+<h2 id="投影和视见变换">投影和视见变换</h2>
+<h3 id="投影矩阵">投影矩阵</h3>
+<h4 id="投影中心在原点">投影中心在原点</h4>
+<p>投影到 z = d 的平面的投影矩阵</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://raw.githubusercontent.com/Yubiao-Li/cloudimg/master/data/20191223151851.png" alt="" title="">
+                </div>
+                <div class="image-caption"></div>
+            </figure>
+<h4 id="投影中心不在原点">投影中心不在原点</h4>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://raw.githubusercontent.com/Yubiao-Li/cloudimg/master/data/20191223152126.png" alt="" title="">
+                </div>
+                <div class="image-caption"></div>
+            </figure>
+<h3 id="投影规范化">投影规范化</h3>
+<blockquote>
+<p>使用平移和旋转变换将照相机坐标系下的顶点变换到默认的视见体的内部</p>
+</blockquote>
+<h4 id="平行投影">平行投影</h4>
+<ol style="list-style-type: decimal">
+<li><p>通过平移把指定视见体的中心移到规范视见体的中心（原点）</p></li>
+<li><p>通过缩放指定的视见体使得它的每条边的长度为2</p></li>
+</ol>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://raw.githubusercontent.com/Yubiao-Li/cloudimg/master/data/20191223160018.png" alt="" title="">
+                </div>
+                <div class="image-caption"></div>
+            </figure>
+<h4 id="透视投影">透视投影</h4>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://raw.githubusercontent.com/Yubiao-Li/cloudimg/master/data/20191223163450.png" alt="" title="">
+                </div>
+                <div class="image-caption"></div>
+            </figure>
+<h3 id="视见变换">视见变换</h3>
+<ol style="list-style-type: decimal">
+<li><p>指定眼睛（或者视图参考点）作为原点</p></li>
+<li><p>将视图平面法向量n指定为z轴</p></li>
+<li><p>将视图向量(VUP) v指定为y轴</p></li>
+<li><p>x轴(第三个向量u)可以用叉乘计算:u = v×n <img src="https://raw.githubusercontent.com/Yubiao-Li/cloudimg/master/data/20191223171548.png" /></p></li>
+<li><p>将世界坐标系转换为眼睛坐标系 <img src="https://raw.githubusercontent.com/Yubiao-Li/cloudimg/master/data/20191223221912.png" /></p></li>
+</ol>
+<h3 id="视口">视口</h3>
+<ul>
+<li><p>视口是窗口的一个你可以在上面绘画的矩形区域</p></li>
+<li><p>默认的视口是整个窗口</p></li>
+<li><p>可以定义一个更小的窗口使得所有绘制被限制在那个区域</p></li>
+<li><p>你可以为每个视口端口使用单独的建模</p></li>
+</ul>
+<h3 id="ctmcurrent-transformation-matrix">CTM（Current Transformation Matrix）</h3>
+<blockquote>
+<p>从概念上讲，有一个4×4的齐次坐标矩阵，即当前变换矩阵(CTM)，它是状态的一部分，适用于沿管道向下传递的所有顶点</p>
+</blockquote>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://raw.githubusercontent.com/Yubiao-Li/cloudimg/master/data/20191228142355.png" alt="" title="">
+                </div>
+                <div class="image-caption"></div>
+            </figure>
+<h2 id="光照和着色">光照和着色</h2>
+<h3 id="光照概念">光照概念</h3>
+<ul>
+<li><p>光线从光源照射到物体上，透射出反射光、透明光和吸收光(不可见)。</p></li>
+<li><p>反射光包括漫射光和反射光，反射光与物体的材质有关</p></li>
+</ul>
+<h3 id="光照模型">光照模型</h3>
+<ul>
+<li><p>我们使用的是局部光照模型（Local Illumination Model）：光线只来自定义在场景中的光源，忽视被其他物体或者表面反射的光</p></li>
+<li>光照被看作由三个部分组成
+<ul>
+<li>环境光（Ambient）
+<ul>
+<li>不关心光照位置</li>
+<li>不关心观察者位置</li>
+<li>不关心表面法向量</li>
+</ul>
+<p><span class="math display">\[ A = L_0 + \sum_{lights}(L_A * C_A) \]</span></p></li>
+<li>漫反射光（Diffuse）
+<ul>
+<li>区域对光来说是否可见取决于光的角度——光向量与平面法向量的点乘</li>
+</ul>
+<p><span class="math display">\[ D = \sum_{lights}L_D* C_D*(L \cdot N)\]</span></p></li>
+<li>镜面反射光（Specular）
+<ul>
+<li>取决于反射光与观察方向的角度</li>
+</ul>
+<p><span class="math display">\[ S = \sum_{lights}L_S * C_S * (V \cdot R)^k \]</span></p>
+<ul>
+<li><p>K：感光度，改变光的衰减速率 <img src="https://raw.githubusercontent.com/Yubiao-Li/cloudimg/master/data/20191228195233.png" /></p></li>
+<li><p>没有物理基础，但在实践中是可行的</p></li>
+</ul>
+<blockquote>
+<p>另一种光照模型是Blinn-Phong光照模型，唯一不同的地方是计算镜面反射光是使用法向量<strong>点乘</strong>观察方向与入射方向的半角</p>
+</blockquote></li>
+</ul></li>
+<li><p>所有光使用RGB颜色模型</p></li>
+</ul>
+<h3 id="表面定向与材质">表面定向与材质</h3>
+<ul>
+<li>为了使用光照，你必须获得每个顶点的法向量与每个对象的材质</li>
+</ul>
+<h4 id="法向量">法向量</h4>
+<ul>
+<li>可以计算为两个相邻边的外积</li>
+</ul>
+<h3 id="光的属性">光的属性</h3>
+<ul>
+<li>光的类型
+<ul>
+<li>点光源</li>
+<li>定向光</li>
+<li>聚光</li>
+<li>环境光</li>
+</ul></li>
+<li>光的位置</li>
+<li>光的方向</li>
+<li>聚光灯的方向和截止</li>
+<li>光的衰减</li>
+<li>光的颜色</li>
+</ul>
+<h3 id="光照着色">光照着色</h3>
+<ul>
+<li>计算图形对象各部分的颜色，尤指多边形</li>
+</ul>
+<h4 id="constantflat-shading">Constant(Flat) Shading</h4>
+<ul>
+<li><p>对于多边形只计算其上的一个点，生成的结果被分配给多边形覆盖的所有像素</p></li>
+<li><p>效率很高但通常十分粗糙</p></li>
+<li><p>着色的离散变化（马赫带，Mach band）通常发生在constant shading <img src="https://raw.githubusercontent.com/Yubiao-Li/cloudimg/master/data/20191228202350.png" /></p></li>
+</ul>
+<h4 id="gouraud-smooth-shading">Gouraud (Smooth) Shading</h4>
+<ul>
+<li><p>平面的每一个顶点都进行渲染计算</p></li>
+<li><p>每个顶点都会有一个法向量，或者是由相邻的几个平面求平均得到的法向量</p></li>
+<li><p>平面的其他像素颜色通过对颜色线性插值获取</p></li>
+</ul>
+<h4 id="phong-shading">Phong Shading</h4>
+<ul>
+<li><p>对法向量进行线性插值</p></li>
+<li><p>对每个像素使用局部光照模型</p></li>
+</ul>
+<h3 id="全局光照">全局光照</h3>
+<ul>
+<li><p>不止考虑来自场景中的光，也考虑反射光</p></li>
+<li><p>更复杂，但更真实</p></li>
+<li><p>热辐射、射线追踪</p></li>
+</ul>
+<h2 id="渲染从顶点到片段">渲染——从顶点到片段</h2>
+<h3 id="线段裁剪算法">线段裁剪算法</h3>
+<h4 id="cohen-sutherland-线段裁剪算法">Cohen-Sutherland 线段裁剪算法</h4>
+<ul>
+<li>该算法有4种情况
+<ol style="list-style-type: decimal">
+<li><p>线段的两点都在区域内</p></li>
+<li><p>线段的两点都在区域外并且在一条边界的同一侧</p></li>
+<li><p>一个点在区域内一个点在区域外</p></li>
+<li><p>两点都在区域外但不在一条边界的同一侧</p></li>
+</ol></li>
+<li>可以将情况的两点进行编码，然后两点运算来裁剪线段 <img src="https://raw.githubusercontent.com/Yubiao-Li/cloudimg/master/data/20191229104456.png" /></li>
+</ul>
+<h4 id="梁友栋-barsky-线段裁剪算法">梁友栋-Barsky 线段裁剪算法</h4>
+<blockquote>
+<p>使用参数方程求出与裁剪窗口四条边的交点，通过交点顺序来判断是否需要裁剪</p>
+</blockquote>
+<h4 id="多边形填充区域裁剪">多边形填充区域裁剪</h4>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://raw.githubusercontent.com/Yubiao-Li/cloudimg/master/data/20191229110902.png" alt="" title="">
+                </div>
+                <div class="image-caption"></div>
+            </figure>
+<h3 id="光栅化">光栅化</h3>
+<ul>
+<li><p>根据一组顶点确定需要着色的像素</p></li>
+<li><p>生成一组片段</p></li>
+<li><p>片段有一个位置(像素位置)和其他属性，比如颜色和纹理坐标，这些属性是通过在顶点上插入值来确定的</p></li>
+</ul>
+<h4 id="dda-算法">DDA 算法</h4>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://raw.githubusercontent.com/Yubiao-Li/cloudimg/master/data/20191229112429.png" alt="" title="">
+                </div>
+                <div class="image-caption"></div>
+            </figure>
+<h4 id="行扫描转换bresenham-algorithm">行扫描转换——Bresenham Algorithm</h4>
+<ul>
+<li>判断交点更接近<span class="math inline">\(y_i\)</span>还是<span class="math inline">\(y_{i+1}\)</span> <img src="https://raw.githubusercontent.com/Yubiao-Li/cloudimg/master/data/20191229153645.png" /></li>
+</ul>
+<h4 id="扫描转换多边形扫描线填充算法">扫描转换多边形——扫描线填充算法</h4>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://raw.githubusercontent.com/Yubiao-Li/cloudimg/master/data/20191229155614.png" alt="" title="">
+                </div>
+                <div class="image-caption"></div>
+            </figure>
+<h3 id="隐藏面消除">隐藏面消除</h3>
+<h4 id="z-buffer-算法">z-Buffer 算法</h4>
+<ul>
+<li>深度缓冲区与帧缓冲区相同</li>
+<li>保存最近的交点的距离</li>
+</ul>
+<h4 id="画家算法">画家算法</h4>
+<ul>
+<li>从后往前渲染</li>
+<li>对所有多边形进行深度排序</li>
+<li>如果有多个多边形循环重叠，需要把多边形分为多个部分</li>
+</ul>
+<h3 id="反走样">反走样</h3>
+<ul>
+<li>计算线与附近像素方块的重叠比例，像素颜色计算公式<span class="math display">\[\alpha \times current\_color + (1- \alpha) \times existing\_color \]</span></li>
+</ul>
+<h3 id="多边形混叠">多边形混叠</h3>
+<ul>
+<li>像素的颜色取决于多多边形的颜色</li>
+</ul>
+<h2 id="离散技术">离散技术</h2>
+<h3 id="写缓存模式">写缓存模式</h3>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://raw.githubusercontent.com/Yubiao-Li/cloudimg/master/data/20191229194140.png" alt="" title="">
+                </div>
+                <div class="image-caption"></div>
+            </figure>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://raw.githubusercontent.com/Yubiao-Li/cloudimg/master/data/20191229194147.png" alt="" title="">
+                </div>
+                <div class="image-caption"></div>
+            </figure>
+<ul>
+<li>重点注意XOR写入模式，即模式6，有如下特性<span class="math display">\[ d = (d \oplus s) \oplus s \]</span></li>
+</ul>
+<h3 id="纹理贴图">纹理贴图</h3>
+<ul>
+<li>凹凸贴图
+<ul>
+<li><p>在Gouraud shading中，光强度是在顶点处计算的。线上其他像素的强度由两个顶点的强度混合而成</p></li>
+<li><p>在凹凸贴图中，光强度是在每个像素处计算的。使用原始曲面的法线。(注意曲线仍然是用直线近似。)</p></li>
+</ul></li>
+</ul>
+<h2 id="层级建模方法">层级建模方法</h2>
+<h2 id="全局光照-1">全局光照</h2>
+<h3 id="射线追踪">射线追踪</h3>
+<ol style="list-style-type: decimal">
+<li><p>对于每个射线，寻找最近的阻挡光路的物体</p></li>
+<li><p>计算这个物体的像素颜色</p></li>
+<li><p>可以确定物体的阴影，光线是否会到达那个表面</p></li>
+<li><p>详情借鉴别人的<a href="https://blog.csdn.net/hmbxsy/article/details/80509876" target="_blank" rel="noopener">博客</a></p></li>
+</ol>
+<h3 id="辐射度算法">辐射度算法</h3>
+<ul>
+<li>辐射度算法的原理就是模拟真实世界中的光照原理，在场景中的每个位置收集所有在该位置所能看到的光照信息，然后对这些颜色信息进行汇总处理，作为最终该位置的颜色并对当前的位置进行着色。在现实世界中，这个位置就代表了无穷多个无限小的像素点，但在计算机中却不可能做到这样一点，因此只能进行近似的模拟操作，这就是将几何空间场景进行分割处理，得到一些相对于整个场景来说很小的多边形面片，然后以这些面片为单位来代替现实世界中的无限小的像素点进行渲染着色。当然，如果我们对整个场景分割得越发细小，得到的最终光照效果也就是越好，但随之而来的代价就是渲染的时间越长。<a href="https://blog.csdn.net/pizi0475/article/details/7933752" target="_blank" rel="noopener">讲的不错的一篇博客</a></li>
+</ul>
+<hr />
+<p>最后附上找到的一个学习OpenGL编程的很好的<a href="https://learnopengl-cn.github.io/" target="_blank" rel="noopener">教程</a></p>
+
+        </div>
+
+        <blockquote class="post-copyright">
+    
+    <div class="content">
+        
+<span class="post-time">
+    最后更新时间：<time datetime="2019-12-30T03:20:06.155Z" itemprop="dateUpdated">2019-12-30 11:20:06</time>
+</span><br>
+
+
+        
+        <hr>推荐一个在线作业管理系统 https://www.makeitone.cn，有兴趣的朋友可以试试看~
+        
+    </div>
+    
+    <footer>
+        <a href="http://yubiao-li.gitee.io">
+            <img src="/img/avatar.jpg" alt="LYB">
+            LYB
+        </a>
+    </footer>
+</blockquote>
+
+        
+<div class="page-reward">
+    <a id="rewardBtn" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
+</div>
+
+
+
+        <div class="post-footer">
+            
+	<ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/" rel="tag">复习笔记</a></li></ul>
+
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yubiao-li.gitee.io/2019/12/20/2019-SCUT-%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6%E5%A4%8D%E4%B9%A0%E6%8F%90%E7%BA%B2/&title=《2019-SCUT-计算机图形学复习提纲》 — LYB的部落格&pic=http://yubiao-li.gitee.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yubiao-li.gitee.io/2019/12/20/2019-SCUT-%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6%E5%A4%8D%E4%B9%A0%E6%8F%90%E7%BA%B2/&title=《2019-SCUT-计算机图形学复习提纲》 — LYB的部落格&source=这是我的个人博客，收录了我学习工作上遇到的一些问题。很高兴能够帮助到你，陌生人！" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yubiao-li.gitee.io/2019/12/20/2019-SCUT-%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6%E5%A4%8D%E4%B9%A0%E6%8F%90%E7%BA%B2/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《2019-SCUT-计算机图形学复习提纲》 — LYB的部落格&url=http://yubiao-li.gitee.io/2019/12/20/2019-SCUT-%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6%E5%A4%8D%E4%B9%A0%E6%8F%90%E7%BA%B2/&via=http://yubiao-li.gitee.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yubiao-li.gitee.io/2019/12/20/2019-SCUT-%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6%E5%A4%8D%E4%B9%A0%E6%8F%90%E7%BA%B2/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between">
+  
+    <div class="waves-block waves-effect prev">
+      <a href="/2019/12/28/C-%E8%A7%A3%E6%9E%90JSON%E6%96%87%E4%BB%B6/" id="post-prev" class="post-nav-link">
+        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
+        <h4 class="title">C++ 解析JSON文件</h4>
+      </a>
+    </div>
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/2019/12/19/2019-SCUT-%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95%E4%B8%8E%E7%BB%B4%E6%8A%A4%E5%A4%8D%E4%B9%A0%E6%8F%90%E7%BA%B2/" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">2019-SCUT-软件测试与维护复习提纲</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Valine Comments -->
+    <div class="comments vcomment" id="comments"></div>
+    <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+    <script src="//unpkg.com/valine@latest/dist/Valine.min.js"></script>
+    <!-- Valine Comments script -->
+    <script>
+        var GUEST_INFO = ['nick','mail','link'];
+        var guest_info = 'nick,mail'.split(',').filter(function(item){
+          return GUEST_INFO.indexOf(item) > -1
+        });
+        new Valine({
+            el: '#comments',
+            notify: 'true' == 'true',
+            verify: 'false' == 'true',
+            appId: "PiV5ptU1bqWnVOva59KIhvd2-gzGzoHsz",
+            appKey: "HV0BvpVesY8UYIJSvcDBvF8H",
+            avatar: "identicon",
+            placeholder: "输入您的看法吧~",
+            guest_info: guest_info.length == 0 ? GUEST_INFO : guest_info,
+            pageSize: "10"
+        })
+    </script>
+    <!-- Valine Comments end -->
+
+
+
+
+
+
+
+
+
+
+</article>
+
+<div id="reward" class="page-modal reward-lay">
+    <a class="close" ><i class="icon icon-close"></i></a>
+    <h3 class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        觉得好送本书给我吧~
+        <i class="icon icon-quote-right"></i>
+    </h3>
+    <div class="reward-content">
+        
+        <div class="reward-code">
+            <img id="rewardCode" src="/img/wechat.jpg" alt="打赏二维码">
+        </div>
+        
+        <label class="reward-toggle">
+            <input id="rewardToggle" type="checkbox" class="reward-toggle-check"
+                data-wechat="/img/wechat.jpg" data-alipay="/img/alipay.jpg">
+            <div class="reward-toggle-ctrol">
+                <span class="reward-toggle-item wechat">微信</span>
+                <span class="reward-toggle-label"></span>
+                <span class="reward-toggle-item alipay">支付宝</span>
+            </div>
+        </label>
+        
+    </div>
+</div>
+
+
+
+</div>
+
+        <footer class="footer">
+    <div class="bottom">
+        
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        站点总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        站点总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+        <p>
+            
+            <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i
+                        class="icon icon-lg icon-rss"></i></a></span>
+            
+            <span>博客内容遵循 <a rel="license noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank">知识共享 署名 - 非商业性 - 相同方式共享 4.0 国际协议</a></span>
+        </p>
+        <p><span>LYB &copy;
+                2019 -
+                2020</span>
+            <span>
+                
+            </span>
+        </p>
+    </div>
+</footer>
+    </main>
+    <div class="mask" id="mask"></div>
+<a id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yubiao-li.gitee.io/2019/12/20/2019-SCUT-%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6%E5%A4%8D%E4%B9%A0%E6%8F%90%E7%BA%B2/&title=《2019-SCUT-计算机图形学复习提纲》 — LYB的部落格&pic=http://yubiao-li.gitee.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yubiao-li.gitee.io/2019/12/20/2019-SCUT-%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6%E5%A4%8D%E4%B9%A0%E6%8F%90%E7%BA%B2/&title=《2019-SCUT-计算机图形学复习提纲》 — LYB的部落格&source=这是我的个人博客，收录了我学习工作上遇到的一些问题。很高兴能够帮助到你，陌生人！" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yubiao-li.gitee.io/2019/12/20/2019-SCUT-%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6%E5%A4%8D%E4%B9%A0%E6%8F%90%E7%BA%B2/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《2019-SCUT-计算机图形学复习提纲》 — LYB的部落格&url=http://yubiao-li.gitee.io/2019/12/20/2019-SCUT-%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6%E5%A4%8D%E4%B9%A0%E6%8F%90%E7%BA%B2/&via=http://yubiao-li.gitee.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yubiao-li.gitee.io/2019/12/20/2019-SCUT-%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6%E5%A4%8D%E4%B9%A0%E6%8F%90%E7%BA%B2/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" ><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASYAAAEmCAAAAADqr2IGAAAEjUlEQVR42u3aW27jMBAEwNz/0skBAivdMzJgKqWvYG1TVGkBzuvrK76+f12/P73+7fXfyWq/f/tqP692nux2dWHChAkTpo9k+r68rrc4+/TVdq/vfv3962/m3C9XwIQJEyZMhzPNlku20j5S+y/XKye/jYISTJgwYcL0b5g2EG3YkRzbOVOeBmPChAkTpv/J1AIlm26rrPm/ty8GEyZMmDA9myk/Yjctz/0RPoPL73tDLRwTJkyYMH0YU3sYP+nvt8w3YcKECROmj2H6Hl2b9dsD+zrB3oz1FM+LCRMmTJiOZWoP0fax84LvXYXd2RBS1OzEhAkTJkyHM7VjN3mSnBd826GfzTFfhz6YMGHChOmhTO2wzix5vg4p7goC8iIvJkyYMGF6KtPswN6M9cyGbNphnfwFRKkvJkyYMGE6kKm9cV66zT/ND/V8hXy1KPXFhAkTJkwHMrUzmfuS7l3jO3kjtm2sYsKECROmJzHlyeEsEW0T5uS3bfV1FkBgwoQJE6bTmWYNy7xUujm2N4d6XqSO/saECRMmTMcytcXNTTk1h8jT3bYk3SbemDBhwoTpdKY8EW0foz3gc7i2pZon3sX/I0yYMGHCdAjTrDibpJebF3BX0TZ/wfmQECZMmDBhOpGpTVM3jc9ZGjwD2rdsMWHChAnT6Uz7h8lTzbbR+I6DfximYMKECROmw5lmHEk7MwkjZmXZu65o55gwYcKE6RFMLUHOlK88o98ECtEzYsKECROmY5lmj5onzPuwY1bYzffTfooJEyZMmM5lSm68Ga9p6a8P5k2QkTxXESlgwoQJE6YPZsrbim26Oxusaduf+5Aiel5MmDBhwnQ4U3vEzn61+X47mrMPHTBhwoQJ0zOYZqlgW059X2k4//ckUPiDFRMmTJgwHcjUllavt3XNkb+eTcAxCxf+2DMmTJgwYTqWKTk+ZzdIxnTuWud9O8eECRMmTE9iykul7W3yIZ42uW2Him4LODBhwoQJ01FM+VHdhg5JgTX/NOGeNTijgAATJkyYMD2CqR2jaQ/aTet0Fhy0aXNUEceECRMmTIcwzRLONultG5xtkNG+sDwgwIQJEyZMpzMl9cx2yCZvDbZBw6xo276YuiKOCRMmTJiOYspbjHmzM0ecvdVZkLF6akyYMGHCdBRTsq22YdkWdmdDP/vib/FNTJgwYcL0UKa8SZmXYmeJ6H5gqE3Ri4AAEyZMmDB9JFN7tOeJbnts5/edrTmsdrf9W0yYMGHC9MFM+4M5CQ5yvnadfFinfTpMmDBhwnQu02yQ5a7jf1VyHYU7m7YoJkyYMGE6kem7vO4NGtp26ayxum/BYsKECROmc5naw3XGlxSFZ03Ttsjb3gsTJkyYMD2DqR2FaQu1eRF21tTctFSLQAETJkyYMB3OlBdJZ2nkbHRm8/32jn8UozFhwoQJ0z9gmsElqfIs0W0HffLyNCZMmDBh+p9M7TRQHjrs12kT9folYcKECROmw5nyIm+e6O5Lrm0TdJboRsVoTJgwYcJ0LNO+2DpDbFuSs1R2ttrX7MKECRMmTJ/F9AMkdyYG9ts2kwAAAABJRU5ErkJggg==" alt="微信分享二维码">
+</div>
+
+
+
+
+    <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: true };
+
+
+</script>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/main.min.js"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/search.min.js" async></script>
+
+
+
+<!-- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+});
+</script>
+
+<script async src="//cdn.bootcss.com/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML" async></script>
+
+
+
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+<script>
+(function() {
+    var OriginTitile = document.title, titleTime;
+    document.addEventListener('visibilitychange', function() {
+        if (document.hidden) {
+            document.title = '您有一条未读消息';
+            clearTimeout(titleTime);
+        } else {
+            document.title = '(つェ⊂)骗你的啦!';
+            titleTime = setTimeout(function() {
+                document.title = OriginTitile;
+            },2000);
+        }
+    });
+})();
+</script>
+
+
+
+</body>
+</html>

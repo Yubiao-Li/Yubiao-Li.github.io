@@ -1,0 +1,732 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+
+    
+
+    
+
+
+
+    <meta charset="utf-8">
+    
+    <meta name="google-site-verification" content="ZJO2ontgtPIhUUi-sjcBT02XwMEIfepFYX1wSv-FS40">
+    
+    
+    <meta name="baidu-site-verification" content="8BjbSAelf8" />
+    
+    
+    <meta name="sogou_site_verification" content="lSs4R7pRIa"/>
+    
+    
+    
+    <title>2019-SCUT-操作系统复习大纲 | LYB的部落格 | 念念不忘，必有回响</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#ff00ff">
+    
+    
+    <meta name="keywords" content="复习笔记">
+    <meta name="description" content="冯·诺伊曼计算机模型                                                                                                            进程与线程 进程PCB  进程PCB包含的内容  一个独立的进程空间，可装入进程映像； 一个独立的进程相关联的执行文件 进程所用的系统资源； 一">
+<meta name="keywords" content="复习笔记">
+<meta property="og:type" content="article">
+<meta property="og:title" content="2019-SCUT-操作系统复习大纲">
+<meta property="og:url" content="http:&#x2F;&#x2F;yubiao-li.gitee.io&#x2F;2020&#x2F;03&#x2F;25&#x2F;2019-SCUT-%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%A4%8D%E4%B9%A0%E5%A4%A7%E7%BA%B2&#x2F;index.html">
+<meta property="og:site_name" content="LYB的部落格">
+<meta property="og:description" content="冯·诺伊曼计算机模型                                                                                                            进程与线程 进程PCB  进程PCB包含的内容  一个独立的进程空间，可装入进程映像； 一个独立的进程相关联的执行文件 进程所用的系统资源； 一">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https:&#x2F;&#x2F;bkimg.cdn.bcebos.com&#x2F;pic&#x2F;574e9258d109b3de4ae00173ccbf6c81800a4c4a?x-bce-process&#x3D;image&#x2F;resize,m_lfit,w_220,h_220,limit_1">
+<meta property="og:image" content="https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;Yubiao-Li&#x2F;cloudimg&#x2F;master&#x2F;data&#x2F;20200310132454.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;Yubiao-Li&#x2F;cloudimg&#x2F;master&#x2F;data&#x2F;20200310160236.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;Yubiao-Li&#x2F;cloudimg&#x2F;master&#x2F;data&#x2F;20200310160506.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;Yubiao-Li&#x2F;cloudimg&#x2F;master&#x2F;data&#x2F;20200310160750.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;Yubiao-Li&#x2F;cloudimg&#x2F;master&#x2F;data&#x2F;20200310210619.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;Yubiao-Li&#x2F;cloudimg&#x2F;master&#x2F;data&#x2F;20200311112016.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;Yubiao-Li&#x2F;cloudimg&#x2F;master&#x2F;data&#x2F;20200311120145.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;Yubiao-Li&#x2F;cloudimg&#x2F;master&#x2F;data&#x2F;20200311152650.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;Yubiao-Li&#x2F;cloudimg&#x2F;master&#x2F;data&#x2F;20200311161305.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;Yubiao-Li&#x2F;cloudimg&#x2F;master&#x2F;data&#x2F;20200311163322.png">
+<meta property="og:updated_time" content="2020-03-25T03:20:20.933Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https:&#x2F;&#x2F;bkimg.cdn.bcebos.com&#x2F;pic&#x2F;574e9258d109b3de4ae00173ccbf6c81800a4c4a?x-bce-process&#x3D;image&#x2F;resize,m_lfit,w_220,h_220,limit_1">
+    
+        <link rel="alternate" type="application/atom+xml" title="LYB的部落格" href="/atom.xml">
+    
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="stylesheet" href="//unpkg.com/hexo-theme-material-indigo@latest/css/style.css">
+    <script>window.lazyScripts=[]</script>
+
+    <!-- custom head -->
+    
+
+</head>
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu" class="hide" >
+  <div class="inner flex-row-vertical">
+    <a class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/img/brand.jpg)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/avatar.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">LYB</h5>
+          <a href="mailto:805650945@qq.com" target="_blank" rel="noopener" title="805650945@qq.com" class="mail">805650945@qq.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                主页
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-archives"></i>
+                归档
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                标签
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/http:/yubiao-li.gitee.io/resume" target="_blank" >
+                <i class="icon icon-lg icon-user-o"></i>
+                关于我
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://github.com/Yubiao-Li" target="_blank" >
+                <i class="icon icon-lg icon-github"></i>
+                Github
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">2019-SCUT-操作系统复习大纲</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="输入感兴趣的关键字">
+            <a class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">2019-SCUT-操作系统复习大纲</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2020-03-25T03:19:33.000Z" itemprop="datePublished" class="page-time">
+  2020-03-25
+</time>
+
+
+            
+        </h5>
+    </div>
+
+    
+
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#冯诺伊曼计算机模型"><span class="post-toc-number">1.</span> <span class="post-toc-text">冯·诺伊曼计算机模型</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#进程与线程"><span class="post-toc-number">2.</span> <span class="post-toc-text">进程与线程</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#进程pcb"><span class="post-toc-number">2.1.</span> <span class="post-toc-text">进程PCB</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#进程的状态"><span class="post-toc-number">3.</span> <span class="post-toc-text">进程的状态</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#进程调度"><span class="post-toc-number">3.1.</span> <span class="post-toc-text">进程调度</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#内存调度"><span class="post-toc-number">4.</span> <span class="post-toc-text">内存调度</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#存储层次"><span class="post-toc-number">4.1.</span> <span class="post-toc-text">存储层次</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#地址空间"><span class="post-toc-number">4.2.</span> <span class="post-toc-text">地址空间</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#内存分配"><span class="post-toc-number">4.3.</span> <span class="post-toc-text">内存分配</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#内存管理的方法"><span class="post-toc-number">4.3.1.</span> <span class="post-toc-text">内存管理的方法</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#空闲块的选择"><span class="post-toc-number">4.3.2.</span> <span class="post-toc-text">空闲块的选择</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#overlaying"><span class="post-toc-number">4.3.3.</span> <span class="post-toc-text">overlaying</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#虚拟内存"><span class="post-toc-number">4.4.</span> <span class="post-toc-text">虚拟内存</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#多级page-table"><span class="post-toc-number">4.4.1.</span> <span class="post-toc-text">多级page table</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#反转页表inverted-page-tables"><span class="post-toc-number">4.4.2.</span> <span class="post-toc-text">反转页表（Inverted Page Tables）</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#页面置换算法"><span class="post-toc-number">4.5.</span> <span class="post-toc-text">页面置换算法</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#文件系统"><span class="post-toc-number">5.</span> <span class="post-toc-text">文件系统</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#文件系统布局"><span class="post-toc-number">5.1.</span> <span class="post-toc-text">文件系统布局</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#文件实现"><span class="post-toc-number">5.2.</span> <span class="post-toc-text">文件实现</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#连续分配"><span class="post-toc-number">5.2.1.</span> <span class="post-toc-text">连续分配</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#linked-list-allocation"><span class="post-toc-number">5.2.2.</span> <span class="post-toc-text">Linked List Allocation</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#io控制"><span class="post-toc-number">6.</span> <span class="post-toc-text">I/O控制</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#separate-io-and-memory-space"><span class="post-toc-number">6.1.</span> <span class="post-toc-text">Separate I/O and memory space</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#memory-mapped-io"><span class="post-toc-number">6.2.</span> <span class="post-toc-text">Memory-mapped I/O</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#io中断"><span class="post-toc-number">6.3.</span> <span class="post-toc-text">I/O中断</span></a></li></ol></li></ol>
+        </nav>
+    </aside>
+
+
+<article id="post-2019-SCUT-操作系统复习大纲"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">2019-SCUT-操作系统复习大纲</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2020-03-25 11:19:33" datetime="2020-03-25T03:19:33.000Z"  itemprop="datePublished">2020-03-25</time>
+
+            
+
+
+            
+<span id="busuanzi_container_page_pv" title="文章总阅读量" style='display:none'>
+    <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>
+</span>
+
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <h2 id="冯诺伊曼计算机模型">冯·诺伊曼计算机模型</h2>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://bkimg.cdn.bcebos.com/pic/574e9258d109b3de4ae00173ccbf6c81800a4c4a?x-bce-process=image/resize,m_lfit,w_220,h_220,limit_1" alt="" title="">
+                </div>
+                <div class="image-caption"></div>
+            </figure>
+<h2 id="进程与线程">进程与线程</h2>
+<h3 id="进程pcb">进程PCB</h3>
+<ul>
+<li>进程PCB包含的内容
+<ol style="list-style-type: decimal">
+<li>一个独立的进程空间，可装入进程映像；</li>
+<li>一个独立的进程相关联的执行文件</li>
+<li>进程所用的系统资源；</li>
+<li>一个或多个线程。（进程在创建时一般同时创建好第一个线程， 其他线程按需要由用户程序请求创建）</li>
+</ol></li>
+</ul>
+<h2 id="进程的状态">进程的状态</h2>
+<ol style="list-style-type: decimal">
+<li>进程有三大状态
+<ul>
+<li>running，正在使用CPU</li>
+<li>ready，可以被运行，正在等待</li>
+<li>blocked，不能运行直到外部事件发生</li>
+</ul></li>
+<li>状态转换 <img src="https://raw.githubusercontent.com/Yubiao-Li/cloudimg/master/data/20200310132454.png" /></li>
+</ol>
+<h3 id="进程调度">进程调度</h3>
+<ol style="list-style-type: decimal">
+<li><p>FCFS，先到先服务。缺点：护航效应</p></li>
+<li><p>JSF，最短作业优先。缺点：饿死</p></li>
+<li><p>Round-robin，时间片。缺点：频繁的上下文切换，没有考虑优先级</p></li>
+<li><p>Priority Scheduling，优先队列，每个任务分配一个优先级，每个优先级使用FCFS。缺点：也会饿死</p></li>
+<li><p>Multi-level Feedback Algorithm，循环遍历优先级队列，且时间片越来越长</p></li>
+<li><p>Guaranteed Scheduling，保证调度，保证每个进程都能分到1/n的CPU。缺点：其实不公平</p></li>
+<li><p>Lottery Scheduling，彩票调度</p></li>
+</ol>
+<h2 id="内存调度">内存调度</h2>
+<h3 id="存储层次">存储层次</h3>
+<ol style="list-style-type: decimal">
+<li><p>理想的内存：大、快、非易失性、便宜</p></li>
+<li><p>实际的内存：小内存快速，昂贵，易失；大内存慢，便宜、非易失</p></li>
+</ol>
+<h3 id="地址空间">地址空间</h3>
+<ol style="list-style-type: decimal">
+<li><p>每个进程有自己的地址空间，独立于于其他进程的空间</p></li>
+<li><p>动态定位：将进程的地址空间放在内存的不同部分</p></li>
+</ol>
+<h3 id="内存分配">内存分配</h3>
+<h4 id="内存管理的方法">内存管理的方法</h4>
+<ol style="list-style-type: decimal">
+<li><p>外部碎片：进程被交换进物理内存和交换出物理内存，时间长了会形成很多空洞 <img src="https://raw.githubusercontent.com/Yubiao-Li/cloudimg/master/data/20200310160236.png" /></p></li>
+<li><p>使用bitmap进行内存管理 <img src="https://raw.githubusercontent.com/Yubiao-Li/cloudimg/master/data/20200310160506.png" /></p>
+<ol style="list-style-type: decimal">
+<li>分配单元越小，bitmap越大</li>
+<li>寻找一个连续的空块是很慢的</li>
+</ol></li>
+<li><p>使用链表进行内存管理 <img src="https://raw.githubusercontent.com/Yubiao-Li/cloudimg/master/data/20200310160750.png" /></p>
+<ol style="list-style-type: decimal">
+<li>使用链表记录内存分配情况</li>
+</ol></li>
+</ol>
+<h4 id="空闲块的选择">空闲块的选择</h4>
+<ol style="list-style-type: decimal">
+<li><p>First Fit：选择第一个可用的空洞。缺点：创建更多的空洞</p></li>
+<li><p>Next Fit：从上一个选择的空洞开始继续向下寻找。缺点：比First Fit的效果还差</p></li>
+<li><p>Best Fit。缺点：创建不可用的小空洞</p></li>
+<li><p>Worst Fit。缺点：减少了大型进程能够运行的空洞</p></li>
+<li><p>Quick Fit：为一些常见的请求大小维护单独的列表</p></li>
+</ol>
+<h4 id="overlaying">overlaying</h4>
+<ul>
+<li>可以将程序分割成小的片段，交换片段由操作系统完成，但程序员需要把程序手动分割成片段，这提高了编程的复杂度 <img src="https://raw.githubusercontent.com/Yubiao-Li/cloudimg/master/data/20200310210619.png" /></li>
+</ul>
+<h3 id="虚拟内存">虚拟内存</h3>
+<ol style="list-style-type: decimal">
+<li><p>虚拟内存提供足够的内存给用户所需，所以一般虚拟内存地址空间大于物理内存地址空间</p></li>
+<li>分页是用来实现虚拟内存的一种方式
+<ul>
+<li>pages:被分割的虚拟内存单元</li>
+<li>page frames:对应的位于物理内存的单元</li>
+</ul></li>
+<li><p>page会轮流被装载到物理内存中，产生的映射存储在page table，page table需要装载到物理内存中，寻找一个没被映射到物理内存的page会产生一次page fault</p></li>
+<li>MMU（memory manangement unit）将虚拟地址翻译为物理地址 <img src="https://raw.githubusercontent.com/Yubiao-Li/cloudimg/master/data/20200311112016.png" />
+<ul>
+<li>TLB是MMU中的一块高速缓存，在翻译过程中首先寻找TLB <img src="https://raw.githubusercontent.com/Yubiao-Li/cloudimg/master/data/20200311120145.png" /></li>
+</ul></li>
+</ol>
+<h4 id="多级page-table">多级page table</h4>
+<ol style="list-style-type: decimal">
+<li><p>单极页表需要连续的内存空间存储页表项，并且大部分页表项是未使用的</p></li>
+<li><p>多级页表使用一个额外的页表项作为目录，并且只需装载需要的部分page table进入内存中</p></li>
+</ol>
+<h4 id="反转页表inverted-page-tables">反转页表（Inverted Page Tables）</h4>
+<ol style="list-style-type: decimal">
+<li><p>每个页表项是哈希索引，哈希索引每一项指向虚拟内存到物理内存的映射，哈希索引的大小与物理内存页的数量相同。所以具有更小的体积，但是需要维护额外的哈希链开销</p></li>
+<li><p>因为一个物理页不可能有多个共享虚拟地址。解决这个问题的方法是允许页表包含一个虚拟地址到物理地址的映射，这意味着对未被映射的虚拟地址的引用会导致页错误</p></li>
+</ol>
+<h3 id="页面置换算法">页面置换算法</h3>
+<ol style="list-style-type: decimal">
+<li><p>Random page replacement：随机替换一个页面</p></li>
+<li><p>First in First Out：替换存在物理内存中最久的page</p></li>
+<li>Not Recently Used：维护两个标记位，一个标记位R标识对象是否被使用过，另一个标记为M标记对象是否被修改过，当一个对象在缓存中被找到时，R置为1，当一个对象被修改，M置为1，优先级如下。该算法认为最近被使用过的对象比最近被修改过的对象更重要
+<ul>
+<li><ol start="3" style="list-style-type: decimal">
+<li>referenced, modified</li>
+</ol></li>
+<li><ol start="2" style="list-style-type: decimal">
+<li>referenced, not modified</li>
+</ol></li>
+<li><ol style="list-style-type: decimal">
+<li>not referenced, modified</li>
+</ol></li>
+<li><ol start="0" style="list-style-type: decimal">
+<li>not referenced, not modified &gt; 当缓存已满则按照从下到上的优先级替换page</li>
+</ol></li>
+</ul></li>
+<li>Least Recently Used：替换掉页面中最久没被使用过的page，使用一个链表，如果一个page被访问且在链表中，则将其移到链表头部，如果不在链表中，则插入到链表头部，如果链表满了，则选择移除链表最尾的page
+<ul>
+<li>老化算法：越近使用权重越大 <img src="https://raw.githubusercontent.com/Yubiao-Li/cloudimg/master/data/20200311152650.png" /></li>
+</ul></li>
+<li><p>Not Frequently Used： 最不常用算法，使用一个计数器来记录页面使用状况</p></li>
+<li><p>Working Set：保留最近的工作集页面</p></li>
+</ol>
+<h2 id="文件系统">文件系统</h2>
+<h3 id="文件系统布局">文件系统布局</h3>
+<ol style="list-style-type: decimal">
+<li><p>MBR（(Master Boot Record）在第0个扇区，用于启动计算机</p></li>
+<li><p>partition table用于给出每个分区的开始与结束地址，并将其中一个分区标记为激活</p></li>
+<li><p>每一个分区有自己的文件系统，并且开头为一个boot block &gt; 这个boot block包含一个小程序，引导操作系统进入该分区</p></li>
+<li><p>操作系统启动时，BIOS读取MBR，然后定位激活的分区，读取分区的boot block并执行</p></li>
+</ol>
+<h3 id="文件实现">文件实现</h3>
+<ul>
+<li>文件的实现指的是追踪每个文件位于哪一硬盘块中</li>
+</ul>
+<h4 id="连续分配">连续分配</h4>
+<ol style="list-style-type: decimal">
+<li><p>使用连续的块存储每一个文件</p></li>
+<li><p>优点：实现简单，只需要记录文件起始位置与长度，读取性能很好</p></li>
+<li><p>缺点：产生磁盘碎片，并且需要预先知道文件的最大大小，否则文件大小无法增长</p></li>
+<li><p>Good for CD-ROMs, DVDs and other write-once optical media</p></li>
+</ol>
+<h4 id="linked-list-allocation">Linked List Allocation</h4>
+<ol style="list-style-type: decimal">
+<li><p>用链表链接一串硬盘块来存储文件，块可能存储在硬盘的各个位置，每个块的第一个字指向下个文件块的位置 <img src="https://raw.githubusercontent.com/Yubiao-Li/cloudimg/master/data/20200311161305.png" /></p></li>
+<li><p>优点：没有外部碎片，只需要记录文件的开始块，文件可以无限增长，顺序读取快</p></li>
+<li><p>缺点：随机访问慢，块中的数据量不是2的幂</p></li>
+<li>改进：
+<ol style="list-style-type: decimal">
+<li>Linked List Allocation Using FAT：使用硬盘每个分区的第一个扇区来存储FAT（File Allocation Table），即把每个文件块的指针单独存放在一个文件用作索引
+<ol style="list-style-type: decimal">
+<li><p>FAT需要装载到内存中以减少硬盘寻道</p></li>
+<li><p>FAT的一个条目包含文件块所在的位置以及下一个文件块索引所在的位置</p></li>
+<li><p>优点：整个磁盘块可以用来存储文件数据，只需要记录文件索引的开始块</p></li>
+<li><p>缺点：需要把FAT加载到内存中</p></li>
+</ol></li>
+<li>Indexed Allocation (i-Node)：将文件的所有指针放在一个位置（i节点），所有文件都有自己的i节点 <img src="https://raw.githubusercontent.com/Yubiao-Li/cloudimg/master/data/20200311163322.png" />
+<ol style="list-style-type: decimal">
+<li><p>在打开文件的时候只需要把该文件的i节点加载进内存</p></li>
+<li><p>所有的目录条目只需要存放i节点地址即可</p></li>
+<li><p>优点：支持直接访问，没有外部碎片，只需要文件对应的i节点加载进内存</p></li>
+<li><p>缺点：需要额外的空间开销存放index</p></li>
+</ol></li>
+</ol></li>
+</ol>
+<h2 id="io控制">I/O控制</h2>
+<ol style="list-style-type: decimal">
+<li><p>每一个控制寄存器有特殊的I/O端口</p></li>
+<li><p>特别的I/O指令用于读/写这些控制寄存器</p></li>
+</ol>
+<h3 id="separate-io-and-memory-space">Separate I/O and memory space</h3>
+<h3 id="memory-mapped-io">Memory-mapped I/O</h3>
+<ol style="list-style-type: decimal">
+<li><p>优点：无需特别的指令来读写控制寄存器，无需特别的保护机制来保护控制寄存器不受用户的直接访问</p></li>
+<li><p>缺点：如果控制寄存器的值是缓存的会导致问题。</p></li>
+</ol>
+<h3 id="io中断">I/O中断</h3>
+<ul>
+<li>使用DMA来作为I/O设备与CPU的中转站，一次传输多个字符，以防CPU被频繁打断</li>
+</ul>
+
+        </div>
+
+        <blockquote class="post-copyright">
+    
+    <div class="content">
+        
+<span class="post-time">
+    最后更新时间：<time datetime="2020-03-25T03:20:20.933Z" itemprop="dateUpdated">2020-03-25 11:20:20</time>
+</span><br>
+
+
+        
+        <hr>推荐一个在线作业管理系统 https://www.makeitone.cn，有兴趣的朋友可以试试看~
+        
+    </div>
+    
+    <footer>
+        <a href="http://yubiao-li.gitee.io">
+            <img src="/img/avatar.jpg" alt="LYB">
+            LYB
+        </a>
+    </footer>
+</blockquote>
+
+        
+<div class="page-reward">
+    <a id="rewardBtn" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
+</div>
+
+
+
+        <div class="post-footer">
+            
+	<ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/" rel="tag">复习笔记</a></li></ul>
+
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yubiao-li.gitee.io/2020/03/25/2019-SCUT-%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%A4%8D%E4%B9%A0%E5%A4%A7%E7%BA%B2/&title=《2019-SCUT-操作系统复习大纲》 — LYB的部落格&pic=http://yubiao-li.gitee.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yubiao-li.gitee.io/2020/03/25/2019-SCUT-%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%A4%8D%E4%B9%A0%E5%A4%A7%E7%BA%B2/&title=《2019-SCUT-操作系统复习大纲》 — LYB的部落格&source=这是我的个人博客，收录了我学习工作上遇到的一些问题。很高兴能够帮助到你，陌生人！" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yubiao-li.gitee.io/2020/03/25/2019-SCUT-%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%A4%8D%E4%B9%A0%E5%A4%A7%E7%BA%B2/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《2019-SCUT-操作系统复习大纲》 — LYB的部落格&url=http://yubiao-li.gitee.io/2020/03/25/2019-SCUT-%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%A4%8D%E4%B9%A0%E5%A4%A7%E7%BA%B2/&via=http://yubiao-li.gitee.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yubiao-li.gitee.io/2020/03/25/2019-SCUT-%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%A4%8D%E4%B9%A0%E5%A4%A7%E7%BA%B2/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between">
+  
+    <div class="waves-block waves-effect prev">
+      <a href="/2020/03/25/2019-SCUT-%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86%E5%A4%8D%E4%B9%A0%E5%A4%A7%E7%BA%B2/" id="post-prev" class="post-nav-link">
+        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
+        <h4 class="title">2019-SCUT-编译原理复习大纲</h4>
+      </a>
+    </div>
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/2020/02/19/nginx-webpack%E4%BD%BF%E7%94%A8vue-router%E5%8E%BB%E9%99%A4%E9%93%BE%E6%8E%A5%E7%9A%84/" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">nginx+webpack使用vue-router去除链接的#</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Valine Comments -->
+    <div class="comments vcomment" id="comments"></div>
+    <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+    <script src="//unpkg.com/valine@latest/dist/Valine.min.js"></script>
+    <!-- Valine Comments script -->
+    <script>
+        var GUEST_INFO = ['nick','mail','link'];
+        var guest_info = 'nick,mail'.split(',').filter(function(item){
+          return GUEST_INFO.indexOf(item) > -1
+        });
+        new Valine({
+            el: '#comments',
+            notify: 'true' == 'true',
+            verify: 'false' == 'true',
+            appId: "PiV5ptU1bqWnVOva59KIhvd2-gzGzoHsz",
+            appKey: "HV0BvpVesY8UYIJSvcDBvF8H",
+            avatar: "identicon",
+            placeholder: "输入您的看法吧~",
+            guest_info: guest_info.length == 0 ? GUEST_INFO : guest_info,
+            pageSize: "10"
+        })
+    </script>
+    <!-- Valine Comments end -->
+
+
+
+
+
+
+
+
+
+
+</article>
+
+<div id="reward" class="page-modal reward-lay">
+    <a class="close" ><i class="icon icon-close"></i></a>
+    <h3 class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        觉得好送本书给我吧~
+        <i class="icon icon-quote-right"></i>
+    </h3>
+    <div class="reward-content">
+        
+        <div class="reward-code">
+            <img id="rewardCode" src="/img/wechat.jpg" alt="打赏二维码">
+        </div>
+        
+        <label class="reward-toggle">
+            <input id="rewardToggle" type="checkbox" class="reward-toggle-check"
+                data-wechat="/img/wechat.jpg" data-alipay="/img/alipay.jpg">
+            <div class="reward-toggle-ctrol">
+                <span class="reward-toggle-item wechat">微信</span>
+                <span class="reward-toggle-label"></span>
+                <span class="reward-toggle-item alipay">支付宝</span>
+            </div>
+        </label>
+        
+    </div>
+</div>
+
+
+
+</div>
+
+        <footer class="footer">
+    <div class="bottom">
+        
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        站点总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        站点总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+        <p>
+            
+            <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i
+                        class="icon icon-lg icon-rss"></i></a></span>
+            
+            <span>博客内容遵循 <a rel="license noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank">知识共享 署名 - 非商业性 - 相同方式共享 4.0 国际协议</a></span>
+        </p>
+        <p><span>LYB &copy;
+                2019 -
+                2020</span>
+            <span>
+                
+            </span>
+        </p>
+    </div>
+</footer>
+    </main>
+    <div class="mask" id="mask"></div>
+<a id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yubiao-li.gitee.io/2020/03/25/2019-SCUT-%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%A4%8D%E4%B9%A0%E5%A4%A7%E7%BA%B2/&title=《2019-SCUT-操作系统复习大纲》 — LYB的部落格&pic=http://yubiao-li.gitee.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yubiao-li.gitee.io/2020/03/25/2019-SCUT-%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%A4%8D%E4%B9%A0%E5%A4%A7%E7%BA%B2/&title=《2019-SCUT-操作系统复习大纲》 — LYB的部落格&source=这是我的个人博客，收录了我学习工作上遇到的一些问题。很高兴能够帮助到你，陌生人！" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yubiao-li.gitee.io/2020/03/25/2019-SCUT-%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%A4%8D%E4%B9%A0%E5%A4%A7%E7%BA%B2/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《2019-SCUT-操作系统复习大纲》 — LYB的部落格&url=http://yubiao-li.gitee.io/2020/03/25/2019-SCUT-%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%A4%8D%E4%B9%A0%E5%A4%A7%E7%BA%B2/&via=http://yubiao-li.gitee.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yubiao-li.gitee.io/2020/03/25/2019-SCUT-%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%A4%8D%E4%B9%A0%E5%A4%A7%E7%BA%B2/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" ><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAQ4AAAEOCAAAAABd2qZ5AAAD5ElEQVR42u3aQXKDQAwEQP//00lVrg5kpFlcOTSnlE0WaB8GafV6xcfXz/H+yfvn+Qrvn19dJT/z/pxjBw4cOHDgCG706rg6J19nepX7lZNvd1fHgQMHDhxnOfIITC6ThF8fosld5c+IAwcOHDg+z5E/QBKT94HXBHZ+hzhw4MCB479x3N/Ero2YF2lN2xEHDhw4cDzNkbftdq3DpPzb/deuuXmgV4oDBw4cOIq8axp8/+HvB+c7cODAgQNHHLF5jDWUeSnYNA2jZ8GBAwcOHIeeZXqLu8GC3VvALlx3AxY4cODAgeMsR94K3A0W5LeYs06DNtoGw4EDBw4cBcdgmz8un5J1pt/m6NN24WXxhgMHDhw4ao5d0PYNwWn5Nx1TGAQ/Dhw4cOA4xLFbYhxjcXsuGUpo2pGX94ADBw4cOGqOXftvGpn5xlKyuTVtU+b/hQMHDhw4eo7B3tRqejl/4Oh3K1aLghwHDhw4cBzlmG7wTIcGps2+aQk3fSG4rGhx4MCBA0fN0TfX8geeblM1MT9uIOLAgQMHjppjOiKwGz5ogJqtrGmo48CBAweOUxz5AFyzpZRvCE1jtUF59Y+KAwcOHDiGEbUL1FPh3XMMNslw4MCBA8chjj5o86GBpnh7Yv1ooAEHDhw4cBziyCOt2Qo6OwzRjNzhwIEDB44nOKZhNrjYMCCTsYnDQxI4cODAgaPmyC/c3+50LK9fZxy0OHDgwIHjEMf0aEYHmoC8j9hpADdDFThw4MCBI+HYPdIu2PJzdsG/G6fAgQMHDhxnOZp24bQtON302q1/4I0DBw4cOHAMOfKiaNdiy1e+Lw7zu8pfAn5ZAQcOHDhwPMbRF0K7TmTy8+yKvQgOBw4cOHA8wJHHXh/Auw2kHX3U+sSBAwcOHDXHrlWXR9duuKEJ6aawxIEDBw4cz3HkzbvpqEFejOX0+Y+RvyjgwIEDB46zHNMRgekIwm6cLm8OJqVgVcLhwIEDB47bZ0wirYnb3SbWdNwhB/ojaHHgwIEDR8ExLZPOjsQ1azaNzsvPceDAgQPHIY5k7GDXOsybff3ARM70xxsHDhw4cOAoOPqm3rTB14wmNNE77pLiwIEDB44Vx65JNy2cpoG9G7Doxyxw4MCBA0fP0af0rpRqQnRaUjZhjAMHDhw4dhy7YYJpaZc3H5PCMnkJWMYwDhw4cOA4xJEEYXNmH8DNkNygeMOBAwcOHB/nmI4s7EYi+gBeNgFx4MCBA8cHORqm/H+Tb/MycrwyDhw4cOA4xDGNxum307JtN6i3g656pThw4MCBYzUhtgva+8vsirRpc7CPcBw4cODAEXN8A18v8r2MPozdAAAAAElFTkSuQmCC" alt="微信分享二维码">
+</div>
+
+
+
+
+    <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: true };
+
+
+</script>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/main.min.js"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/search.min.js" async></script>
+
+
+
+<!-- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+});
+</script>
+
+<script async src="//cdn.bootcss.com/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML" async></script>
+
+
+
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+<script>
+(function() {
+    var OriginTitile = document.title, titleTime;
+    document.addEventListener('visibilitychange', function() {
+        if (document.hidden) {
+            document.title = '您有一条未读消息';
+            clearTimeout(titleTime);
+        } else {
+            document.title = '(つェ⊂)骗你的啦!';
+            titleTime = setTimeout(function() {
+                document.title = OriginTitile;
+            },2000);
+        }
+    });
+})();
+</script>
+
+
+
+</body>
+</html>

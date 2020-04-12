@@ -1,0 +1,1417 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+
+    
+
+    
+
+
+
+    <meta charset="utf-8">
+    
+    <meta name="google-site-verification" content="ZJO2ontgtPIhUUi-sjcBT02XwMEIfepFYX1wSv-FS40">
+    
+    
+    <meta name="baidu-site-verification" content="8BjbSAelf8" />
+    
+    
+    <meta name="sogou_site_verification" content="lSs4R7pRIa"/>
+    
+    
+    
+    <title>2019-SCUT-软件体系结构复习提纲 | LYB的部落格 | 念念不忘，必有回响</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#ff00ff">
+    
+    
+    <meta name="keywords" content="复习笔记">
+    <meta name="description" content="什么是软件架构  系统的软件架构包括软件元素、这些元素的外观，以及它们之间的关系。  架构是涉众之间进行交流的手段 是早期设计决策的体现 是可传递、可重用的系统抽象  结构和视图  结构是元素本身的集合，因为它们存在于软件或硬件中。 视图是由系统涉众编写和读取的一组一致的体系结构元素的表示。  常用的结构  Module structure  体现了关于如何将系统">
+<meta name="keywords" content="复习笔记">
+<meta property="og:type" content="article">
+<meta property="og:title" content="2019-SCUT-软件体系结构复习提纲">
+<meta property="og:url" content="http:&#x2F;&#x2F;yubiao-li.gitee.io&#x2F;2019&#x2F;12&#x2F;05&#x2F;2019-SCUT-%E8%BD%AF%E4%BB%B6%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84%E5%A4%8D%E4%B9%A0%E6%8F%90%E7%BA%B2&#x2F;index.html">
+<meta property="og:site_name" content="LYB的部落格">
+<meta property="og:description" content="什么是软件架构  系统的软件架构包括软件元素、这些元素的外观，以及它们之间的关系。  架构是涉众之间进行交流的手段 是早期设计决策的体现 是可传递、可重用的系统抽象  结构和视图  结构是元素本身的集合，因为它们存在于软件或硬件中。 视图是由系统涉众编写和读取的一组一致的体系结构元素的表示。  常用的结构  Module structure  体现了关于如何将系统">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https:&#x2F;&#x2F;i.loli.net&#x2F;2019&#x2F;11&#x2F;26&#x2F;6NkjduHWwhI1Yf5.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;i.loli.net&#x2F;2019&#x2F;11&#x2F;26&#x2F;6TC5YVxwXfdSI9O.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;i.loli.net&#x2F;2019&#x2F;11&#x2F;26&#x2F;wOV7KayjMnuz2oL.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;i.loli.net&#x2F;2019&#x2F;12&#x2F;03&#x2F;JfxDEL5NC6VtgOX.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;i.loli.net&#x2F;2019&#x2F;12&#x2F;03&#x2F;cfVwqilvCIrtHTX.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;i.loli.net&#x2F;2019&#x2F;11&#x2F;26&#x2F;wftCUo5O7HnxYFg.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;i.loli.net&#x2F;2019&#x2F;11&#x2F;26&#x2F;nEMOG8NruqUa3dJ.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;i.loli.net&#x2F;2019&#x2F;12&#x2F;05&#x2F;j9KpiHVEGUB1k2c.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;i.loli.net&#x2F;2019&#x2F;11&#x2F;29&#x2F;fCkX3tK2LanN4lJ.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;ultramangaia.github.io&#x2F;img&#x2F;architecture&#x2F;1.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;i.loli.net&#x2F;2019&#x2F;11&#x2F;29&#x2F;fTMJE2Fe7XSvYDm.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;i.loli.net&#x2F;2019&#x2F;11&#x2F;30&#x2F;4tMFQByYazewIdG.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;i.loli.net&#x2F;2019&#x2F;12&#x2F;04&#x2F;g5vkrbwJ6lpm7dM.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;i.loli.net&#x2F;2019&#x2F;11&#x2F;30&#x2F;Sb8FIvE1zALrOJR.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;i.loli.net&#x2F;2019&#x2F;11&#x2F;30&#x2F;7fLDxUsbwS2EH5R.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;i.loli.net&#x2F;2019&#x2F;11&#x2F;30&#x2F;wzGeSHMVkfRvUYl.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;i.loli.net&#x2F;2019&#x2F;11&#x2F;30&#x2F;qAcEu4VU5Ci8Grd.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;i.loli.net&#x2F;2019&#x2F;11&#x2F;30&#x2F;IwBH4b8aCSAuGfx.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;i.loli.net&#x2F;2019&#x2F;11&#x2F;30&#x2F;1c4RuKpGBNDzmtr.png">
+<meta property="og:updated_time" content="2019-12-17T09:14:39.329Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https:&#x2F;&#x2F;i.loli.net&#x2F;2019&#x2F;11&#x2F;26&#x2F;6NkjduHWwhI1Yf5.png">
+    
+        <link rel="alternate" type="application/atom+xml" title="LYB的部落格" href="/atom.xml">
+    
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="stylesheet" href="//unpkg.com/hexo-theme-material-indigo@latest/css/style.css">
+    <script>window.lazyScripts=[]</script>
+
+    <!-- custom head -->
+    
+
+</head>
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu" class="hide" >
+  <div class="inner flex-row-vertical">
+    <a class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/img/brand.jpg)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/avatar.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">LYB</h5>
+          <a href="mailto:805650945@qq.com" target="_blank" rel="noopener" title="805650945@qq.com" class="mail">805650945@qq.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                主页
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-archives"></i>
+                归档
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                标签
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/http:/yubiao-li.gitee.io/resume" target="_blank" >
+                <i class="icon icon-lg icon-user-o"></i>
+                关于我
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://github.com/Yubiao-Li" target="_blank" >
+                <i class="icon icon-lg icon-github"></i>
+                Github
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">2019-SCUT-软件体系结构复习提纲</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="输入感兴趣的关键字">
+            <a class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">2019-SCUT-软件体系结构复习提纲</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2019-12-05T03:17:16.000Z" itemprop="datePublished" class="page-time">
+  2019-12-05
+</time>
+
+
+            
+        </h5>
+    </div>
+
+    
+
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#什么是软件架构"><span class="post-toc-number">1.</span> <span class="post-toc-text">什么是软件架构</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#为什么要用架构"><span class="post-toc-number">2.</span> <span class="post-toc-text">为什么要用架构</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#软件体系结构的多种背景"><span class="post-toc-number">3.</span> <span class="post-toc-text">软件体系结构的多种背景</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#质量属性"><span class="post-toc-number">4.</span> <span class="post-toc-text">质量属性</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#可用性"><span class="post-toc-number">5.</span> <span class="post-toc-text">可用性</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#互操作性"><span class="post-toc-number">6.</span> <span class="post-toc-text">互操作性</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#可修改性"><span class="post-toc-number">7.</span> <span class="post-toc-text">可修改性</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#性能"><span class="post-toc-number">8.</span> <span class="post-toc-text">性能</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#安全性"><span class="post-toc-number">9.</span> <span class="post-toc-text">安全性</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#可测试性"><span class="post-toc-number">10.</span> <span class="post-toc-text">可测试性</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#易用性"><span class="post-toc-number">11.</span> <span class="post-toc-text">易用性</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#其他质量属性"><span class="post-toc-number">12.</span> <span class="post-toc-text">其他质量属性</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#架构与需求"><span class="post-toc-number">13.</span> <span class="post-toc-text">架构与需求</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#设计一个架构"><span class="post-toc-number">14.</span> <span class="post-toc-text">设计一个架构</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#架构实现与测试"><span class="post-toc-number">15.</span> <span class="post-toc-text">架构实现与测试</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#架构评价"><span class="post-toc-number">16.</span> <span class="post-toc-text">架构评价</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#云架构"><span class="post-toc-number">17.</span> <span class="post-toc-text">云架构</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#此复习提纲配合中文翻译ppt食用更佳"><span class="post-toc-number">18.</span> <span class="post-toc-text">此复习提纲配合中文翻译ppt食用更佳</span></a></li></ol>
+        </nav>
+    </aside>
+
+
+<article id="post-2019-SCUT-软件体系结构复习提纲"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">2019-SCUT-软件体系结构复习提纲</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2019-12-05 11:17:16" datetime="2019-12-05T03:17:16.000Z"  itemprop="datePublished">2019-12-05</time>
+
+            
+
+
+            
+<span id="busuanzi_container_page_pv" title="文章总阅读量" style='display:none'>
+    <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>
+</span>
+
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <h2 id="什么是软件架构">什么是软件架构</h2>
+<ol style="list-style-type: decimal">
+<li>系统的软件架构包括软件元素、这些元素的外观，以及它们之间的关系。
+<ul>
+<li>架构是涉众之间进行交流的手段</li>
+<li>是早期设计决策的体现</li>
+<li>是可传递、可重用的系统抽象</li>
+</ul></li>
+<li>结构和视图
+<ul>
+<li>结构是元素本身的集合，因为它们存在于软件或硬件中。</li>
+<li>视图是由系统涉众编写和读取的一组一致的体系结构元素的表示。</li>
+</ul></li>
+<li>常用的结构
+<ol style="list-style-type: decimal">
+<li><p>Module structure</p>
+<blockquote>
+<p>体现了关于如何将系统构建为一组代码或数据单元的决策</p>
+</blockquote>
+<ul>
+<li><p>Decomposition structure（分解结构）</p>
+<div class="figure">
+<img src="https://i.loli.net/2019/11/26/6NkjduHWwhI1Yf5.png" />
+
+</div></li>
+<li><p>User structure -&gt; layer pattern</p>
+<div class="figure">
+<img src="https://i.loli.net/2019/11/26/6TC5YVxwXfdSI9O.png" />
+
+</div>
+<div class="figure">
+<img src="https://i.loli.net/2019/11/26/wOV7KayjMnuz2oL.png" />
+
+</div></li>
+<li>Class structure
+<ul>
+<li>模块中的关系为继承或实例</li>
+</ul></li>
+<li>Data model
+<ul>
+<li>描述静态数据结构与它们之间的关系</li>
+</ul></li>
+</ul></li>
+<li><p>Component and connector structures（C&amp;C）</p>
+<blockquote>
+<p>体现了关于如何将系统作为一组具有运行时行为(组件)和交互(连接器)的元素进行结构化的决策。元素是运行时组件，如服务、对等点、客户端、服务器或许多其他类型的运行时元素。连接器是组件之间的通信工具，例如调用返回、进程同步操作符、管道或其他</p>
+</blockquote>
+<ul>
+<li>Service structure
+<ul>
+<li><p>单元之间通过服务协调机制（如SOAP）互相交互</p>
+<blockquote>
+<p>SOAP(Simple Object Access Protocol)——简单对象访问协议，用来描述传递信息的格式</p>
+</blockquote></li>
+</ul></li>
+<li>Concurrency structure
+<ul>
+<li><p>用于确定并行的可能与可能发生资源争用的位置</p>
+<div class="figure">
+<img src="https://i.loli.net/2019/12/03/JfxDEL5NC6VtgOX.png" />
+
+</div>
+<div class="figure">
+<img src="https://i.loli.net/2019/12/03/cfVwqilvCIrtHTX.png" />
+
+</div></li>
+</ul></li>
+</ul></li>
+<li><p>Allocation structures</p>
+<blockquote>
+<p>显示了软件元素和一个或多个外部环境中的元素之间的关系，软件就是在这些外部环境中创建和执行的。</p>
+</blockquote>
+<ul>
+<li>Deployment structure
+<ul>
+<li>说明软件在硬件上怎么分配与交互的元素</li>
+</ul></li>
+<li>Implementation structure
+<ul>
+<li><p>说明软件元素（通常是模块）是怎么映射到系统部署的文件结构的</p>
+<div class="figure">
+<img src="https://i.loli.net/2019/11/26/wftCUo5O7HnxYFg.png" />
+
+</div></li>
+</ul></li>
+<li>Work assignment structure
+<ul>
+<li>说明模块集成实现的职责分配</li>
+</ul></li>
+</ul></li>
+</ol></li>
+<li><p>架构模式</p>
+<blockquote>
+<p>体系结构模式表示用于解决特定问题的元素类型及其交互形式。</p>
+</blockquote>
+<ol style="list-style-type: decimal">
+<li>Module type pattern
+<ul>
+<li><p>Layered pattern</p>
+<blockquote>
+<p>用来构建可以分解为子任务组的程序，每个子任务都处于特定的抽象层次。每层仅为下一个更高层提供服务</p>
+</blockquote>
+<ul>
+<li>问题：减少发展的不同组织之间的相互作用，并支持可移植性、可修改性、和重用</li>
+<li>解决方案：分层模式将软件划分为层。每一层都是一组模块，它们提供了一组内聚的服务。每个层通过公共接口公开。用法必须是单向的。</li>
+</ul></li>
+</ul></li>
+<li>Component and connector pattern
+<ul>
+<li><p>Broker pattern 代理模式</p>
+<blockquote>
+<p>代理模式定义了一个运行时组件，称为代理，它代理多个客户机和服务器之间的通信</p>
+</blockquote>
+<ul>
+<li>背景：许多系统服务发布在多台服务器</li>
+<li>问题；我们如何构造分布式软件，使服务使用者不需要知道服务提供者的性质和位置？</li>
+<li>解决方案：代理模式通过插入中介（称为代理）将客户机与提供者服务器分开，当客户机需要服务时，它通过服务接口查询代理。然后，代理将客户机的服务请求转发给服务器，该服务器处理请求</li>
+</ul></li>
+<li>Model-View-Controller pattern
+<ul>
+<li>背景：用户界面软件是交互式应用程序中最经常修改的部分</li>
+<li>问题：如何将用户界面功能与应用程序功能分开，但仍响应用户输入，还是对底层应用程序的数据进行响应？当底层应用程序数据发生变化时，如何创建、维护和协调用户界面的多个视图？</li>
+<li>解决方案：模型-视图-控制器模式将应用程序功能划分为三种组件：一个模型，其中包含应用程序的数据；视图，显示底层数据的一部分并与用户交互；一个控制器，它在模型和视图之间进行中介，管理状态变化的通知</li>
+</ul></li>
+<li>Pipe-and-Filter pattern 管道-过滤器模式
+<ul>
+<li>背景：流数据处理</li>
+<li>问题：如何加速数据处理</li>
+<li>解决方案：数据到达过滤器的输入端口，进行转换，然后通过其输出端口通过管道传递到下一个过滤器。单个筛选器可以将数据从一个或多个端口消耗或生成数据</li>
+</ul></li>
+<li>Shared data（repository） pattern 共享数据模式
+<ul>
+<li>背景：各种计算组件需要共享和操作大量数据。这些数据不完全属于这些组件中的任何一个</li>
+<li>问题：系统如何存储和操作由多个独立组件访问的持久数据？</li>
+<li>解决方案：在共享数据模式。相互作用是由多个数据访问和至少一个共享数据存储之间的数据交流为主的持续性。交流可以通过访问器或数据存储器启动。连接器类型是数据读写。之间的数据访问的通信是通过共享数据存储介质。数据由数据存储器持久化。</li>
+</ul>
+<div class="figure">
+<img src="https://i.loli.net/2019/11/26/nEMOG8NruqUa3dJ.png" />
+
+</div></li>
+<li><p>Client and server pattern</p>
+<blockquote>
+<p>这种模式由两方组成：一个服务器和多个客户端。服务器组件将向多个客户端组件提供服务。客户端向服务器请求服务，服务器向这些客户端提供相关服务。此外服务器继续侦听客户端请求</p>
+</blockquote>
+<ul>
+<li>背景：大量分布式客户机希望访问共享资源和服务，我们希望控制访问或服务质量</li>
+<li>问题：通过集中控制这些资源和服务来提高可伸缩性和可用性</li>
+<li>解决方案：客户端通过请求服务器的服务进行交互。一些组件可以同时充当客户端和服务器。可能有一个中央服务器或多个分布式服务器</li>
+</ul></li>
+<li><p>Peer to peer pattern（点对点模式）</p>
+<blockquote>
+<p>在这种模式中，单个组件被称为同级。同事可能即作为客户端又作为服务器，并且可以随着时间动态地改变其角色</p>
+</blockquote>
+<ul>
+<li>背景：分布式计算实体需要合作和协作以向分布式用户社区提供服务</li>
+<li>问题：一组“相同”的分布式计算实体如何通过一个公共协议互相连接，这样它们就可以组织并共享其高可用性和可伸缩性的服务？</li>
+<li>解决方案：在点对点模式中，组件直接作为对等体交互。所有的peers都是平等的。对等通信是一个典型的没有不对称的CS模式请求/响应交互</li>
+</ul></li>
+<li>Service-Oriented Architecture pattern SOA模式
+<ul>
+<li>背景：服务消费者需要了解和使用服务，而不需要了解服务的实现</li>
+<li>问题：我们如何支持在不同平台上运行的分布式组件的互操作性，以及由不同组织提供的不同实现语言编写，并在Internet分发？</li>
+<li>解决方案：面向服务的体系结构模式描述了提供 和/或 服务的分布式组件的集合</li>
+<li>元素：
+<ul>
+<li>组件：
+<ul>
+<li><p>服务提供者，它通过发布的接口提供一个或多个服务</p></li>
+<li><p>服务消费者，直接或通过中介调用服务。</p></li>
+</ul></li>
+<li><p>企业服务总线(ESB)是一个中间元素，它可以在服务提供者和使用者之间路由和转换消息。</p></li>
+<li><p>服务注册中心，提供者可以使用它来注册服务，使用者可以使用它来在运行时发现服务。</p></li>
+<li>连接器：
+<ul>
+<li><p>SOAP连接器，它使用SOAP协议在web服务之间进行同步通信，通常是通过HTTP。</p></li>
+<li><p>REST连接器，它依赖于HTTP协议的基本请求/应答操作。</p></li>
+<li><p>异步消息传递连接器，它使用消息传递系统来提供点对点或发布-订阅异步消息交换。</p></li>
+</ul></li>
+</ul></li>
+<li>约束：服务使用者连接到服务提供者，但是可以使用中介组件(例如ESB、注册中心)。</li>
+</ul></li>
+<li>Publish-Subscribe pattern 发布订阅模式
+<ul>
+<li>背景：数据生产者和消费者的确切数量和性质不是预先确定的或固定的</li>
+<li>问题：在生产者和消费者之间传递信息，使他们不知道对方的身份，甚至他们的存在？</li>
+<li>解决方案：提供时间、空间和同步的解耦</li>
+</ul></li>
+</ul></li>
+<li>Allocation type pattern
+<ul>
+<li>Multi-tier pattern 多级模式
+<ul>
+<li><p>描述如何在不同的硬件和软件子集中分配和分配系统的组件，这些子集由某些通信媒介连接。</p>
+<div class="figure">
+<img src="https://i.loli.net/2019/12/05/j9KpiHVEGUB1k2c.png" />
+
+</div></li>
+</ul></li>
+<li>Competence center pattern
+<ul>
+<li>这个模式声明了软件系统的职责分配结构</li>
+</ul></li>
+<li><p>Platform pattern</p></li>
+<li><p>Map-Reduce pattern</p>
+<div class="figure">
+<img src="https://i.loli.net/2019/11/29/fCkX3tK2LanN4lJ.png" />
+
+</div></li>
+</ul></li>
+</ol></li>
+<li>好的结构的一些经验法则
+<ol style="list-style-type: decimal">
+<li>体系结构应该是单个架构师的产品，或者是一个确定的技术领导者的一个架构师小组的产品。</li>
+<li>架构师(或体系结构团队)应该将体系结构建立在良好指定的质量属性需求的优先列表之上。</li>
+<li>应该使用视图记录体系结构</li>
+<li>应该评估体系结构交付系统重要质量属性的能力</li>
+<li>体系结构应该适合增量实现</li>
+<li>体系结构应该以定义良好的模块为特征</li>
+<li>体系结构不应该依赖于商业产品或工具的特定版本</li>
+<li>产生数据的模块应该与消耗数据的模块分开</li>
+<li>不要期望模块和组件是一一对应的</li>
+<li>应该编写每个进程以便能够轻松地更改对特定处理器地分配 ，甚至在运行时也可以这样做</li>
+<li>体系结构应该提供少量的组件交互方式</li>
+</ol></li>
+</ol>
+<h2 id="为什么要用架构">为什么要用架构</h2>
+<ol style="list-style-type: decimal">
+<li>体系结构将抑制或者促进系统的驱动质量属性</li>
+<li>体系结构可以让你在软件升级的时候控制变更</li>
+<li>对体系结构的分析可以对系统的质量进行早期预测</li>
+<li>文档化体系结构增强了涉众之间的沟通</li>
+<li>体系结构是最早、最基本、最难改变设计决策的载体</li>
+<li>体系结构在随后的实现中定义了一组约束</li>
+<li>体系结构决定了一个组织的结构，反之亦然</li>
+<li>体系结构可以为演化原型提供基础</li>
+<li>体系结构允许架构师和项目经理判断成本和进度</li>
+<li>体系结构可以创建为可转移的、可重用的模型，形成产品线的核心</li>
+<li>基于体系结构的开发关注的是组件的组装，而不是简单地创建它们</li>
+<li>通过限制设计方案，体系结构可以拓宽开发人员的创造力，减少设计和系统复杂性</li>
+<li>架构可以是培训新团队成员的基础</li>
+<li>一个系统是否能够展示它的所需质量属性大体上取决于它的架构</li>
+</ol>
+<h2 id="软件体系结构的多种背景">软件体系结构的多种背景</h2>
+<ul>
+<li>Technical：软件体系结构在系统中扮演什么样的技术角色</li>
+<li>Project life cycle：软件体系结构如何与软件开发生命周期的其他阶段相关联</li>
+<li>Business：软件体系结构的存在如何影响组织的业务环境</li>
+<li>Professional：软件架构师在组织或开发项目中的作用是什么</li>
+</ul>
+<h2 id="质量属性">质量属性</h2>
+<ul>
+<li>系统需求可以分为：
+<ul>
+<li>功能需求</li>
+<li>质量属性需求
+<ul>
+<li>描述系统运行时的属性：availability、performance、usability、security</li>
+<li>描述系统开发时的属性：modifiability、testability</li>
+</ul></li>
+<li>约束</li>
+</ul></li>
+<li>为了表达质量属性的需求我们使用了一个质量属性场景
+<ul>
+<li>Stimulus source</li>
+<li>Stimulus</li>
+<li>Environment</li>
+<li>Artifact</li>
+<li>Response</li>
+<li>Response measure</li>
+</ul>
+<div class="figure">
+<img src="http://ultramangaia.github.io/img/architecture/1.png" />
+
+</div></li>
+<li>质量属性场景分类
+<ul>
+<li>一般的质量属性场景是与系统无关的</li>
+<li>具体的质量属性场景是特定于所考虑的特定系统的</li>
+</ul></li>
+<li><p>Tactics</p>
+<blockquote>
+<p>一个原始设计技术的集合，架构师可以用它来实现质量属性响应</p>
+</blockquote></li>
+<li>Tactics VS Architecture pattern
+<ul>
+<li>A tatic 是针对单个质量属性的设计决策</li>
+<li>A tatic 不考虑质量属性的权衡</li>
+<li>Architecture pattern 可以看为一个考虑了权衡的Tatics的集合</li>
+</ul></li>
+<li>我们需要隔离、分类和描述战术。我们为什么要这么做?
+<ol style="list-style-type: decimal">
+<li>设计模式是复杂的，而且通常很难应用，架构师需要修改和调整它们</li>
+<li>如果没有模式来实现架构师的设计目标，策略允许架构师从“第一原理”构建一个设计片段</li>
+<li>通过编目策略，我们可以选择多种策略来改进特定的质量属性。选择哪种策略取决于实施成本等因素</li>
+</ol></li>
+<li>七种质量设计的决策：
+<ol style="list-style-type: decimal">
+<li>职责分配</li>
+<li>协调模型</li>
+<li>数据模型</li>
+<li>资源管理</li>
+<li>构建元素之间的映射</li>
+<li>结合时间的决定</li>
+<li>技术的选择</li>
+</ol></li>
+</ul>
+<h2 id="可用性">可用性</h2>
+<blockquote>
+<p>可用性泛指系统在故障发生时可用的能力</p>
+</blockquote>
+<ul>
+<li>提高可用性的策略分为：
+<ul>
+<li>检测错误
+<ol style="list-style-type: decimal">
+<li>ping/回声</li>
+<li>监控</li>
+<li>心跳</li>
+<li>时间戳、状态监视、投票、异常检测、自检</li>
+</ol></li>
+<li>从错误当中恢复
+<ol style="list-style-type: decimal">
+<li>活动冗余（热备用）</li>
+<li>备用（冷备用）</li>
+<li>降级：在组件失败的情况下维护最关键的系统功能，减少不重要的功能</li>
+<li>重构： 重新分配职责，离开故障的资源，同时保持尽可能多的功能</li>
+</ol></li>
+<li>预防故障
+<ol style="list-style-type: decimal">
+<li>删除服务：暂时将系统组件置于服务状态之外，以减轻潜在的系统故障</li>
+<li>事务：捆绑状态更新，以便在分布式组件之间交换的异步消息具有原子性、一致性、隔离性和持久性</li>
+<li>预测模型：在检测到可能出现的未来故障的情况下，采取纠正措施</li>
+<li>异常预防：通过智能指针、抽象数据类型、包装器防止系统异常发生</li>
+<li>增加权限集：设计一个组件来处理更多的故障，作为其正常运行的一部分</li>
+</ol></li>
+</ul></li>
+</ul>
+<h2 id="互操作性">互操作性</h2>
+<ul>
+<li>互操作性是指两个或多个系统能够通过特定上下文中的接口有效地交换有意义的信息的程度
+<ul>
+<li>语法互操作性是交换数据的能力</li>
+<li>语义互操作性是对正在交换的数据进行解释的能力</li>
+</ul></li>
+<li>SOAP VS REST
+<ul>
+<li>SOAP 与一组协议一起在 SOA 系统中使用
+<ul>
+<li>服务描述 &amp; 发现： WSDL，UDDI</li>
+<li>服务集成： BPEL</li>
+</ul></li>
+<li>SOAP是用来传输结构化数据的复杂方法，而REST是简单的传输少量信息的方法</li>
+</ul></li>
+<li>互操作性的两个目标
+<ul>
+<li>了解彼此，这是定位战术的目标
+<ul>
+<li>Flood/Broadcast request
+<ul>
+<li>Efficient and less resource consuming for the searcher</li>
+<li>Low resource consuming for the searched</li>
+<li>But disturbing and resource consuming for the environment</li>
+</ul></li>
+<li>Successive request（一次请求一个实体并匹配，如果不匹配则继续寻找下一个）
+<ul>
+<li>Less efficient and high resource consuming for the searcher</li>
+<li>But less disturbing and less resource consuming for the environment</li>
+</ul></li>
+<li>Continuous/periodical advertisement
+<ul>
+<li>Efficient but high resource consuming for the searched</li>
+<li>Low resource demanding for the searcher</li>
+<li>Disturbing and resource consuming for the environment</li>
+</ul></li>
+<li><p>Advertisement upon arrival of new entity （新实体到达时广播）</p>
+<blockquote>
+<p>需要检测新实体到达的机制</p>
+</blockquote>
+<ul>
+<li>Less resource consuming for the searched</li>
+<li>Low resource demanding for the searcher</li>
+<li>Less disturbing and resource consuming for the environment</li>
+</ul></li>
+<li>Introduction of the “middlemen”, registry （中间人）
+<ul>
+<li>The searched entity registers to a registry</li>
+<li>The searcher can address to the registry to get information and find the searched entity</li>
+</ul>
+<div class="figure">
+<img src="https://i.loli.net/2019/11/29/fTMJE2Fe7XSvYDm.png" />
+
+</div></li>
+</ul></li>
+<li>在语义上有意义的方法交换信息。这是管理接口战术的目标，交换信息的两个方面是：
+<ol style="list-style-type: decimal">
+<li>按正确的顺序提供服务
+<ul>
+<li>Orchestrate：使用控制机制来协调、管理和排序服务的调用。当系统必须以复杂的交互方式完成复杂的任务时，就会使用Orchestrate</li>
+</ul></li>
+<li>将一个参与者生成的信息修改为另一个参与者可接收的形式
+<ul>
+<li>Tailor Interface：添加或移除接口的功能，比如翻译，缓冲或者数据平滑</li>
+</ul></li>
+</ol></li>
+</ul></li>
+</ul>
+<h2 id="可修改性">可修改性</h2>
+<blockquote>
+<p>可修改性是关于变更的，我们对它的兴趣在于改变的成本和风险</p>
+</blockquote>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://i.loli.net/2019/11/30/4tMFQByYazewIdG.png" alt="" title="">
+                </div>
+                <div class="image-caption"></div>
+            </figure>
+<ul>
+<li>可修改性战术的目标
+<ul>
+<li>控制变更的复杂度</li>
+<li>控制变更的时间和花费</li>
+</ul></li>
+<li>战术
+<ul>
+<li>Reduce Size of a Module
+<ul>
+<li>Split Module</li>
+</ul></li>
+<li>Increase Cohesion
+<ul>
+<li>Increase Semantic Coherence</li>
+</ul></li>
+<li>Reducing Coupling
+<ul>
+<li><p>Encapsulate：封装为模块引入了显式接口。这个接口包括一个API及其相关的职责</p></li>
+<li><p>Use an Intermediary：给定职责A和职责B之间的依赖关系(例如，首先执行A需要执行B)，可以通过使用中介打破依赖关系。</p></li>
+<li><p>Restrict Dependencies：限制给定模块与之交互或依赖的模块</p></li>
+<li><p>Abstract Common Services：如果两个模块提供了近似的方法，那更有效率的做法是实现一个更加一般化的服务</p></li>
+</ul></li>
+</ul></li>
+<li>Publish/Subscribe System
+<ul>
+<li>动机：
+<ul>
+<li>传统C/S通信模型
+<ul>
+<li>同步、紧耦合的请求调用</li>
+<li>对分布式应用程序，特别是广域网和局域网，有很大的限制</li>
+<li>当节点/链接失败时，系统收到影响。必须内置容错功能来支持这一点</li>
+</ul></li>
+<li>需要提供异步机制的更灵活的解耦合通信样式</li>
+</ul></li>
+<li>解决方案：
+<ul>
+<li>发布/订阅系统是一种通信范式，它允许在(分布式)系统中通过通信实体在时间、空间和同步方面的解耦实现自由。</li>
+<li>Publishers：发布者生成事件数据并发布它们</li>
+<li>Subscribers：订阅者提交他们的订阅并处理接收到的事件<br />
+</li>
+<li>P/S service：中介/代理过滤并将事件从发布者路由到感兴趣的订阅者</li>
+</ul>
+<div class="figure">
+<img src="https://i.loli.net/2019/12/04/g5vkrbwJ6lpm7dM.png" />
+
+</div></li>
+<li>分类：
+<ul>
+<li>Centralized Broker model（集中代理模型）
+<ul>
+<li>由多个发布者、多个订阅者和一个集中的代理/代理(一个相互交互的覆盖网络)组成。</li>
+</ul></li>
+<li>Peer-to-Peer model
+<ul>
+<li>每个节点都可以作为发布者、订阅者或代理</li>
+<li>订阅者直接订阅发布者，发布者直接通知订阅者。所以他们必须保持对彼此的了解</li>
+</ul></li>
+</ul></li>
+<li>代理中间件的关键方法
+<ul>
+<li>事件过滤
+<ul>
+<li>选出对产生的事件感兴趣的订阅者集合</li>
+<li>订阅者们被存储在内存中并且在发布者发布一个新的事件时被搜索</li>
+</ul></li>
+<li>事件路由
+<ul>
+<li>将产生的事件路由到所有感兴趣的订阅者的过程</li>
+</ul></li>
+</ul></li>
+<li>Topic based VS Content based
+<ul>
+<li>Topic based
+<ul>
+<li><p>通常也称为基于主题、基于组或基于通道的事件过滤。</p></li>
+<li><p>每个事件由其发布者发布到这些通道之一。</p></li>
+<li><p>订阅者订阅特定的通道，并将接收发布到订阅通道的所有事件</p></li>
+</ul></li>
+<li>Content based
+<ul>
+<li><p>通过允许对事件内容的任意/自定义查询中的更多表达式，为订阅者提供了更大的灵活性和更强大的功能</p></li>
+<li><p>事件通过键/值属性对发布，而订阅使用显式订阅语言指定筛选器</p></li>
+</ul></li>
+</ul></li>
+<li>优缺点：
+<ul>
+<li>优点
+<ul>
+<li>Robust：发布者或者订阅者错误不会影响整个系统</li>
+<li>Scalability：适合构建包含大量实体的分布式应用程序</li>
+<li>Adaptability：可以适应不同的环境(移动，网络游戏，嵌入式系统等)</li>
+</ul></li>
+<li>缺点
+<ul>
+<li>Reliability：它默认所有对应的订阅者会接收到发布者发布的事件</li>
+<li>当发布者和订阅者使中间代理超载时，可能出现瓶颈</li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul>
+<h2 id="性能">性能</h2>
+<blockquote>
+<p>性能是关于时间和软件系统满足时序要求的能力</p>
+</blockquote>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://i.loli.net/2019/11/30/Sb8FIvE1zALrOJR.png" alt="" title="">
+                </div>
+                <div class="image-caption"></div>
+            </figure>
+<ul>
+<li>List Scheduling Method
+<ul>
+<li><p>第一步：排序任务</p>
+<div class="figure">
+<img src="https://i.loli.net/2019/11/30/7fLDxUsbwS2EH5R.png" />
+
+</div></li>
+<li><p>第二步：选择处理器</p>
+<div class="figure">
+<img src="https://i.loli.net/2019/11/30/wzGeSHMVkfRvUYl.png" />
+
+</div></li>
+</ul></li>
+<li>战术
+<ul>
+<li>控制资源需求
+<ul>
+<li>控制采样率</li>
+<li>事件优先级</li>
+<li>减少开销</li>
+<li>限制执行时间</li>
+<li>提高资源效率：提高算法</li>
+</ul></li>
+<li>管理资源
+<ul>
+<li>提高资源</li>
+<li>提高并发度</li>
+</ul></li>
+</ul></li>
+<li>任务调度问题
+<ol style="list-style-type: decimal">
+<li><p>单处理器任务包</p></li>
+<li><p>多处理器任务包</p></li>
+<li><p>DAGs调度在多处理器上</p></li>
+<li>Job Shop Problem（JSP)
+<ul>
+<li>约束：每个任务要在每个处理器执行一次</li>
+</ul></li>
+</ol></li>
+</ul>
+<h2 id="安全性">安全性</h2>
+<blockquote>
+<p>安全性是衡量系统保护数据和信息免受未经授权访问的能力的一种度量方法，同时还提供对被授权的人和系统的访问</p>
+</blockquote>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://i.loli.net/2019/11/30/qAcEu4VU5Ci8Grd.png" alt="" title="">
+                </div>
+                <div class="image-caption"></div>
+            </figure>
+<ul>
+<li>什么是安全性
+<ul>
+<li>保密性——保护数据或服务不受未经授权的访问的属性</li>
+<li>完整性——数据或服务不受未经授权的操作的属性</li>
+<li>可用性——系统可以合法使用的属性</li>
+<li>身份验证——验证事务各方的身份，并检查他们是否真的如他们所声称的那样</li>
+<li>授权——授予用户执行的权力</li>
+<li>不可抵赖性</li>
+</ul></li>
+<li>战术
+<ul>
+<li>检测攻击
+<ul>
+<li><p>检测入侵</p></li>
+<li><p>检查服务否认：将进入系统的网络流量的模式或签名与已知拒绝服务（DoS）攻击的历史概括进行比较</p></li>
+<li><p>检查消息的完整性：如校验和</p></li>
+<li><p>检测消息延迟</p></li>
+</ul></li>
+<li>抵抗攻击
+<ul>
+<li><p>标识参与者：标识系统的任何外部输入的来源。</p></li>
+<li><p>验证参与者身份：确保用户或远程计算机实际上是它所声明的人或内容。</p></li>
+<li><p>限制访问</p></li>
+<li><p>限制暴露:通过尽可能少的访问点来最小化系统的攻击面。</p></li>
+</ul></li>
+<li>应对攻击
+<ul>
+<li><p>撤销访问</p></li>
+<li><p>锁定计算机</p></li>
+<li><p>告知参与者</p></li>
+</ul></li>
+</ul></li>
+</ul>
+<h2 id="可测试性">可测试性</h2>
+<blockquote>
+<p>软件可测试性指的是软件可以通过测试来演示其故障的容易程度</p>
+</blockquote>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://i.loli.net/2019/11/30/IwBH4b8aCSAuGfx.png" alt="" title="">
+                </div>
+                <div class="image-caption"></div>
+            </figure>
+<ul>
+<li>战术
+<ul>
+<li>控制并观察系统状态
+<ul>
+<li><p>专门的接口：set或get函数等</p></li>
+<li><p>记录/回放：捕获跨接口的信息并将其用作进一步测试的输入。</p></li>
+<li><p>本地化状态存储：要以测试的任意状态启动系统，最方便的方法是将该状态存储在单个位置。</p></li>
+<li><p>沙盒：将系统与现实世界隔离以支持实验</p></li>
+<li><p>可执行断言:断言是手工编码的，并放置在需要的位置，以指示程序何时以及何处处于错误状态</p></li>
+</ul></li>
+<li>控制复杂度
+<ul>
+<li><p>限制结构复杂性:避免或解决组件之间的循环依赖关系，减少组件之间的依赖关系</p></li>
+<li><p>限制非决定论:找出所有非决定论的来源，如无约束并行论，并尽可能地清除它们。</p></li>
+</ul></li>
+</ul></li>
+</ul>
+<h2 id="易用性">易用性</h2>
+<blockquote>
+<p>用于描述用户使用软件完成任务的难易度</p>
+</blockquote>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://i.loli.net/2019/11/30/1c4RuKpGBNDzmtr.png" alt="" title="">
+                </div>
+                <div class="image-caption"></div>
+            </figure>
+<ul>
+<li>战术
+<ul>
+<li>支持用户主动
+<ul>
+<li><p>取消:系统必须监听取消请求</p></li>
+<li><p>暂停/恢复:暂时释放资源，以便重新分配给其他任务。</p></li>
+<li><p>恢复:维护关于系统状态的足够数量的信息，以便可以恢复较早的状态</p></li>
+<li><p>聚合:能够将较低级别的对象聚合到一个组中，这样就可以将用户操作应用到组中，从而将用户从重复操作中解放出来。</p></li>
+<li><p>维护任务模型:确定上下文，以便系统能够了解用户正在尝试什么并提供帮助</p></li>
+<li><p>维护系统模型:系统维护自己的显式模型。这用于确定预期的系统行为，以便向用户提供适当的反馈</p></li>
+</ul></li>
+</ul></li>
+</ul>
+<h2 id="其他质量属性">其他质量属性</h2>
+<ul>
+<li><p>可移植性</p>
+<blockquote>
+<p>用于描述在一个平台运行的软件移植到另一不同平台运行的难易程度</p>
+</blockquote></li>
+<li><p>开发可分布性</p>
+<blockquote>
+<p>开发可分布性是设计支持分布式软件开发的软件的质量。</p>
+</blockquote></li>
+<li>可拓展性
+<ul>
+<li><p>水平可伸缩性(向外扩展)指向逻辑单元添加更多资源，比如向集群添加另一台服务器。</p></li>
+<li><p>垂直可伸缩性(向上扩展)是指向物理单元添加更多的资源，比如向计算机添加更多的内存</p></li>
+</ul></li>
+<li><p>可部署性</p>
+<blockquote>
+<p>可部署性涉及可执行文件如何到达主机平台以及如何调用它。</p>
+</blockquote></li>
+<li><p>机动性（Mobility）</p>
+<blockquote>
+<p>机动性处理平台的移动和可承受性问题，如电池管理、断开与重新连接、蜂窝网络中的传递</p>
+</blockquote></li>
+<li><p>可监测性</p>
+<blockquote>
+<p>可监测性处理操作人员在系统执行时监视系统的能力。</p>
+</blockquote></li>
+</ul>
+<!-- ## 质量属性建模与分析
+
+## 敏捷项目的架构 -->
+<h2 id="架构与需求">架构与需求</h2>
+<ul>
+<li>ASR = Architecturally Significant Requirement = 重要的架构需求
+<ul>
+<li>来自需求文档</li>
+<li>采访干系人
+<ul>
+<li>组织质量属性研讨会 Quality Attribute Workshop（QAW）
+<ol style="list-style-type: decimal">
+<li>QAW演示和介绍：QAW主持人描述了QAW的动机，并解释了QAW的每个步骤</li>
+<li>业务/任务介绍</li>
+<li>架构计划展示</li>
+<li>确定架构驱动程序</li>
+<li>质量属性场景头脑风暴</li>
+<li>整合质量属性场景</li>
+<li>给质量属性场景分优先级</li>
+<li>对质量属性场景进行细化</li>
+</ol></li>
+</ul></li>
+<li>通过理解业务目标</li>
+<li>在效用树</li>
+</ul></li>
+</ul>
+<h2 id="设计一个架构">设计一个架构</h2>
+<ul>
+<li><p>设计一个架构： ADD = The Attribute-Driven Design Method = 属性驱动设计方法</p>
+<blockquote>
+<p>一种迭代的方法。ADD并不能导致完整的设计。在每次迭代：</p>
+</blockquote>
+<ul>
+<li>选择系统的一部分进行设计</li>
+<li>组织该部分的所有架构上的重要需求</li>
+<li>生成并测试该部分的设计</li>
+</ul>
+<!-- - 有责任的容器集
+- 容器间的交互和信息流
+    > 不为容器生成api -->
+<ul>
+<li><p>输入：需求, 上下文描述</p></li>
+<li><p>输出：架构元素及其关系</p></li>
+<li>step of ADD
+<ol style="list-style-type: decimal">
+<li>选择系统的元素进行设计</li>
+<li>确定所选元素的ASRs</li>
+<li>为所选元素生成设计解决方案</li>
+<li>统计剩余需求，并为下一次迭代选择输入</li>
+<li>重复1-4直到ASRs满足</li>
+</ol></li>
+</ul></li>
+</ul>
+<h2 id="架构实现与测试">架构实现与测试</h2>
+<ul>
+<li>4种保持代码与架构一致性的技巧
+<ol style="list-style-type: decimal">
+<li>将设计嵌入代码中：实现者知道他们正在实现什么样的架构。他们可以将代码中的体系结构文档作为注释记录。然后任何人拿起代码都会知道一些约束条件。有的工具可以自动关联代码和体系结构</li>
+<li>框架方法。框架是围绕特定主体组织起来的可重用的库或类集。程序员使用框架提供的服务</li>
+<li>代码模板方法。代码模板是代码集合，程序员在其中提供特定于应用程序的部分</li>
+<li>保持代码和体系结构的一致性（即避免体系结构的侵蚀）。
+<ul>
+<li>实现可能会偏离文档体系结构</li>
+<li>实施者可能做出与其他实施者和架构都不一致的决定</li>
+<li>架构可能没有预见，提出所有可能性</li>
+<li>使用工具强制架构约束。可以添加被强制执行的架构规则</li>
+<li>在创建代码模板时，给剩下部分更多的信任/自由</li>
+<li>计划文档/代码同步时间</li>
+</ul></li>
+</ol></li>
+<li>两种级别的测试
+<ul>
+<li>单元测试：测试软件的特定片段
+<ul>
+<li>功能正确性的职责</li>
+<li>综合负荷下的性能</li>
+<li>故障注入后的可用性</li>
+<li>可修改性的需求也可以通过将变更分配给测试团队来测试</li>
+</ul></li>
+<li>集成测试：
+<ul>
+<li>测试功能、性能、可用性和安全性</li>
+<li>通过测试执行各种攻击场景，可以对安全性进行测试</li>
+<li>如果资源未释放或配置错误，系统运行很长时间后可能会降级</li>
+</ul></li>
+</ul></li>
+</ul>
+<h2 id="架构评价">架构评价</h2>
+<ul>
+<li>架构评价的三种形式
+<ul>
+<li>设计者在设计过程中评价。每次设计者做出关键的设计决策时，所选择的方案都要进行评估</li>
+<li>同行在设计过程中评价。同行评审可以在设计过程的任何地方进行，只要存在候选体系结构，或者至少是体系结构的一个连贯的可评审部分</li>
+<li>设计完成后交给局外人评价，“外”是相对的，可能意味着
+<ul>
+<li>在开发项目之外</li>
+<li>在项目所在的业务单元之外，但在同一家公司</li>
+<li>公司以外</li>
+</ul></li>
+</ul></li>
+<li><p>ATAM = Architecture Tradeoff Analysis Method = 架构权衡分析方法</p>
+<blockquote>
+<p>ATAM是一个全面的评价软件架构的方法</p>
+</blockquote>
+<ol style="list-style-type: decimal">
+<li>介绍ATAM</li>
+<li>现在的业务驱动程序</li>
+<li>呈现架构</li>
+<li>确定架构方法</li>
+<li>生成Utility Tree</li>
+<li>分析架构方法</li>
+<li>头脑风暴和优先考虑情景</li>
+<li>分析架构方法</li>
+<li>展示结果</li>
+</ol></li>
+<li><p>Lightweight Architecture Evaluation 是基于 ATAM 的，提供了一种低成本的评估软件架构的方法</p></li>
+</ul>
+<h2 id="云架构">云架构</h2>
+<blockquote>
+<p>云计算是一种信息技术(IT)范式，它支持无处不在地访问共享的系统资源池和更高级别的服务，这些资源和服务可以用最少的管理工作(通常是通过Internet)快速提供。</p>
+</blockquote>
+<ul>
+<li>基本属性
+<ul>
+<li><p>随需应变。资源使用者可以根据需要单方面获得计算服务</p></li>
+<li><p>资源池。云提供商的计算资源被合并。</p></li>
+<li><p>无处不在的网络访问。云服务和资源可以通过异构网络访问</p></li>
+<li><p>位置独立性。资源的位置不必与资源的使用者有关。</p></li>
+<li><p>快速的弹性。能力可以迅速而灵活地提供。</p></li>
+<li><p>现收现付制。服务的消费者仅根据他们使用的内容付费</p></li>
+<li><p>多租户。应用程序和资源可以在不了解彼此的多个使用者之间共享。</p></li>
+</ul></li>
+<li>基本的服务模型
+<ul>
+<li>Software as a Service (SaaS).
+<ul>
+<li><p>在这种情况下，消费者是最终用户。</p></li>
+<li><p>消费者使用在云上运行的应用程序。</p></li>
+<li><p>E.g. e-mail services</p></li>
+</ul></li>
+<li>Platform as a Service (PaaS).
+<ul>
+<li><p>这里的消费者是开发人员</p></li>
+<li><p>为用户提供在云上开发和部署应用程序的编程语言和工具</p></li>
+</ul></li>
+<li>Infrastructure as a Service (IaaS).
+<ul>
+<li><p>本例中的使用者是开发人员或系统管理员。</p></li>
+<li><p>提供处理、存储、网络和其他基础计算资源</p></li>
+<li><p>使用者可以部署和运行任意软件，包括操作系统和应用程序</p></li>
+</ul></li>
+</ul></li>
+<li>部署模式
+<ul>
+<li><p>Public cloud.云基础设施向公众开放，并由出售云服务的组织拥有。</p></li>
+<li><p>Private cloud.云基础设施仅由单个组织拥有，且仅为该组织拥有的应用程序运行。</p></li>
+<li><p>Community cloud.云基础设施由多个组织共享，并支持共享关注点的特定社区</p></li>
+<li><p>Hybrid cloud.云基础设施是两个或多个云(私有、社区或公共)的组合</p></li>
+</ul></li>
+</ul>
+<hr />
+<h2 id="此复习提纲配合中文翻译ppt食用更佳">此复习提纲配合<a href="http://ultramangaia.github.io/blog/2017/%E8%BD%AF%E4%BB%B6%E4%BD%93%E7%B3%BB%E6%9E%B6%E6%9E%84.html" target="_blank" rel="noopener">中文翻译ppt食用更佳</a></h2>
+
+        </div>
+
+        <blockquote class="post-copyright">
+    
+    <div class="content">
+        
+<span class="post-time">
+    最后更新时间：<time datetime="2019-12-17T09:14:39.329Z" itemprop="dateUpdated">2019-12-17 17:14:39</time>
+</span><br>
+
+
+        
+        <hr>推荐一个在线作业管理系统 https://www.makeitone.cn，有兴趣的朋友可以试试看~
+        
+    </div>
+    
+    <footer>
+        <a href="http://yubiao-li.gitee.io">
+            <img src="/img/avatar.jpg" alt="LYB">
+            LYB
+        </a>
+    </footer>
+</blockquote>
+
+        
+<div class="page-reward">
+    <a id="rewardBtn" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
+</div>
+
+
+
+        <div class="post-footer">
+            
+	<ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/" rel="tag">复习笔记</a></li></ul>
+
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yubiao-li.gitee.io/2019/12/05/2019-SCUT-%E8%BD%AF%E4%BB%B6%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84%E5%A4%8D%E4%B9%A0%E6%8F%90%E7%BA%B2/&title=《2019-SCUT-软件体系结构复习提纲》 — LYB的部落格&pic=http://yubiao-li.gitee.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yubiao-li.gitee.io/2019/12/05/2019-SCUT-%E8%BD%AF%E4%BB%B6%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84%E5%A4%8D%E4%B9%A0%E6%8F%90%E7%BA%B2/&title=《2019-SCUT-软件体系结构复习提纲》 — LYB的部落格&source=这是我的个人博客，收录了我学习工作上遇到的一些问题。很高兴能够帮助到你，陌生人！" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yubiao-li.gitee.io/2019/12/05/2019-SCUT-%E8%BD%AF%E4%BB%B6%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84%E5%A4%8D%E4%B9%A0%E6%8F%90%E7%BA%B2/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《2019-SCUT-软件体系结构复习提纲》 — LYB的部落格&url=http://yubiao-li.gitee.io/2019/12/05/2019-SCUT-%E8%BD%AF%E4%BB%B6%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84%E5%A4%8D%E4%B9%A0%E6%8F%90%E7%BA%B2/&via=http://yubiao-li.gitee.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yubiao-li.gitee.io/2019/12/05/2019-SCUT-%E8%BD%AF%E4%BB%B6%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84%E5%A4%8D%E4%B9%A0%E6%8F%90%E7%BA%B2/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between">
+  
+    <div class="waves-block waves-effect prev">
+      <a href="/2019/12/06/2019-SCUT-%E8%BD%AF%E4%BB%B6%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/" id="post-prev" class="post-nav-link">
+        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
+        <h4 class="title">2019-SCUT-软件项目管理期末复习</h4>
+      </a>
+    </div>
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/2019/12/03/2019-SCUT-%E6%99%BA%E8%83%BD%E4%BA%BA%E6%9C%BA%E4%BA%A4%E4%BA%92%E8%80%83%E8%AF%95%E5%A4%8D%E4%B9%A0/" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">2019-SCUT-智能人机交互考试复习</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Valine Comments -->
+    <div class="comments vcomment" id="comments"></div>
+    <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+    <script src="//unpkg.com/valine@latest/dist/Valine.min.js"></script>
+    <!-- Valine Comments script -->
+    <script>
+        var GUEST_INFO = ['nick','mail','link'];
+        var guest_info = 'nick,mail'.split(',').filter(function(item){
+          return GUEST_INFO.indexOf(item) > -1
+        });
+        new Valine({
+            el: '#comments',
+            notify: 'true' == 'true',
+            verify: 'false' == 'true',
+            appId: "PiV5ptU1bqWnVOva59KIhvd2-gzGzoHsz",
+            appKey: "HV0BvpVesY8UYIJSvcDBvF8H",
+            avatar: "identicon",
+            placeholder: "输入您的看法吧~",
+            guest_info: guest_info.length == 0 ? GUEST_INFO : guest_info,
+            pageSize: "10"
+        })
+    </script>
+    <!-- Valine Comments end -->
+
+
+
+
+
+
+
+
+
+
+</article>
+
+<div id="reward" class="page-modal reward-lay">
+    <a class="close" ><i class="icon icon-close"></i></a>
+    <h3 class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        觉得好送本书给我吧~
+        <i class="icon icon-quote-right"></i>
+    </h3>
+    <div class="reward-content">
+        
+        <div class="reward-code">
+            <img id="rewardCode" src="/img/wechat.jpg" alt="打赏二维码">
+        </div>
+        
+        <label class="reward-toggle">
+            <input id="rewardToggle" type="checkbox" class="reward-toggle-check"
+                data-wechat="/img/wechat.jpg" data-alipay="/img/alipay.jpg">
+            <div class="reward-toggle-ctrol">
+                <span class="reward-toggle-item wechat">微信</span>
+                <span class="reward-toggle-label"></span>
+                <span class="reward-toggle-item alipay">支付宝</span>
+            </div>
+        </label>
+        
+    </div>
+</div>
+
+
+
+</div>
+
+        <footer class="footer">
+    <div class="bottom">
+        
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        站点总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        站点总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+        <p>
+            
+            <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i
+                        class="icon icon-lg icon-rss"></i></a></span>
+            
+            <span>博客内容遵循 <a rel="license noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank">知识共享 署名 - 非商业性 - 相同方式共享 4.0 国际协议</a></span>
+        </p>
+        <p><span>LYB &copy;
+                2019 -
+                2020</span>
+            <span>
+                
+            </span>
+        </p>
+    </div>
+</footer>
+    </main>
+    <div class="mask" id="mask"></div>
+<a id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yubiao-li.gitee.io/2019/12/05/2019-SCUT-%E8%BD%AF%E4%BB%B6%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84%E5%A4%8D%E4%B9%A0%E6%8F%90%E7%BA%B2/&title=《2019-SCUT-软件体系结构复习提纲》 — LYB的部落格&pic=http://yubiao-li.gitee.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yubiao-li.gitee.io/2019/12/05/2019-SCUT-%E8%BD%AF%E4%BB%B6%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84%E5%A4%8D%E4%B9%A0%E6%8F%90%E7%BA%B2/&title=《2019-SCUT-软件体系结构复习提纲》 — LYB的部落格&source=这是我的个人博客，收录了我学习工作上遇到的一些问题。很高兴能够帮助到你，陌生人！" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yubiao-li.gitee.io/2019/12/05/2019-SCUT-%E8%BD%AF%E4%BB%B6%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84%E5%A4%8D%E4%B9%A0%E6%8F%90%E7%BA%B2/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《2019-SCUT-软件体系结构复习提纲》 — LYB的部落格&url=http://yubiao-li.gitee.io/2019/12/05/2019-SCUT-%E8%BD%AF%E4%BB%B6%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84%E5%A4%8D%E4%B9%A0%E6%8F%90%E7%BA%B2/&via=http://yubiao-li.gitee.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yubiao-li.gitee.io/2019/12/05/2019-SCUT-%E8%BD%AF%E4%BB%B6%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84%E5%A4%8D%E4%B9%A0%E6%8F%90%E7%BA%B2/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" ><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASYAAAEmCAAAAADqr2IGAAAElElEQVR42u3aS27cOhAFUO9/035ARnlwun1vlRKI8tEoUFoieWSArM/HR3x9/rq+3vn9/tc77+8nb/56vX/q1fvfP3vZhQkTJkyYbsk0m9arKb7HSpb0fm45SjJKsnZMmDBhwvQMptni3xO8X2RO2b4/oW8/GCZMmDBh+glMCV/OlH+SfPu/9s2YMGHChOmnMUUh4kXhdL6FJ6PMQmhMmDBhwvQkptlgbYkxKXkWUy+fna0LEyZMmDCdzrTZkk//91/sb8KECRMmTDdg+iyvvLSZPNWmg/etRbMLEyZMmDCdy5SHrG1wm4e7+UFkk/CdlWPrxWPChAkTppsxJQnNTWK33nTXs9qkj1+uDhMmTJgwHcuUb4qzBp32ADFL0c7C9fo4ggkTJkyYDmTKg8P3g7UNMZtwtIVuDwR/uIMJEyZMmA5nal/aBo0tU95q086zTRZ/bOwxYcKECdONmYrUZ9nh+W/KpbPQ95v0LiZMmDBhOpYp31bzcDcB3QfAm/knR4pvMgSYMGHChOkQpln5MB8mKW22o2wad9qjAyZMmDBheh5THqDm5cy21WZ2zRLK3xxfMGHChAnTg5iGW2bcrJO8oW39mR1Zig+DCRMmTJiOZcrbXHLW/JO0v5wlkVus4V8ZJkyYMGE6imlG05YbN8nZv5eAHh4RMGHChAnTjZna7Xw20RlEMtbsqueMCRMmTJiOZUomMduq21abNhWbEO+PFJgwYcKE6XSmNiZuF7wvJc6SubN0LSZMmDBhejbTrGA52/ivCpI3oyefExMmTJgwnc40a6BpN/gkQN0nc5Nx83WtThCYMGHChOmWTO3G2W6r7eGjbcTJx83T05gwYcKE6XSmq1Kubfi633nbEHqWyMaECRMmTM9g2rfX5Kz5IvNQefbOYnRMmDBhwnQ4U774vDCZY+Vlzs1xJE8Zv6z6YsKECROmBzG1adzZRPMRk5nMjjXRnwgmTJgwYTqQKW9b2QeQm9aca4uj9YEDEyZMmDAdy9SmYtupzxqDZgF2O+4sYY0JEyZMmE5k2gSH+dY7C7b3hdLZ277JEGDChAkTpmOZ2vaa6KwRL2+WON5/qiJPgAkTJkyYjmLKaWZp331id3NnNsoffoMJEyZMmI5luqpNp72/+d/9USN5qkj4YsKECROm2zO1NJuwuS1Yzj5VW2otWnYwYcKECdOBTElry1VHhLZpJk/FtqXKfHRMmDBhwnQu0yzI3LTCzAqTbeo2ObgURxZMmDBhwvQIplmhMT9StCnXvISZzDAKa5OzEiZMmDBhOoqp3ew37Tj1VOLf5yXVNn8bVX0xYcKECdONmT7LK6fcb/CzY8q1pdAi04wJEyZMmG7JtN+S24m2YepVJcxZKw8mTJgwYXoG0yxhOgtfN3ztgmdjvVwdJkyYMGE6nGnfdpNMt4XODwebTxidmDBhwoQJ0w9guraIuGnESbb8/LNF0JgwYcKE6QczXUU5Y23D3XYVmDBhwoTpGUx5s86sADnb4Iebd7zG96v735sxYcKECdOxTG3qMykEtoHobOptQjn/hMMLEyZMmDDdi+k/AnPzVIHXO+0AAAAASUVORK5CYII=" alt="微信分享二维码">
+</div>
+
+
+
+
+    <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: true };
+
+
+</script>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/main.min.js"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/search.min.js" async></script>
+
+
+
+<!-- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+});
+</script>
+
+<script async src="//cdn.bootcss.com/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML" async></script>
+
+
+
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+<script>
+(function() {
+    var OriginTitile = document.title, titleTime;
+    document.addEventListener('visibilitychange', function() {
+        if (document.hidden) {
+            document.title = '您有一条未读消息';
+            clearTimeout(titleTime);
+        } else {
+            document.title = '(つェ⊂)骗你的啦!';
+            titleTime = setTimeout(function() {
+                document.title = OriginTitile;
+            },2000);
+        }
+    });
+})();
+</script>
+
+
+
+</body>
+</html>
