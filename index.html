@@ -411,12 +411,11 @@ vue-router在创建router的时候将模式设置为history，如下，详见官
 
     
         背景
-
 在本地运行Django后端相信作为一个Django开发者来说不是问题了，但在完成项目后如何将我们的劳动成果部署在服务器上，则需要一番操作，本文使用nginx+uwsgi+django来搭建后端环境，服务器系统版本是centos7.2，使用的是root用户（并不推荐）
 
 步骤
-
-安装nginx yum install nginx，如果你没有办法通过这条命令安装ngin，请自...
+安装nginx yum install nginx，如果你没有办法通过这条命令安装ngin，请自行百度寻找原因
+...
     
 
         <a href="/2020/02/08/centos%E4%B8%8Bnginx-uwsgi-django%E6%90%AD%E5%BB%BA%E5%90%8E%E7%AB%AF%E6%9C%8D%E5%8A%A1%E5%99%A8/" class="post-more waves-effect waves-button">
@@ -902,5 +901,20 @@ MathJax.Hub.Queue(function() {
 
 
 
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 </body>
 </html>
