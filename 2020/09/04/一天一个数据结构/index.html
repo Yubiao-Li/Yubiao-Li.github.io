@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+
+    
+
+    
+
+
+
+    <meta charset="utf-8">
+    
+    <meta name="google-site-verification" content="ZJO2ontgtPIhUUi-sjcBT02XwMEIfepFYX1wSv-FS40">
+    
+    
+    <meta name="baidu-site-verification" content="8BjbSAelf8" />
+    
+    
+    <meta name="sogou_site_verification" content="lSs4R7pRIa"/>
+    
+    
+    
+    <title>一天一个数据结构 | LYB的部落格 | 念念不忘，必有回响</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#ff00ff">
+    
+    
+    <meta name="keywords" content="复习笔记">
+    <meta name="description" content="树二叉查找树（BST）概念二叉查找树实际上是数据域有序的二叉树，即对树上的每个结点，都满足其左子树上所有结点的数据均小于或等于根节点的数据，右子树上所有的结点的数据均大于根节点的数据                                                                                              图5">
+<meta name="keywords" content="复习笔记">
+<meta property="og:type" content="article">
+<meta property="og:title" content="一天一个数据结构">
+<meta property="og:url" content="http:&#x2F;&#x2F;yubiao-li.gitee.io&#x2F;2020&#x2F;09&#x2F;04&#x2F;%E4%B8%80%E5%A4%A9%E4%B8%80%E4%B8%AA%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84&#x2F;index.html">
+<meta property="og:site_name" content="LYB的部落格">
+<meta property="og:description" content="树二叉查找树（BST）概念二叉查找树实际上是数据域有序的二叉树，即对树上的每个结点，都满足其左子树上所有结点的数据均小于或等于根节点的数据，右子树上所有的结点的数据均大于根节点的数据                                                                                              图5">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https:&#x2F;&#x2F;c3wsq5.coding-pages.com&#x2F;003822531bb29b67c158aaa3c0208d1d41a9a1a4ddabb7cda96395396dcc5f9d.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;c3wsq5.coding-pages.com&#x2F;a1f52e390dd2a5fc00a2cabca743ffa6be807ccb88c200d72b1fee17603f6887.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;c3wsq5.coding-pages.com&#x2F;3b01ff0d74d288e311b2d985dda5459f732b8ebd355d2aebada28d24b065669a.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;c3wsq5.coding-pages.com&#x2F;f9fc6062e979d4cda233cf5cf269f5db0652b08cf0f14651542b26adf162cd6a.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;c3wsq5.coding-pages.com&#x2F;fd651895b86d528fed81eef2e6ee67e3d951f765ebc281d42883d268ab49eb92.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;c3wsq5.coding-pages.com&#x2F;7db91d5e9beabb3411a4ec77f819b2f77fcc88345aa7219f15fb4d0d09fb9aca.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;c3wsq5.coding-pages.com&#x2F;970d2dc81bc58bd81a4d41ce5b93aa2af1e16fb750b32235e956b161b4c60feb.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;c3wsq5.coding-pages.com&#x2F;53dd9411fb5da79874c5bfac14ae254d495dee037e92d4b375b41fb134d67e85.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;c3wsq5.coding-pages.com&#x2F;bdaaa017a350faf9a156e970985a193e58729e998ee8812333d63ef52d3d33a4.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;c3wsq5.coding-pages.com&#x2F;33ff78de8d4979ede851b9ea4f47c61af0dd6e8479789d1d699af988280cedc5.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;c3wsq5.coding-pages.com&#x2F;833a44efc98a7eb5fbc86e9c73e6f7268534e3e7a6dda35fbc1035c785e1fc22.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;c3wsq5.coding-pages.com&#x2F;6a6a708238fc07776f47a551606157780d4d94aec02b4f4ce72408fcd3b1b8a6.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;c3wsq5.coding-pages.com&#x2F;dc9aaaa82f5ea0fe6596ea33c308830469fe643ff607a4780884eafb5f2b514b.png">
+<meta property="og:updated_time" content="2020-09-06T01:26:57.161Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https:&#x2F;&#x2F;c3wsq5.coding-pages.com&#x2F;003822531bb29b67c158aaa3c0208d1d41a9a1a4ddabb7cda96395396dcc5f9d.png">
+    
+        <link rel="alternate" type="application/atom+xml" title="LYB的部落格" href="/atom.xml">
+    
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="stylesheet" href="//unpkg.com/hexo-theme-material-indigo@latest/css/style.css">
+    <script>window.lazyScripts=[]</script>
+
+    <!-- custom head -->
+    
+
+</head>
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu" class="hide" >
+  <div class="inner flex-row-vertical">
+    <a class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/img/brand.jpg)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/avatar.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">LYB</h5>
+          <a href="mailto:805650945@qq.com" target="_blank" rel="noopener" title="805650945@qq.com" class="mail">805650945@qq.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                主页
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-archives"></i>
+                归档
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                标签
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/resume"  >
+                <i class="icon icon-lg icon-user-o"></i>
+                关于我
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://github.com/Yubiao-Li" target="_blank" >
+                <i class="icon icon-lg icon-github"></i>
+                Github
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">一天一个数据结构</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="输入感兴趣的关键字">
+            <a class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">一天一个数据结构</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2020-09-04T11:25:38.000Z" itemprop="datePublished" class="page-time">
+  2020-09-04
+</time>
+
+
+            
+        </h5>
+    </div>
+
+    
+
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#树"><span class="post-toc-number">1.</span> <span class="post-toc-text">树</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#二叉查找树（BST）"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">二叉查找树（BST）</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#概念"><span class="post-toc-number">1.1.1.</span> <span class="post-toc-text">概念</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#平衡二叉树（AVL树）"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">平衡二叉树（AVL树）</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#概念-1"><span class="post-toc-number">1.2.1.</span> <span class="post-toc-text">概念</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#保持平衡"><span class="post-toc-number">1.2.2.</span> <span class="post-toc-text">保持平衡</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#B树"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">B树</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#概念-2"><span class="post-toc-number">1.3.1.</span> <span class="post-toc-text">概念</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#规则"><span class="post-toc-number">1.3.2.</span> <span class="post-toc-text">规则</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#查询过程"><span class="post-toc-number">1.3.3.</span> <span class="post-toc-text">查询过程</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#插入"><span class="post-toc-number">1.3.4.</span> <span class="post-toc-text">插入</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#删除"><span class="post-toc-number">1.3.5.</span> <span class="post-toc-text">删除</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#特点"><span class="post-toc-number">1.3.6.</span> <span class="post-toc-text">特点</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#B-树"><span class="post-toc-number">1.4.</span> <span class="post-toc-text">B+ 树</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#概念-3"><span class="post-toc-number">1.4.1.</span> <span class="post-toc-text">概念</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#规则-1"><span class="post-toc-number">1.4.2.</span> <span class="post-toc-text">规则</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#特点-1"><span class="post-toc-number">1.4.3.</span> <span class="post-toc-text">特点</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#B-树-1"><span class="post-toc-number">1.5.</span> <span class="post-toc-text">B*树</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#特点-2"><span class="post-toc-number">1.5.1.</span> <span class="post-toc-text">特点</span></a></li></ol></li></ol></li></ol>
+        </nav>
+    </aside>
+
+
+<article id="post-一天一个数据结构"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">一天一个数据结构</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2020-09-04 19:25:38" datetime="2020-09-04T11:25:38.000Z"  itemprop="datePublished">2020-09-04</time>
+
+            
+
+
+            
+<span id="busuanzi_container_page_pv" title="文章总阅读量" style='display:none'>
+    <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>
+</span>
+
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <h2 id="树"><a href="#树" class="headerlink" title="树"></a>树</h2><h3 id="二叉查找树（BST）"><a href="#二叉查找树（BST）" class="headerlink" title="二叉查找树（BST）"></a>二叉查找树（BST）</h3><h4 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h4><p>二叉查找树实际上是数据域有序的二叉树，即对树上的每个结点，都满足其左子树上所有结点的数据均小于或等于根节点的数据，右子树上所有的结点的数据均大于根节点的数据</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://c3wsq5.coding-pages.com/003822531bb29b67c158aaa3c0208d1d41a9a1a4ddabb7cda96395396dcc5f9d.png" alt="图5" title="">
+                </div>
+                <div class="image-caption">图5</div>
+            </figure>  
+<h3 id="平衡二叉树（AVL树）"><a href="#平衡二叉树（AVL树）" class="headerlink" title="平衡二叉树（AVL树）"></a>平衡二叉树（AVL树）</h3><h4 id="概念-1"><a href="#概念-1" class="headerlink" title="概念"></a>概念</h4><p>本质上还是二叉查找树，但是需要满足平衡的要求，即对任意节点来说，其左子树与右子树的高度之差的绝对值不超过1</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://c3wsq5.coding-pages.com/a1f52e390dd2a5fc00a2cabca743ffa6be807ccb88c200d72b1fee17603f6887.png" alt="图6" title="">
+                </div>
+                <div class="image-caption">图6</div>
+            </figure>  
+<h4 id="保持平衡"><a href="#保持平衡" class="headerlink" title="保持平衡"></a>保持平衡</h4><div class="table-container">
+<table>
+<thead>
+<tr>
+<th>插入方式</th>
+<th>描述</th>
+<th>旋转方式</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>LL</td>
+<td>在a的左子树根节点的左子树上插入节点而导致破坏平衡</td>
+<td>右旋转</td>
+</tr>
+<tr>
+<td>RR</td>
+<td>在a的右子树根节点的右子树上插入节点而导致破坏平衡</td>
+<td>左旋转</td>
+</tr>
+<tr>
+<td>LR</td>
+<td>在a的左子树根节点的右子树上插入节点而导致破坏平衡</td>
+<td>先左旋后右旋</td>
+</tr>
+<tr>
+<td>RL</td>
+<td>在a的右子树根节点的左子树上插入节点而导致破坏平衡</td>
+<td>先右旋后左旋</td>
+</tr>
+</tbody>
+</table>
+</div>
+<ul>
+<li><p>当一颗AVL因为插入后变得不平衡了<br>  <img src="https://c3wsq5.coding-pages.com/3b01ff0d74d288e311b2d985dda5459f732b8ebd355d2aebada28d24b065669a.png" alt="图7"><br>  <img src="https://c3wsq5.coding-pages.com/f9fc6062e979d4cda233cf5cf269f5db0652b08cf0f14651542b26adf162cd6a.png" alt="图8">  </p>
+</li>
+<li><p>这样子就失衡了，所谓右旋，就是将这个AVL树，从最靠近插入节点的失衡处，通过往右子树调整，使整棵树的每个节点的平衡因子变为正常<br>  <img src="https://c3wsq5.coding-pages.com/fd651895b86d528fed81eef2e6ee67e3d951f765ebc281d42883d268ab49eb92.png" alt="图9"><br>  <img src="https://c3wsq5.coding-pages.com/7db91d5e9beabb3411a4ec77f819b2f77fcc88345aa7219f15fb4d0d09fb9aca.png" alt="图10">  </p>
+</li>
+</ul>
+<h3 id="B树"><a href="#B树" class="headerlink" title="B树"></a>B树</h3><h4 id="概念-2"><a href="#概念-2" class="headerlink" title="概念"></a>概念</h4><p>B树又名平衡多路查找树（查找路径不只有两个）</p>
+<h4 id="规则"><a href="#规则" class="headerlink" title="规则"></a>规则</h4><ul>
+<li><p>排序方式：所有节点关键字递增排序，遵循左小右大原则</p>
+</li>
+<li><p>子节点数：非叶节点的子节点数 &gt; 1，且 &lt;= M，且 M &gt;= 2，空树除外（注：M阶代表一个树节点最多有多少个查找路径，M = M路，当M=2则是二叉树，M=3则是3叉</p>
+</li>
+<li><p>关键字树：枝节点的关键字数量大于等于$ceil(m/2)-1$ 且小于等于M-1个</p>
+</li>
+<li><p>所有叶子节点均在同一层、叶子节点除了包含关键字和关键字记录的指针外也有指向其子节点的指针只不过指针地址都为null对应下图最后一层节点的空格子</p>
+</li>
+</ul>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://c3wsq5.coding-pages.com/970d2dc81bc58bd81a4d41ce5b93aa2af1e16fb750b32235e956b161b4c60feb.png" alt="图11" title="">
+                </div>
+                <div class="image-caption">图11</div>
+            </figure>  
+<h4 id="查询过程"><a href="#查询过程" class="headerlink" title="查询过程"></a>查询过程</h4><p>如上图我要从上图中找到E字母，查找流程如下</p>
+<ol>
+<li><p>获取根节点的关键字进行比较，当前根节点关键字为M，E &lt; M（26个字母顺序），所以往找到指向左边的子节点（二分法规则，左小右大，左边放小于当前节点值的子节点、右边放大于当前节点值的子节点）；</p>
+</li>
+<li><p>拿到关键字D和G，D &lt; E &lt; G 所以直接找到D和G中间的节点；</p>
+</li>
+<li><p>拿到E和F，因为E=E 所以直接返回关键字和指针信息（如果树结构里面没有包含所要查找的节点则返回null）；</p>
+</li>
+</ol>
+<h4 id="插入"><a href="#插入" class="headerlink" title="插入"></a>插入</h4><p>先插入 3、8、31、11<br><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://c3wsq5.coding-pages.com/53dd9411fb5da79874c5bfac14ae254d495dee037e92d4b375b41fb134d67e85.png" alt="图12" title="">
+                </div>
+                <div class="image-caption">图12</div>
+            </figure>  </p>
+<p>再插入23、29<br><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://c3wsq5.coding-pages.com/bdaaa017a350faf9a156e970985a193e58729e998ee8812333d63ef52d3d33a4.png" alt="图13" title="">
+                </div>
+                <div class="image-caption">图13</div>
+            </figure>  </p>
+<p>再插入50、28<br><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://c3wsq5.coding-pages.com/33ff78de8d4979ede851b9ea4f47c61af0dd6e8479789d1d699af988280cedc5.png" alt="图14" title="">
+                </div>
+                <div class="image-caption">图14</div>
+            </figure>  </p>
+<h4 id="删除"><a href="#删除" class="headerlink" title="删除"></a>删除</h4><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://c3wsq5.coding-pages.com/833a44efc98a7eb5fbc86e9c73e6f7268534e3e7a6dda35fbc1035c785e1fc22.png" alt="图15" title="">
+                </div>
+                <div class="image-caption">图15</div>
+            </figure>  
+<h4 id="特点"><a href="#特点" class="headerlink" title="特点"></a>特点</h4><p>B树相对于平衡二叉树的不同是，每个节点包含的关键字增多了，特别是在B树应用到数据库的时候，数据库充分利用了磁盘块的原理（磁盘数据存储是以块的形式，每次IO进行数据读取时，同一个磁盘块的数据可以一次性读出来）把节点大小限制和充分使用在磁盘块大小范围；把树的节点关键字增多后树的层级比原来二叉树少了，减少数据查找的次数和复杂度</p>
+<h3 id="B-树"><a href="#B-树" class="headerlink" title="B+ 树"></a>B+ 树</h3><h4 id="概念-3"><a href="#概念-3" class="headerlink" title="概念"></a>概念</h4><p>B+树是B树的一个升级版</p>
+<h4 id="规则-1"><a href="#规则-1" class="headerlink" title="规则"></a>规则</h4><ol>
+<li><p>B+树的<strong>非叶子节点</strong>不保存关键字记录的指针，只进行数据索引，这样使得B+树每个<strong>非叶子节点</strong>所能保存的关键字大大增加</p>
+</li>
+<li><p>B+树的<strong>叶子</strong>节点保存了父节点所有关键字记录的指针，所有数据地址必须要到叶子节点才能获取得到，所以每次查询次数都是一样的</p>
+</li>
+<li><p>B+树的<strong>叶子</strong>节点的关键字按从小到大排序，左边结尾数据都会保存右边节点开始数据的指针</p>
+</li>
+</ol>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://c3wsq5.coding-pages.com/6a6a708238fc07776f47a551606157780d4d94aec02b4f4ce72408fcd3b1b8a6.png" alt="图16" title="">
+                </div>
+                <div class="image-caption">图16</div>
+            </figure>  
+<h4 id="特点-1"><a href="#特点-1" class="headerlink" title="特点"></a>特点</h4><ol>
+<li><p>因为<strong>非叶子</strong>节点不存储记录的指针，所以每个节点能存储的关键字更多，树的层级更少所以查询数据更快</p>
+</li>
+<li><p>B+树的记录都在叶子节点上所以查询速度更稳定</p>
+</li>
+<li><p>B+树天然具备排序功能并且全节点遍历更快</p>
+</li>
+</ol>
+<h3 id="B-树-1"><a href="#B-树-1" class="headerlink" title="B*树"></a>B*树</h3><h4 id="特点-2"><a href="#特点-2" class="headerlink" title="特点"></a>特点</h4><ol>
+<li>B*树的节点具有指向兄弟节点的指针，当节点满了可以将记录转移到兄弟节点处</li>
+</ol>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://c3wsq5.coding-pages.com/dc9aaaa82f5ea0fe6596ea33c308830469fe643ff607a4780884eafb5f2b514b.png" alt="图17" title="">
+                </div>
+                <div class="image-caption">图17</div>
+            </figure>  
+
+        </div>
+
+        <blockquote class="post-copyright">
+    
+    <div class="content">
+        
+<span class="post-time">
+    最后更新时间：<time datetime="2020-09-06T01:26:57.161Z" itemprop="dateUpdated">2020-09-06 09:26:57</time>
+</span><br>
+
+
+        
+        <hr>推荐一个在线作业管理系统 https://www.makeitone.cn，有兴趣的朋友可以试试看~
+        
+    </div>
+    
+    <footer>
+        <a href="http://yubiao-li.gitee.io">
+            <img src="/img/avatar.jpg" alt="LYB">
+            LYB
+        </a>
+    </footer>
+</blockquote>
+
+        
+<div class="page-reward">
+    <a id="rewardBtn" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
+</div>
+
+
+
+        <div class="post-footer">
+            
+	<ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/" rel="tag">复习笔记</a></li></ul>
+
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yubiao-li.gitee.io/2020/09/04/%E4%B8%80%E5%A4%A9%E4%B8%80%E4%B8%AA%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/&title=《一天一个数据结构》 — LYB的部落格&pic=http://yubiao-li.gitee.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yubiao-li.gitee.io/2020/09/04/%E4%B8%80%E5%A4%A9%E4%B8%80%E4%B8%AA%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/&title=《一天一个数据结构》 — LYB的部落格&source=这是我的个人博客，收录了我学习工作上遇到的一些问题。很高兴能够帮助到你，陌生人！" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yubiao-li.gitee.io/2020/09/04/%E4%B8%80%E5%A4%A9%E4%B8%80%E4%B8%AA%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《一天一个数据结构》 — LYB的部落格&url=http://yubiao-li.gitee.io/2020/09/04/%E4%B8%80%E5%A4%A9%E4%B8%80%E4%B8%AA%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/&via=http://yubiao-li.gitee.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yubiao-li.gitee.io/2020/09/04/%E4%B8%80%E5%A4%A9%E4%B8%80%E4%B8%AA%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between flex-row-reverse">
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/2020/09/02/HTTP%E5%8D%8F%E8%AE%AE%E7%9A%84%E5%89%8D%E4%B8%96%E4%BB%8A%E7%94%9F/" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">HTTP协议的前世今生</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Valine Comments -->
+    <div class="comments vcomment" id="comments"></div>
+    <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+    <script src="//unpkg.com/valine@latest/dist/Valine.min.js"></script>
+    <!-- Valine Comments script -->
+    <script>
+        var GUEST_INFO = ['nick','mail','link'];
+        var guest_info = 'nick,mail'.split(',').filter(function(item){
+          return GUEST_INFO.indexOf(item) > -1
+        });
+        new Valine({
+            el: '#comments',
+            notify: 'true' == 'true',
+            verify: 'false' == 'true',
+            appId: "PiV5ptU1bqWnVOva59KIhvd2-gzGzoHsz",
+            appKey: "HV0BvpVesY8UYIJSvcDBvF8H",
+            avatar: "identicon",
+            placeholder: "输入您的看法吧~",
+            guest_info: guest_info.length == 0 ? GUEST_INFO : guest_info,
+            pageSize: "10"
+        })
+    </script>
+    <!-- Valine Comments end -->
+
+
+
+
+
+
+
+
+
+
+</article>
+
+<div id="reward" class="page-modal reward-lay">
+    <a class="close" ><i class="icon icon-close"></i></a>
+    <h3 class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        觉得好送本书给我吧~
+        <i class="icon icon-quote-right"></i>
+    </h3>
+    <div class="reward-content">
+        
+        <div class="reward-code">
+            <img id="rewardCode" src="/img/wechat.jpg" alt="打赏二维码">
+        </div>
+        
+        <label class="reward-toggle">
+            <input id="rewardToggle" type="checkbox" class="reward-toggle-check"
+                data-wechat="/img/wechat.jpg" data-alipay="/img/alipay.jpg">
+            <div class="reward-toggle-ctrol">
+                <span class="reward-toggle-item wechat">微信</span>
+                <span class="reward-toggle-label"></span>
+                <span class="reward-toggle-item alipay">支付宝</span>
+            </div>
+        </label>
+        
+    </div>
+</div>
+
+
+
+</div>
+
+        <footer class="footer">
+    <div class="bottom">
+        
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        站点总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        站点总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+        <p>
+            
+            <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i
+                        class="icon icon-lg icon-rss"></i></a></span>
+            
+            <span>博客内容遵循 <a rel="license noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank">知识共享 署名 - 非商业性 - 相同方式共享 4.0 国际协议</a></span>
+        </p>
+        <p><span>LYB &copy;
+                2019 -
+                2020</span>
+            <span>
+                
+            </span>
+        </p>
+    </div>
+</footer>
+    </main>
+    <div class="mask" id="mask"></div>
+<a id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yubiao-li.gitee.io/2020/09/04/%E4%B8%80%E5%A4%A9%E4%B8%80%E4%B8%AA%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/&title=《一天一个数据结构》 — LYB的部落格&pic=http://yubiao-li.gitee.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yubiao-li.gitee.io/2020/09/04/%E4%B8%80%E5%A4%A9%E4%B8%80%E4%B8%AA%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/&title=《一天一个数据结构》 — LYB的部落格&source=这是我的个人博客，收录了我学习工作上遇到的一些问题。很高兴能够帮助到你，陌生人！" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yubiao-li.gitee.io/2020/09/04/%E4%B8%80%E5%A4%A9%E4%B8%80%E4%B8%AA%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《一天一个数据结构》 — LYB的部落格&url=http://yubiao-li.gitee.io/2020/09/04/%E4%B8%80%E5%A4%A9%E4%B8%80%E4%B8%AA%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/&via=http://yubiao-li.gitee.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yubiao-li.gitee.io/2020/09/04/%E4%B8%80%E5%A4%A9%E4%B8%80%E4%B8%AA%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" ><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAQ4AAAEOCAAAAABd2qZ5AAAEC0lEQVR42u3cSW7jQBAEQP//0x5gboZMMrOqLegQPBlaupvBQ6kW+Osrvr7/X6+vvL7++vmr716tdr/y/S73+x67cODAgQNHsOj9ga42zm/j/vWrHWfoyWqXK+PAgQMHjkMcszCWh7rkKLPA2Z7k4d5x4MCBA8cbOZKjt2lYGxo3uDhw4MCB49M4ksPNiolJ6TAvNeLAgQMHjk/g2N9wXhDMy4Kz3tCbaqU4cODAgaPLqooGz+f//YfzHThw4MCBYxSu2oGGtrGUh+3NmMXDOXHgwIEDx5pjVm5LjrWP/Mmp8jJikYLiwIEDB45DHPlCbchsBxHakYW2yPjwkHDgwIEDx4IjOUrbRtqMFMzaQi3TcLIDBw4cOHCUHG3gzIce7ldIaJLvzsqFP76FAwcOHDgOcSQhbX+IPGnMd2wf5wM3Dhw4cOA4xLFv2NQhbTSWl8O1+0a/O3DgwIEDR1zHa7echcBZcjU7T5sc4sCBAweOsxz5ofPDnQLKb2aW7OHAgQMHjrMcSUKVDLHlUwF54rdvR+WNtGykEAcOHDhwhB2l+l9hnqLMR+jydlQ7ovfwiwMHDhw4cJTrJMFpNmSQjz7kTa985Tbx+5HC4cCBAweOBUcbqNoSXhKqk3eTR9IG/uLzOHDgwIEj5iiCTZyS/cX6edBNdrlEx4EDBw4chzj27aWzHZx9i2v4MHDgwIEDx5pjVrCbEe9HH842nx66cDhw4MCBY80xG2WY3fy+aJhPILRFRhw4cODAsefYXJuhtzb9O7Xy/rs4cODAgSP57iZk5o2izcrJOWdjEA95LQ4cOHDgOMTRtnk2LavZoFs+4lA3pXDgwIEDx4hjNvSchOQNVhKwk5Pf7/vLOXHgwIEDxyGOpMEzu6V90M1vfjOKcTmTjgMHDhw4FhW2JMnJhwmSELgvMiaFwpwYBw4cOHDsOWYhMB+qyxO8diA7TzWLII0DBw4cOI5yzApzbXOoXTMfX5j9UPjKpXHgwIEDR1zra8t8pwjahG22TvL3Q/MJBw4cOHDEHG2Br91sk7BtQmmb+BWzGzhw4MCBI+bYtJHyZGzWTGqHHlpoHDhw4MBxlmM/DNeOF8xGEPLVkrNdDjTgwIEDB44Fxz5QtQ2htmU1C/mblXHgwIEDx4bju7xmga1N/GatpjZF/OVdHDhw4MCx5tinQHkw3idp7QNrz4YDBw4cOE5xJBtswlvd/hmF21lxs+jF4cCBAweOkqNNw/LC3CpZipOuWXvsslaKAwcOHDjewtEOIuSBPAnDbVFv+Bhw4MCBA8fbOdqS36yNtGlBtc2tYQqHAwcOHDjWfZZ9Kyh/AG0rq9338pM4cODAgWPN0eY1bYlwNsqQj0S0oXdWUsSBAwcOHAHHP1ek4pWofQtFAAAAAElFTkSuQmCC" alt="微信分享二维码">
+</div>
+
+
+
+
+    <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: true };
+
+
+</script>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/main.min.js"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/search.min.js" async></script>
+
+
+
+<!-- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+});
+</script>
+
+<script async src="//cdn.bootcss.com/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML" async></script>
+
+
+
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+<script>
+(function() {
+    var OriginTitile = document.title, titleTime;
+    document.addEventListener('visibilitychange', function() {
+        if (document.hidden) {
+            document.title = '您有一条未读消息';
+            clearTimeout(titleTime);
+        } else {
+            document.title = '(つェ⊂)骗你的啦!';
+            titleTime = setTimeout(function() {
+                document.title = OriginTitile;
+            },2000);
+        }
+    });
+})();
+</script>
+
+
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<!-- <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+</body>
+</html>

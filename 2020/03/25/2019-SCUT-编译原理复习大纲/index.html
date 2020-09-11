@@ -28,13 +28,13 @@
     
     
     <meta name="keywords" content="复习笔记">
-    <meta name="description" content="编译程序总框                                                                                                            词法分析  NFA转DFA">
+    <meta name="description" content="编译程序总框                                                                                                           词法分析 NFA转DFA">
 <meta name="keywords" content="复习笔记">
 <meta property="og:type" content="article">
 <meta property="og:title" content="2019-SCUT-编译原理复习大纲">
 <meta property="og:url" content="http:&#x2F;&#x2F;yubiao-li.gitee.io&#x2F;2020&#x2F;03&#x2F;25&#x2F;2019-SCUT-%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86%E5%A4%8D%E4%B9%A0%E5%A4%A7%E7%BA%B2&#x2F;index.html">
 <meta property="og:site_name" content="LYB的部落格">
-<meta property="og:description" content="编译程序总框                                                                                                            词法分析  NFA转DFA">
+<meta property="og:description" content="编译程序总框                                                                                                           词法分析 NFA转DFA">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;Yubiao-Li&#x2F;cloudimg&#x2F;master&#x2F;data&#x2F;20200325120408.png">
 <meta property="og:image" content="http:&#x2F;&#x2F;m.qpic.cn&#x2F;psb?&#x2F;V10MalFd1CQ8f5&#x2F;Bw92tEbi4Az36eUqGgnBiN.Wxxyvg9X*PFZjY2KNBAw!&#x2F;b&#x2F;dMUAAAAAAAAA&amp;bo&#x3D;IwVGAwAAAAADB0E!&amp;rf&#x3D;viewer_4">
@@ -44,7 +44,7 @@
 <meta property="og:image" content="http:&#x2F;&#x2F;m.qpic.cn&#x2F;psb?&#x2F;V10MalFd1CQ8f5&#x2F;t7fGGNSQwI6ilXuKvYxO3OenEkkWQPaXHswSwRgeG14!&#x2F;b&#x2F;dE4BAAAAAAAA&amp;bo&#x3D;gAc4BAAAAAADB5k!&amp;rf&#x3D;viewer_4">
 <meta property="og:image" content="http:&#x2F;&#x2F;m.qpic.cn&#x2F;psb?&#x2F;V10MalFd1CQ8f5&#x2F;iC5t4PYvFH0.830g8x.fpIA9Po48NDWnOR9.tIrsWuQ!&#x2F;b&#x2F;dLYAAAAAAAAA&amp;bo&#x3D;5gQKAgAAAAADB8g!&amp;rf&#x3D;viewer_4">
 <meta property="og:image" content="http:&#x2F;&#x2F;a4.qpic.cn&#x2F;psb?&#x2F;V10MalFd1CQ8f5&#x2F;z6xrPJlY6uZvR8PtSn*PZ6FfKLc.urYMKEHgNBoshPQ!&#x2F;m&#x2F;dL8AAAAAAAAAnull&amp;bo&#x3D;1AXlAQAAAAADBxc!&amp;rf&#x3D;photolist&amp;t&#x3D;5">
-<meta property="og:updated_time" content="2020-03-25T04:55:31.685Z">
+<meta property="og:updated_time" content="2020-09-06T11:38:28.374Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;Yubiao-Li&#x2F;cloudimg&#x2F;master&#x2F;data&#x2F;20200325120408.png">
     
@@ -196,18 +196,16 @@
 
         </div>
         <div class="post-content" id="post-content" itemprop="postContent">
-            <h2 id="编译程序总框">编译程序总框</h2>
-<figure class="image-bubble">
+            <h2 id="编译程序总框"><a href="#编译程序总框" class="headerlink" title="编译程序总框"></a>编译程序总框</h2><figure class="image-bubble">
                 <div class="img-lightbox">
                     <div class="overlay"></div>
                     <img src="https://raw.githubusercontent.com/Yubiao-Li/cloudimg/master/data/20200325120408.png" alt="" title="">
                 </div>
                 <div class="image-caption"></div>
             </figure>
-<h2 id="词法分析">词法分析</h2>
-<ol style="list-style-type: decimal">
-<li>NFA转DFA
-<ol style="list-style-type: decimal">
+<h2 id="词法分析"><a href="#词法分析" class="headerlink" title="词法分析"></a>词法分析</h2><ol>
+<li><p>NFA转DFA</p>
+<ol>
 <li><figure class="image-bubble">
                 <div class="img-lightbox">
                     <div class="overlay"></div>
@@ -216,36 +214,44 @@
                 <div class="image-caption">合并NFA所有可以同时到达的状态集，若状态集中包含接收状态，则新状态为接收状态</div>
             </figure></li>
 <li>最小化状态数：若两个状态同为接收状态或非接收状态，且接收相同的字符去到相同的状态，则这两个状态是等价的，可以合并为一个状态</li>
-</ol></li>
-<li>五种类型Token：标识符，保留字，数字，操作符，特殊符号</li>
 </ol>
-<h2 id="语法分析">语法分析</h2>
-<figure class="image-bubble">
+</li>
+<li><p>五种类型Token：标识符，保留字，数字，操作符，特殊符号</p>
+</li>
+</ol>
+<h2 id="语法分析"><a href="#语法分析" class="headerlink" title="语法分析"></a>语法分析</h2><figure class="image-bubble">
                 <div class="img-lightbox">
                     <div class="overlay"></div>
                     <img src="http://m.qpic.cn/psb?/V10MalFd1CQ8f5/KV.YMLS9TimdxmQMGqUWhz6NxjUtkdnta0D27ltIAuw!/b/dDQBAAAAAAAA&bo=DQVuAwAAAAADB0c!&rf=viewer_4" alt="四种文法" title="">
                 </div>
                 <div class="image-caption">四种文法</div>
             </figure>
-<ol style="list-style-type: decimal">
-<li>上下文无关文法（CFG）
+<ol>
+<li><p>上下文无关文法（CFG）</p>
 <ul>
-<li>概念：一个四元组 G=(V<sub>T</sub>,V<sub>N</sub>,S,P),其中：
+<li><p>概念：一个四元组 G=(V<sub>T</sub>,V<sub>N</sub>,S,P),其中：</p>
 <ul>
 <li>V<sub>T</sub>：终结符集合（非空）</li>
 <li>V<sub>N</sub>：非终结符集合（非空）</li>
 <li>S：文法的开始符号</li>
-<li>P：产生式集合 &gt; 巴克斯范式 把—&gt;用::=表示</li>
-</ul></li>
-<li>句型、句子和语言：
+<li>P：产生式集合<blockquote>
+<p>巴克斯范式 把—&gt;用::=表示</p>
+</blockquote>
+</li>
+</ul>
+</li>
+<li><p>句型、句子和语言：</p>
 <ul>
 <li>可由开始符号推出的即为句型</li>
 <li>不含非终结符的句型叫句子</li>
-<li>所有句子的全体叫做语言</li>
-</ul></li>
-<li>若一个句子不对应唯一的一颗语法分析树，则这个文法是二义的；若一个语言找不到无二义的文法，则这个语言是二义的</li>
-</ul></li>
-<li>抽象语法树
+<li>所有句子的全体叫做语言 </li>
+</ul>
+</li>
+<li><p>若一个句子不对应唯一的一颗语法分析树，则这个文法是二义的；若一个语言找不到无二义的文法，则这个语言是二义的</p>
+</li>
+</ul>
+</li>
+<li><p>抽象语法树</p>
 <ul>
 <li>语法分析树包含了过多的无用信息，<figure class="image-bubble">
                 <div class="img-lightbox">
@@ -254,127 +260,158 @@
                 </div>
                 <div class="image-caption">语法分析树与抽象语法树</div>
             </figure></li>
-</ul></li>
-<li>语法分析
-<ol style="list-style-type: decimal">
+</ul>
+</li>
+<li><p>语法分析</p>
+<ol>
 <li>目标：给定一个token序列，找到一个语法分析树与之匹配</li>
-<li>匹配方法：
+<li><p>匹配方法：</p>
 <ul>
-<li>自顶向下：从开始符号进行推导，试图找到一个推导方式可以推导成该用户代码
+<li><p>自顶向下：从开始符号进行推导，试图找到一个推导方式可以推导成该用户代码</p>
 <ul>
 <li>问题：应该采用哪个产生式进行规约</li>
-<li>LL(1)文法:第一个L表示从左到右扫描输入字符串，第二个L表示最左推导，k表示需要向前看k个token
+<li><p>LL(1)文法:第一个L表示从左到右扫描输入字符串，第二个L表示最左推导，k表示需要向前看k个token</p>
 <ul>
-<li>FIRST(β) = { a ∈ V<sub>T</sub> | β =&gt;* a......} , if β=&gt; * ε then ε ∈ FIRST(β)</li>
-<li>FOLLOW(A)={a ∈ V<sub>T</sub> | S=&gt;* …Aa…}， if S=&gt;* …A, then $ ∈ FOLLOW(A)</li>
-<li>如何判断一个文法是LL(1)的：
+<li>FIRST(β) = { a ∈ V<sub>T</sub> | β =&gt;<em> a……} , if β=&gt; </em> ε then ε ∈ FIRST(β)</li>
+<li>FOLLOW(A)={a ∈ V<sub>T</sub> | S=&gt;<em> …Aa…}， if S=&gt;</em> …A, then $ ∈ FOLLOW(A)</li>
+<li><p>如何判断一个文法是LL(1)的：   </p>
 <ul>
-<li>For each production A → α<sub>1</sub> | α<sub>2</sub> |…| α<sub>n</sub> , for all i and j, 1≤i, j ≤ n, i≠j , First( α<sub>i</sub> ) ∩ First(α<sub>j</sub> ) = Φ</li>
-<li>For each nonterminal A such that First(A) contains ε, First(A)  ∩ Follow(A) = Φ.<br> <em>若一个文法是左递归的或者有左公因子，那么它一定不是LL(1)文法</em> <br><strong>将非LL(1)文法转换为LL(1)文法</strong>
+<li>For each production A → α<sub>1</sub> | α<sub>2</sub> |…| α<sub>n</sub> , for all i and j, 1≤i, j ≤ n, i≠j , First( α<sub>i</sub> ) ∩ First(α<sub>j</sub> ) = Φ</li>
+<li><p>For each nonterminal A such that First(A) contains ε, First(A)  ∩ Follow(A) = Φ.<br><br><em>若一个文法是左递归的或者有左公因子，那么它一定不是LL(1)文法</em><br><br><strong>将非LL(1)文法转换为LL(1)文法</strong></p>
 <ul>
-<li>消除左公因子：
+<li><p>消除左公因子：</p>
 <ul>
-<li>A→αβ<sub>1</sub> |αβ<sub>2</sub> |…|αβ<sub>n</sub> <br>可以重写为<br> A→αA’ <br> A’→ β<sub>1</sub> |β<sub>2</sub> |…|β<sub>n</sub></li>
-</ul></li>
-<li>消除左递归：
+<li>A→αβ<sub>1</sub> |αβ<sub>2</sub> |…|αβ<sub>n</sub><br>  <br>可以重写为<br><br>  A→αA’ <br><br>  A’→ β<sub>1</sub> |β<sub>2</sub> |…|β<sub>n</sub></li>
+</ul>
+</li>
+<li><p>消除左递归：</p>
 <ul>
-<li>A→Aα<sub>1</sub> |Aα<sub>2</sub> |…|Aα<sub>m</sub> |β<sub>1</sub> |β<sub>2</sub> |…|β<sub>n</sub> <br>可以重写为<br>A→β<sub>1</sub>A’|β<sub>2</sub>A’|…|β<sub>n</sub>A’<br> A’→α<sub>1</sub>A’|α<sub>2</sub>A’|…|α<sub>m</sub>A’|ε</li>
-</ul></li>
-</ul></li>
-</ul></li>
-</ul></li>
-<li>解决：可预测的分析方法
+<li>A→Aα<sub>1</sub> |Aα<sub>2</sub> |…|Aα<sub>m</sub> |β<sub>1</sub> |β<sub>2</sub> |…|β<sub>n</sub><br>  <br>可以重写为<br>A→β<sub>1</sub>A’|β<sub>2</sub>A’|…|β<sub>n</sub>A’<br><br>  A’→α<sub>1</sub>A’|α<sub>2</sub>A’|…|α<sub>m</sub>A’|ε</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>解决：可预测的分析方法</p>
 <ul>
 <li>递归下降分析法：首先判断是否为LL(1)文法，然后构造递归下降分析器</li>
-<li>LL(1)分析法：
-<ol style="list-style-type: decimal">
+<li>LL(1)分析法：<ol>
 <li>首先构造LL(1)分析表，对每个M[A,a]，确定每个产生式A-&gt;α在表中的位置。对每个终结符 a ∈ FIRST(α)，把A-&gt;α加至M[A,a]中；若 ε ∈ FIRST(α)，则对任何 b ∈ FOLLOW(A) 把 A-&gt; α 加至M[A,b]中</li>
-<li>利用符号栈进行分析。将开始符号推入栈顶，当前输入字符为a，利用LL(1)分析表进行相应的操作<br> <img src="http://222.16.42.161/meol/data/convert/2019/4/22/dbb8598e-0317-4dbc-af17-14aae24a5e36_page-54" alt="操作流程" /></li>
-</ol></li>
-<li>错误恢复——恐慌模式：语法分析器忽略输入中的一些符号，直到输入中出现同步词法单元集合中的某个词法单元
-<ul>
+<li>利用符号栈进行分析。将开始符号推入栈顶，当前输入字符为a，利用LL(1)分析表进行相应的操作<br><br><img src="http://222.16.42.161/meol/data/convert/2019/4/22/dbb8598e-0317-4dbc-af17-14aae24a5e36_page-54" alt="操作流程"></li>
+</ol>
+</li>
+<li>错误恢复——恐慌模式：语法分析器忽略输入中的一些符号，直到输入中出现同步词法单元集合中的某个词法单元<ul>
 <li>常将FOLLOW(A)放到非终结符A的同步集合中</li>
 <li>较高层次的开始符号加入到较低构造的同步集合中去</li>
 <li>FIRST(A)</li>
 <li>默认使用推导出空串的产生式</li>
 <li>若栈顶的一个终结符不被匹配，则将该终结符弹出栈，并发出一个消息称已经插入了这个终结符</li>
-</ul></li>
-</ul></li>
-</ul></li>
-<li>自底向上：从用户代码开始，找到一个规约的方法使得其能回到开始符号
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>自底向上：从用户代码开始，找到一个规约的方法使得其能回到开始符号</p>
 <ul>
 <li>这个从左到右自底向上的分析相当于最右推导的逆运算，每一个最右推导得到的中间句型称为右句型</li>
 <li>短语、直接短语和句柄：以某非终结符为根的所有末端结点从左到右排列就是相对于该非终结符的一个短语；如果子树只有两代，该短语就是直接短语；句柄是最左端的直接短语，即需要马上进行规约的直接短语；</li>
 <li>前缀、活前缀：字的前缀指字的任意首部，如字abc的前缀有ε,a,ab,abc；活前缀指不含句柄之后的任何符号的前缀</li>
-<li>LR(K)分析法：L表示从左到右处理输入，R表示会产生一个最右推导，k表示需要向前看k个token &gt; LR(0) &lt; SLR(1) &lt; LR(1) &lt; 无二义文法
-<ol style="list-style-type: decimal">
-<li>构造LR分析表：先拓展文法，再根据所有项目构建DFA
-<ul>
-<li><p>若不存在一个项目集既含规约项目又含移进项目或者含有多个规约项目，则该文法是 <strong>LR(0)</strong> 的文法，若项目集I<sub>k</sub>属于移进项目且GO(I<sub>k</sub>,a)=I<sub>j</sub>，a为终结符，则置ACTION[k,a]为sj；若I<sub>k</sub>为规约项目，则所有a，ACTION[k,a]为rj（j表示第j个产生式）；若S'-&gt;S·属于I<sub>k</sub>，则置ACTION[k,#]为acc</p></li>
-<li><p>若有规约-移进冲突，使用 <strong>SLR(1)</strong> 解决冲突：假定该状态集移进项目的下一个终结符与规约项目的FOLLOW两两不相交（包括不得有两个#），则面临任何输入a都有唯一选择</p></li>
-<li><p>若FOLLOW集合相交，则使用 <strong>LR(1)</strong> 解决冲突：项目附带1个终结符，称为向前搜索字符串或展望串，利用这个展望串来进行规约，展望串通过下一个非终结符的FIRST集合或下一个终结符生成</p></li>
-</ul></li>
-</ol></li>
+<li><p>LR(K)分析法：L表示从左到右处理输入，R表示会产生一个最右推导，k表示需要向前看k个token</p>
+<blockquote>
+<p>LR(0) &lt; SLR(1) &lt; LR(1) &lt; 无二义文法</p>
+<ol>
+<li>构造LR分析表：先拓展文法，再根据所有项目构建DFA<ul>
+<li>若不存在一个项目集既含规约项目又含移进项目或者含有多个规约项目，则该文法是 <strong>LR(0)</strong> 的文法，若项目集I<sub>k</sub>属于移进项目且GO(I<sub>k</sub>,a)=I<sub>j</sub>，a为终结符，则置ACTION[k,a]为sj；若I<sub>k</sub>为规约项目，则所有a，ACTION[k,a]为rj（j表示第j个产生式）；若S’-&gt;S·属于I<sub>k</sub>，则置ACTION[k,#]为acc</li>
 </ul>
-<img src="http://m.qpic.cn/psb?/V10MalFd1CQ8f5/t7fGGNSQwI6ilXuKvYxO3OenEkkWQPaXHswSwRgeG14!/b/dE4BAAAAAAAA&amp;bo=gAc4BAAAAAADB5k!&amp;rf=viewer_4" title="fig:" alt="操作过程" /></li>
-</ul></li>
-</ol></li>
+</li>
 </ol>
-<h2 id="语法制导的翻译">语法制导的翻译</h2>
-<ol style="list-style-type: decimal">
-<li>语法制导定义（SDD）是一个上下文无关文法和属性及规则的结合 &gt; 一个没有副作用的SDD也称为属性文法
-<ol style="list-style-type: decimal">
-<li>属性的区分：
-<ul>
+</blockquote>
+<pre><code>  - 若有规约-移进冲突，使用 **SLR(1)** 解决冲突：假定该状态集移进项目的下一个终结符与规约项目的FOLLOW两两不相交（包括不得有两个#），则面临任何输入a都有唯一选择
+
+  - 若FOLLOW集合相交，则使用 **LR(1)** 解决冲突：项目附带1个终结符，称为向前搜索字符串或展望串，利用这个展望串来进行规约，展望串通过下一个非终结符的FIRST集合或下一个终结符生成
+</code></pre><p><img src="http://m.qpic.cn/psb?/V10MalFd1CQ8f5/t7fGGNSQwI6ilXuKvYxO3OenEkkWQPaXHswSwRgeG14!/b/dE4BAAAAAAAA&amp;bo=gAc4BAAAAAADB5k!&amp;rf=viewer_4" alt="操作过程"></p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+</li>
+</ol>
+<h2 id="语法制导的翻译"><a href="#语法制导的翻译" class="headerlink" title="语法制导的翻译"></a>语法制导的翻译</h2><ol>
+<li><p>语法制导定义（SDD）是一个上下文无关文法和属性及规则的结合</p>
+<blockquote>
+<p>一个没有副作用的SDD也称为属性文法</p>
+<ol>
+<li>属性的区分：<ul>
 <li>综合属性：根据右部候选式中的符号的属性计算左部被定义符号的综合属性，既根据子结点的属性和父节点自身的属性来计算父节点的综合属性</li>
 <li>继承属性：根据右部候选式中的符号的属性和左部被定义符号的属性计算右部候选式中的符号的继承属性，既根据父节点和兄弟结点的属性计算子节点的继承属性</li>
-</ul></li>
-<li>属性计算的三种方法：
+</ul>
+</li>
+</ol>
+</blockquote>
+<ol>
+<li><p>属性计算的三种方法：</p>
 <ul>
 <li>依赖图：依赖图为每个属性设置一个结点，若属性b依赖于属性c，则从属性c的结点有一条有向边连接到属性b的结点。首先构造有向图，若该有向图不存在环，则称该文法为良定义的</li>
 <li>树遍历算法：如果还有没被计算的属性，就遍历树，将所有能计算的属性都计算出来</li>
-<li>一遍扫描：使用mknode(),mkleaf()边构建抽象语法树边计算属性 <img src="http://m.qpic.cn/psb?/V10MalFd1CQ8f5/iC5t4PYvFH0.830g8x.fpIA9Po48NDWnOR9.tIrsWuQ!/b/dLYAAAAAAAAA&amp;bo=5gQKAgAAAAADB8g!&amp;rf=viewer_4" alt="示例" /></li>
-</ul></li>
-<li>属性文法分类：
+<li>一遍扫描：使用mknode(),mkleaf()边构建抽象语法树边计算属性<br><img src="http://m.qpic.cn/psb?/V10MalFd1CQ8f5/iC5t4PYvFH0.830g8x.fpIA9Po48NDWnOR9.tIrsWuQ!/b/dLYAAAAAAAAA&amp;bo=5gQKAgAAAAADB8g!&amp;rf=viewer_4" alt="示例">   </li>
+</ul>
+</li>
+<li><p>属性文法分类：</p>
 <ul>
 <li>S-属性文法：所有属性都是综合属性的属性文法</li>
-<li>L-属性文法：每个产生式每个属性或者是综合属性，或者这个继承属性只依赖于这个结点的左兄弟属性与父节点的继承属性 &gt; S-属性文法一定是L-属性文法</li>
-</ul></li>
-</ol></li>
-<li><p>一个显示了所有属性值的语法分析树称为注释语法分析树</p></li>
-<li>语法制导的翻译方案（SDT，翻译模式）：原来的语义规则只给出了属性计算的定义，没给出属性计算的次序，翻译模式把语义动作用花括号{}括起来，插入到产生式右部合适的位置上。如果既有综合属性又有继承属性，在建立翻译模式时就必须保证：
-<ol style="list-style-type: decimal">
+<li>L-属性文法：每个产生式每个属性或者是综合属性，或者这个继承属性只依赖于这个结点的左兄弟属性与父节点的继承属性<blockquote>
+<p>S-属性文法一定是L-属性文法</p>
+</blockquote>
+</li>
+</ul>
+</li>
+</ol>
+</li>
+<li><p>一个显示了所有属性值的语法分析树称为注释语法分析树</p>
+</li>
+<li><p>语法制导的翻译方案（SDT，翻译模式）：原来的语义规则只给出了属性计算的定义，没给出属性计算的次序，翻译模式把语义动作用花括号{}括起来，插入到产生式右部合适的位置上。如果既有综合属性又有继承属性，在建立翻译模式时就必须保证：</p>
+<ol>
 <li>产生式右边的符号的继承属性必须在这个符号以前的动作计算出来</li>
 <li>一个动作不能引用这个动作右边的符号的综合属性</li>
 <li>产生式左边的非终结符的综合属性只有在它所引用的所有属性都计算出来以后才能计算</li>
-</ol></li>
-<li>递归下降翻译器
-<ol style="list-style-type: decimal">
-<li>按照产生式右部从左到右，对于终结符、非终结符和语义动作，分别实现
-<ul>
-<li>对带有综合属性x的终结符X，把x的值存入为X.x设置的变量中。然后匹配X，读入下一个输入符号</li>
-<li>对每个非终结符B，产生一个右边带有函数调用的赋值语句c=B(b1,b2,...)，其中，b1...是为B的继承属性设置的变量，c是为B的综合属性设置的变量</li>
-<li>对于语义动作，把动作的代码抄进分析器中，用代表属性的变量来代替对属性的每一次引用</li>
-</ul></li>
-</ol></li>
 </ol>
-<h2 id="中间代码生成">中间代码生成</h2>
-<ol style="list-style-type: decimal">
-<li><p>DAG——一个用来表示具有公共子表达式的语法的有向无环图</p></li>
-<li>步骤：
-<ol style="list-style-type: decimal">
+</li>
+<li><p>递归下降翻译器</p>
+<ol>
+<li>按照产生式右部从左到右，对于终结符、非终结符和语义动作，分别实现<ul>
+<li>对带有综合属性x的终结符X，把x的值存入为X.x设置的变量中。然后匹配X，读入下一个输入符号</li>
+<li>对每个非终结符B，产生一个右边带有函数调用的赋值语句c=B(b1,b2,…)，其中，b1…是为B的继承属性设置的变量，c是为B的综合属性设置的变量</li>
+<li>对于语义动作，把动作的代码抄进分析器中，用代表属性的变量来代替对属性的每一次引用</li>
+</ul>
+</li>
+</ol>
+</li>
+</ol>
+<h2 id="中间代码生成"><a href="#中间代码生成" class="headerlink" title="中间代码生成"></a>中间代码生成</h2><ol>
+<li><p>DAG——一个用来表示具有公共子表达式的语法的有向无环图</p>
+</li>
+<li><p>步骤：</p>
+<ol>
 <li>中间代码生成</li>
 <li>生成某种形式的汇编代码而不是可执行的代码</li>
 <li>（可选）代码优化</li>
-</ol></li>
-<li>IR(Intermediate Representation)
+</ol>
+</li>
+<li><p>IR(Intermediate Representation)</p>
 <ul>
 <li>一种在翻译过程中用来表示源代码的数据结构，如抽象语法树</li>
-</ul></li>
-<li>中间代码(Intermediate Code)
+</ul>
+</li>
+<li><p>中间代码(Intermediate Code)</p>
 <ul>
 <li>用一种顺序形式来替代中间表示的更类似于目标代码的形式</li>
-<li>其中最流行的中间代码：三地址码（TAC）：
+<li><p>其中最流行的中间代码：三地址码（TAC）：</p>
 <ul>
 <li><p>三地址码示例：<figure class="image-bubble">
                 <div class="img-lightbox">
@@ -382,44 +419,53 @@
                     <img src="http://a4.qpic.cn/psb?/V10MalFd1CQ8f5/z6xrPJlY6uZvR8PtSn*PZ6FfKLc.urYMKEHgNBoshPQ!/m/dL8AAAAAAAAAnull&bo=1AXlAQAAAAADBxc!&rf=photolist&t=5" alt="三地址码示例" title="">
                 </div>
                 <div class="image-caption">三地址码示例</div>
-            </figure></p></li>
-<li>表示方法：三元组与四元组：
+            </figure></p>
+</li>
+<li><p>表示方法：三元组与四元组：</p>
 <ul>
 <li>四元组：运算符，2个操作数地址，1个结果地址</li>
 <li>三元组：运算符，2个操作数地址，指令本身用来存储临时变量</li>
-<li>优劣：三元组节省地址空间，并且不需要额外为临时变量命名，但是三元组在优化的时候位置会变化导致指令也需要相应变化，而四元组更适合优化</li>
-<li>间接三元式——三元式表+间接码表：三元式表存储操作，间接码表存储操作次序，这样优 化代码的时候只需要更改间接码表</li>
-</ul></li>
-</ul></li>
-</ul></li>
-<li><p>SSA——一种IR方便了代码优化</p></li>
-<li>控制流
+<li>优劣：三元组节省地址空间，并且不需要额外为临时变量命名，但是三元组在优化的时候位置会变化导致指令也需要相应变化，而四元组更适合优化 </li>
+<li>间接三元式——三元式表+间接码表：三元式表存储操作，间接码表存储操作次序，这样优化代码的时候只需要更改间接码表</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>SSA——一种IR方便了代码优化</p>
+</li>
+<li><p>控制流</p>
 <ul>
-<li>多遍扫描
+<li><p>多遍扫描</p>
 <ul>
 <li>建立语法树</li>
 <li>自上而下地计算继承属性</li>
 <li>自下而上计算综合属性生成代码</li>
-</ul></li>
-<li>一遍扫描
+</ul>
+</li>
+<li><p>一遍扫描</p>
 <ul>
-<li>约定：
-<ul>
+<li>约定：<ul>
 <li>(jnz,a,-,p) 表示if a goto p</li>
 <li>(jrop,x,y,p) 表示 if x rop y goto p</li>
 <li>(j,-,-,p) 表示 goto p</li>
-</ul></li>
+</ul>
+</li>
 <li>扩展文法加上一个ε产生式，用于存储下一个非终结符代码的起始位置</li>
 <li>对于E -&gt; id<sub>1</sub> relop id<sub>2</sub>，生成truelist与falselist链表，发射一个真跳转四元组与一个假跳转四元组</li>
 <li>规约则将进行回填</li>
-</ul></li>
-</ul></li>
-<li>代码优化的主要方法：
-<ol style="list-style-type: decimal">
+</ul>
+</li>
+</ul>
+</li>
+<li><p>代码优化的主要方法：</p>
+<ol>
 <li>将经常使用的值放在寄存器中</li>
 <li>减少不必要的操作，如将公共计算的代码结果保存起来</li>
 <li>用一些更廉价的方法实现某种耗时操作，如将递归转换为循环</li>
-</ol></li>
+</ol>
+</li>
 </ol>
 
         </div>
@@ -429,7 +475,7 @@
     <div class="content">
         
 <span class="post-time">
-    最后更新时间：<time datetime="2020-03-25T04:55:31.685Z" itemprop="dateUpdated">2020-03-25 12:55:31</time>
+    最后更新时间：<time datetime="2020-09-06T11:38:28.374Z" itemprop="dateUpdated">2020-09-06 19:38:28</time>
 </span><br>
 
 
@@ -513,9 +559,9 @@
 <nav class="post-nav flex-row flex-justify-between">
   
     <div class="waves-block waves-effect prev">
-      <a href="/2020/03/25/%E5%AD%97%E8%8A%82%E8%B7%B3%E5%8A%A8%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91%E5%AE%9E%E4%B9%A0%E7%94%9F%E9%9D%A2%E7%BB%8F/" id="post-prev" class="post-nav-link">
+      <a href="/2020/09/02/React-Hook%E4%B8%8B%E7%9A%84%E5%85%A8%E5%B1%80%E7%8A%B6%E6%80%81%E7%AE%A1%E7%90%86/" id="post-prev" class="post-nav-link">
         <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
-        <h4 class="title">字节跳动前端开发实习生面经</h4>
+        <h4 class="title">React Hook下的全局状态管理</h4>
       </a>
     </div>
   
@@ -767,5 +813,21 @@ MathJax.Hub.Queue(function() {
 
 
 
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<!-- <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
 </body>
 </html>

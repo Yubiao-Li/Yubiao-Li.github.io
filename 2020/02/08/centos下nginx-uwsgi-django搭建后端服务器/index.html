@@ -38,7 +38,8 @@
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;Yubiao-Li&#x2F;cloudimg&#x2F;master&#x2F;data&#x2F;20200208124151.png">
 <meta property="og:image" content="https:&#x2F;&#x2F;c3wsq5.coding-pages.com&#x2F;2bd6747ffa149a57ecf4c97f59d25372299ce9c03de749394b19535ac1e0137b.png">
-<meta property="og:updated_time" content="2020-05-25T04:11:31.378Z">
+<meta property="og:image" content="https:&#x2F;&#x2F;c3wsq5.coding-pages.com&#x2F;d8744ff5211537d6bf931315e167d16f51e5424696fedce064e9747ea8fc4945.png">
+<meta property="og:updated_time" content="2020-09-04T07:39:17.577Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;Yubiao-Li&#x2F;cloudimg&#x2F;master&#x2F;data&#x2F;20200208124151.png">
     
@@ -166,7 +167,7 @@
     <aside class="post-widget">
         <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
             <h4>TOC</h4>
-            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#背景"><span class="post-toc-number">1.</span> <span class="post-toc-text">背景</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#步骤"><span class="post-toc-number">2.</span> <span class="post-toc-text">步骤</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#后期运维"><span class="post-toc-number">3.</span> <span class="post-toc-text">后期运维</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#SSL证书"><span class="post-toc-number">4.</span> <span class="post-toc-text">SSL证书</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#原理"><span class="post-toc-number">4.1.</span> <span class="post-toc-text">原理</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#配置"><span class="post-toc-number">4.2.</span> <span class="post-toc-text">配置</span></a></li></ol></li></ol>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#背景"><span class="post-toc-number">1.</span> <span class="post-toc-text">背景</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#步骤"><span class="post-toc-number">2.</span> <span class="post-toc-text">步骤</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#后期运维"><span class="post-toc-number">3.</span> <span class="post-toc-text">后期运维</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#SSL证书"><span class="post-toc-number">4.</span> <span class="post-toc-text">SSL证书</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#原理"><span class="post-toc-number">4.1.</span> <span class="post-toc-text">原理</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#HTTPS中间人攻击"><span class="post-toc-number">4.2.</span> <span class="post-toc-text">HTTPS中间人攻击</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#配置"><span class="post-toc-number">4.3.</span> <span class="post-toc-text">配置</span></a></li></ol></li></ol>
         </nav>
     </aside>
 
@@ -264,6 +265,19 @@
 </ul>
 </li>
 </ol>
+<h3 id="HTTPS中间人攻击"><a href="#HTTPS中间人攻击" class="headerlink" title="HTTPS中间人攻击"></a>HTTPS中间人攻击</h3><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://c3wsq5.coding-pages.com/d8744ff5211537d6bf931315e167d16f51e5424696fedce064e9747ea8fc4945.png" alt="图4" title="">
+                </div>
+                <div class="image-caption">图4</div>
+            </figure>  
+<ul>
+<li><p>中间人截取客户端发送给服务器的请求，然后伪装成客户端与服务器进行通信；将服务器返回给客户端的内容发送给客户端，伪装成服务器与客户端进行通信。 通过这样的手段，便可以获取客户端和服务器之间通信的所有内容。 </p>
+</li>
+<li><p>使用中间人攻击手段，必须要让客户端信任中间人的证书，如果客户端不信任，则这种攻击手段也无法发挥作用。</p>
+</li>
+</ul>
 <h3 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h3><ul>
 <li><p>在nginx.conf中添加如下规则即可</p>
   <figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">server &#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">    listen         <span class="number">443</span> ssl;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">    server_name  domain.com;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line">    charset <span class="string">'utf-8'</span>;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">7</span></pre></td><td class="code"><pre><span class="line">    <span class="comment">#证书文件</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">8</span></pre></td><td class="code"><pre><span class="line">    ssl_certificate     xxx.crt;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">9</span></pre></td><td class="code"><pre><span class="line">    <span class="comment">#私钥文件</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">10</span></pre></td><td class="code"><pre><span class="line">    ssl_certificate_key xxx.key;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">11</span></pre></td><td class="code"><pre><span class="line">    ssl_protocols       TLSv1 TLSv1<span class="number">.1</span> TLSv1<span class="number">.2</span>;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">12</span></pre></td><td class="code"><pre><span class="line">    ssl_ciphers         HIGH:!aNULL:!MD5;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">13</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">14</span></pre></td><td class="code"><pre><span class="line">    ...</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">15</span></pre></td><td class="code"><pre><span class="line">&#125;</span></pre></td></tr></table></figure>
@@ -277,7 +291,7 @@
     <div class="content">
         
 <span class="post-time">
-    最后更新时间：<time datetime="2020-05-25T04:11:31.378Z" itemprop="dateUpdated">2020-05-25 12:11:31</time>
+    最后更新时间：<time datetime="2020-09-04T07:39:17.577Z" itemprop="dateUpdated">2020-09-04 15:39:17</time>
 </span><br>
 
 
@@ -615,5 +629,21 @@ MathJax.Hub.Queue(function() {
 
 
 
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<!-- <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
 </body>
 </html>

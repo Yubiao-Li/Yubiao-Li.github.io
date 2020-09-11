@@ -28,13 +28,13 @@
     
     
     <meta name="keywords" content="复习笔记">
-    <meta name="description" content="图形系统和模型 图形流水线  计算机图形学分为两个阶段：  从模型到屏幕空间的几何建模 在屏幕空间中创建所需的图像   图形流水线分为两个部分 Modeling Pipeline">
+    <meta name="description" content="图形系统和模型图形流水线 计算机图形学分为两个阶段：  从模型到屏幕空间的几何建模  在屏幕空间中创建所需的图像     图形流水线分为两个部分 Modeling Pipeline                                                                                                            3D">
 <meta name="keywords" content="复习笔记">
 <meta property="og:type" content="article">
 <meta property="og:title" content="2019-SCUT-计算机图形学复习提纲">
 <meta property="og:url" content="http:&#x2F;&#x2F;yubiao-li.gitee.io&#x2F;2019&#x2F;12&#x2F;20&#x2F;2019-SCUT-%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6%E5%A4%8D%E4%B9%A0%E6%8F%90%E7%BA%B2&#x2F;index.html">
 <meta property="og:site_name" content="LYB的部落格">
-<meta property="og:description" content="图形系统和模型 图形流水线  计算机图形学分为两个阶段：  从模型到屏幕空间的几何建模 在屏幕空间中创建所需的图像   图形流水线分为两个部分 Modeling Pipeline">
+<meta property="og:description" content="图形系统和模型图形流水线 计算机图形学分为两个阶段：  从模型到屏幕空间的几何建模  在屏幕空间中创建所需的图像     图形流水线分为两个部分 Modeling Pipeline                                                                                                            3D">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;Yubiao-Li&#x2F;cloudimg&#x2F;master&#x2F;data&#x2F;20191220182908.png">
 <meta property="og:image" content="https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;Yubiao-Li&#x2F;cloudimg&#x2F;master&#x2F;data&#x2F;20191220184106.png">
@@ -191,7 +191,7 @@
     <aside class="post-widget">
         <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
             <h4>TOC</h4>
-            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#图形系统和模型"><span class="post-toc-number">1.</span> <span class="post-toc-text">图形系统和模型</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#图形流水线"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">图形流水线</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#modeling-pipeline"><span class="post-toc-number">1.1.1.</span> <span class="post-toc-text">Modeling Pipeline</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#rendering-pipeline"><span class="post-toc-number">1.1.2.</span> <span class="post-toc-text">Rendering Pipeline</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#三色定理"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">三色定理</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#图形学编程"><span class="post-toc-number">2.</span> <span class="post-toc-text">图形学编程</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#opengl-介绍"><span class="post-toc-number">2.1.</span> <span class="post-toc-text">OpenGL 介绍</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#glslopengl-shading-language"><span class="post-toc-number">2.2.</span> <span class="post-toc-text">GLSL(OpenGL Shading Language)</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#opengl图元"><span class="post-toc-number">2.3.</span> <span class="post-toc-text">OpenGL图元</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#vaovertex-array-object"><span class="post-toc-number">2.4.</span> <span class="post-toc-text">VAO(Vertex Array Object)</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#vbovertex-buffer-object"><span class="post-toc-number">2.5.</span> <span class="post-toc-text">VBO(Vertex Buffer Object)</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#几何对象和变换"><span class="post-toc-number">3.</span> <span class="post-toc-text">几何对象和变换</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#基本变换"><span class="post-toc-number">3.1.</span> <span class="post-toc-text">基本变换</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#齐次坐标"><span class="post-toc-number">3.1.1.</span> <span class="post-toc-text">齐次坐标</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#平移"><span class="post-toc-number">3.1.2.</span> <span class="post-toc-text">平移</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#缩放"><span class="post-toc-number">3.1.3.</span> <span class="post-toc-text">缩放</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#旋转"><span class="post-toc-number">3.1.4.</span> <span class="post-toc-text">旋转</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#错切变换"><span class="post-toc-number">3.1.5.</span> <span class="post-toc-text">错切变换</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#投影和视见变换"><span class="post-toc-number">4.</span> <span class="post-toc-text">投影和视见变换</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#投影矩阵"><span class="post-toc-number">4.1.</span> <span class="post-toc-text">投影矩阵</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#投影中心在原点"><span class="post-toc-number">4.1.1.</span> <span class="post-toc-text">投影中心在原点</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#投影中心不在原点"><span class="post-toc-number">4.1.2.</span> <span class="post-toc-text">投影中心不在原点</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#投影规范化"><span class="post-toc-number">4.2.</span> <span class="post-toc-text">投影规范化</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#平行投影"><span class="post-toc-number">4.2.1.</span> <span class="post-toc-text">平行投影</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#透视投影"><span class="post-toc-number">4.2.2.</span> <span class="post-toc-text">透视投影</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#视见变换"><span class="post-toc-number">4.3.</span> <span class="post-toc-text">视见变换</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#视口"><span class="post-toc-number">4.4.</span> <span class="post-toc-text">视口</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#ctmcurrent-transformation-matrix"><span class="post-toc-number">4.5.</span> <span class="post-toc-text">CTM（Current Transformation Matrix）</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#光照和着色"><span class="post-toc-number">5.</span> <span class="post-toc-text">光照和着色</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#光照概念"><span class="post-toc-number">5.1.</span> <span class="post-toc-text">光照概念</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#光照模型"><span class="post-toc-number">5.2.</span> <span class="post-toc-text">光照模型</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#表面定向与材质"><span class="post-toc-number">5.3.</span> <span class="post-toc-text">表面定向与材质</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#法向量"><span class="post-toc-number">5.3.1.</span> <span class="post-toc-text">法向量</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#光的属性"><span class="post-toc-number">5.4.</span> <span class="post-toc-text">光的属性</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#光照着色"><span class="post-toc-number">5.5.</span> <span class="post-toc-text">光照着色</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#constantflat-shading"><span class="post-toc-number">5.5.1.</span> <span class="post-toc-text">Constant(Flat) Shading</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#gouraud-smooth-shading"><span class="post-toc-number">5.5.2.</span> <span class="post-toc-text">Gouraud (Smooth) Shading</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#phong-shading"><span class="post-toc-number">5.5.3.</span> <span class="post-toc-text">Phong Shading</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#全局光照"><span class="post-toc-number">5.6.</span> <span class="post-toc-text">全局光照</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#渲染从顶点到片段"><span class="post-toc-number">6.</span> <span class="post-toc-text">渲染——从顶点到片段</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#线段裁剪算法"><span class="post-toc-number">6.1.</span> <span class="post-toc-text">线段裁剪算法</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#cohen-sutherland-线段裁剪算法"><span class="post-toc-number">6.1.1.</span> <span class="post-toc-text">Cohen-Sutherland 线段裁剪算法</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#梁友栋-barsky-线段裁剪算法"><span class="post-toc-number">6.1.2.</span> <span class="post-toc-text">梁友栋-Barsky 线段裁剪算法</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#多边形填充区域裁剪"><span class="post-toc-number">6.1.3.</span> <span class="post-toc-text">多边形填充区域裁剪</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#光栅化"><span class="post-toc-number">6.2.</span> <span class="post-toc-text">光栅化</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#dda-算法"><span class="post-toc-number">6.2.1.</span> <span class="post-toc-text">DDA 算法</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#行扫描转换bresenham-algorithm"><span class="post-toc-number">6.2.2.</span> <span class="post-toc-text">行扫描转换——Bresenham Algorithm</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#扫描转换多边形扫描线填充算法"><span class="post-toc-number">6.2.3.</span> <span class="post-toc-text">扫描转换多边形——扫描线填充算法</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#隐藏面消除"><span class="post-toc-number">6.3.</span> <span class="post-toc-text">隐藏面消除</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#z-buffer-算法"><span class="post-toc-number">6.3.1.</span> <span class="post-toc-text">z-Buffer 算法</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#画家算法"><span class="post-toc-number">6.3.2.</span> <span class="post-toc-text">画家算法</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#反走样"><span class="post-toc-number">6.4.</span> <span class="post-toc-text">反走样</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#多边形混叠"><span class="post-toc-number">6.5.</span> <span class="post-toc-text">多边形混叠</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#离散技术"><span class="post-toc-number">7.</span> <span class="post-toc-text">离散技术</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#写缓存模式"><span class="post-toc-number">7.1.</span> <span class="post-toc-text">写缓存模式</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#纹理贴图"><span class="post-toc-number">7.2.</span> <span class="post-toc-text">纹理贴图</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#层级建模方法"><span class="post-toc-number">8.</span> <span class="post-toc-text">层级建模方法</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#全局光照-1"><span class="post-toc-number">9.</span> <span class="post-toc-text">全局光照</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#射线追踪"><span class="post-toc-number">9.1.</span> <span class="post-toc-text">射线追踪</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#辐射度算法"><span class="post-toc-number">9.2.</span> <span class="post-toc-text">辐射度算法</span></a></li></ol></li></ol>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#图形系统和模型"><span class="post-toc-number">1.</span> <span class="post-toc-text">图形系统和模型</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#图形流水线"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">图形流水线</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Modeling-Pipeline"><span class="post-toc-number">1.1.1.</span> <span class="post-toc-text">Modeling Pipeline</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Rendering-Pipeline"><span class="post-toc-number">1.1.2.</span> <span class="post-toc-text">Rendering Pipeline</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#三色定理"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">三色定理</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#图形学编程"><span class="post-toc-number">2.</span> <span class="post-toc-text">图形学编程</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#OpenGL-介绍"><span class="post-toc-number">2.1.</span> <span class="post-toc-text">OpenGL 介绍</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#GLSL-OpenGL-Shading-Language"><span class="post-toc-number">2.2.</span> <span class="post-toc-text">GLSL(OpenGL Shading Language)</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#OpenGL图元"><span class="post-toc-number">2.3.</span> <span class="post-toc-text">OpenGL图元</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#VAO-Vertex-Array-Object"><span class="post-toc-number">2.4.</span> <span class="post-toc-text">VAO(Vertex Array Object)</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#VBO-Vertex-Buffer-Object"><span class="post-toc-number">2.5.</span> <span class="post-toc-text">VBO(Vertex Buffer Object)</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#几何对象和变换"><span class="post-toc-number">3.</span> <span class="post-toc-text">几何对象和变换</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#基本变换"><span class="post-toc-number">3.1.</span> <span class="post-toc-text">基本变换</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#齐次坐标"><span class="post-toc-number">3.1.1.</span> <span class="post-toc-text">齐次坐标</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#平移"><span class="post-toc-number">3.1.2.</span> <span class="post-toc-text">平移</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#缩放"><span class="post-toc-number">3.1.3.</span> <span class="post-toc-text">缩放</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#旋转"><span class="post-toc-number">3.1.4.</span> <span class="post-toc-text">旋转</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#错切变换"><span class="post-toc-number">3.1.5.</span> <span class="post-toc-text">错切变换</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#投影和视见变换"><span class="post-toc-number">4.</span> <span class="post-toc-text">投影和视见变换</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#投影矩阵"><span class="post-toc-number">4.1.</span> <span class="post-toc-text">投影矩阵</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#投影中心在原点"><span class="post-toc-number">4.1.1.</span> <span class="post-toc-text">投影中心在原点</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#投影中心不在原点"><span class="post-toc-number">4.1.2.</span> <span class="post-toc-text">投影中心不在原点</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#投影规范化"><span class="post-toc-number">4.2.</span> <span class="post-toc-text">投影规范化</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#平行投影"><span class="post-toc-number">4.2.1.</span> <span class="post-toc-text">平行投影</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#透视投影"><span class="post-toc-number">4.2.2.</span> <span class="post-toc-text">透视投影</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#视见变换"><span class="post-toc-number">4.3.</span> <span class="post-toc-text">视见变换</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#视口"><span class="post-toc-number">4.4.</span> <span class="post-toc-text">视口</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#CTM（Current-Transformation-Matrix）"><span class="post-toc-number">4.5.</span> <span class="post-toc-text">CTM（Current Transformation Matrix）</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#光照和着色"><span class="post-toc-number">5.</span> <span class="post-toc-text">光照和着色</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#光照概念"><span class="post-toc-number">5.1.</span> <span class="post-toc-text">光照概念</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#光照模型"><span class="post-toc-number">5.2.</span> <span class="post-toc-text">光照模型</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#表面定向与材质"><span class="post-toc-number">5.3.</span> <span class="post-toc-text">表面定向与材质</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#法向量"><span class="post-toc-number">5.3.1.</span> <span class="post-toc-text">法向量</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#光的属性"><span class="post-toc-number">5.4.</span> <span class="post-toc-text">光的属性</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#光照着色"><span class="post-toc-number">5.5.</span> <span class="post-toc-text">光照着色</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Constant-Flat-Shading"><span class="post-toc-number">5.5.1.</span> <span class="post-toc-text">Constant(Flat) Shading</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Gouraud-Smooth-Shading"><span class="post-toc-number">5.5.2.</span> <span class="post-toc-text">Gouraud (Smooth) Shading</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Phong-Shading"><span class="post-toc-number">5.5.3.</span> <span class="post-toc-text">Phong Shading</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#全局光照"><span class="post-toc-number">5.6.</span> <span class="post-toc-text">全局光照</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#渲染——从顶点到片段"><span class="post-toc-number">6.</span> <span class="post-toc-text">渲染——从顶点到片段</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#线段裁剪算法"><span class="post-toc-number">6.1.</span> <span class="post-toc-text">线段裁剪算法</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Cohen-Sutherland-线段裁剪算法"><span class="post-toc-number">6.1.1.</span> <span class="post-toc-text">Cohen-Sutherland 线段裁剪算法</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#梁友栋-Barsky-线段裁剪算法"><span class="post-toc-number">6.1.2.</span> <span class="post-toc-text">梁友栋-Barsky 线段裁剪算法</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#多边形填充区域裁剪"><span class="post-toc-number">6.1.3.</span> <span class="post-toc-text">多边形填充区域裁剪</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#光栅化"><span class="post-toc-number">6.2.</span> <span class="post-toc-text">光栅化</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#DDA-算法"><span class="post-toc-number">6.2.1.</span> <span class="post-toc-text">DDA 算法</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#行扫描转换——Bresenham-Algorithm"><span class="post-toc-number">6.2.2.</span> <span class="post-toc-text">行扫描转换——Bresenham Algorithm</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#扫描转换多边形——扫描线填充算法"><span class="post-toc-number">6.2.3.</span> <span class="post-toc-text">扫描转换多边形——扫描线填充算法</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#隐藏面消除"><span class="post-toc-number">6.3.</span> <span class="post-toc-text">隐藏面消除</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#z-Buffer-算法"><span class="post-toc-number">6.3.1.</span> <span class="post-toc-text">z-Buffer 算法</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#画家算法"><span class="post-toc-number">6.3.2.</span> <span class="post-toc-text">画家算法</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#反走样"><span class="post-toc-number">6.4.</span> <span class="post-toc-text">反走样</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#多边形混叠"><span class="post-toc-number">6.5.</span> <span class="post-toc-text">多边形混叠</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#离散技术"><span class="post-toc-number">7.</span> <span class="post-toc-text">离散技术</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#写缓存模式"><span class="post-toc-number">7.1.</span> <span class="post-toc-text">写缓存模式</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#纹理贴图"><span class="post-toc-number">7.2.</span> <span class="post-toc-text">纹理贴图</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#层级建模方法"><span class="post-toc-number">8.</span> <span class="post-toc-text">层级建模方法</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#全局光照-1"><span class="post-toc-number">9.</span> <span class="post-toc-text">全局光照</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#射线追踪"><span class="post-toc-number">9.1.</span> <span class="post-toc-text">射线追踪</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#辐射度算法"><span class="post-toc-number">9.2.</span> <span class="post-toc-text">辐射度算法</span></a></li></ol></li></ol>
         </nav>
     </aside>
 
@@ -215,18 +215,18 @@
 
         </div>
         <div class="post-content" id="post-content" itemprop="postContent">
-            <h2 id="图形系统和模型">图形系统和模型</h2>
-<h3 id="图形流水线">图形流水线</h3>
-<ul>
-<li>计算机图形学分为两个阶段：
-<ol style="list-style-type: decimal">
-<li><p>从模型到屏幕空间的几何建模</p></li>
-<li><p>在屏幕空间中创建所需的图像</p></li>
-</ol></li>
+            <h2 id="图形系统和模型"><a href="#图形系统和模型" class="headerlink" title="图形系统和模型"></a>图形系统和模型</h2><h3 id="图形流水线"><a href="#图形流水线" class="headerlink" title="图形流水线"></a>图形流水线</h3><ul>
+<li><p>计算机图形学分为两个阶段：</p>
+<ol>
+<li><p>从模型到屏幕空间的几何建模</p>
+</li>
+<li><p>在屏幕空间中创建所需的图像</p>
+</li>
+</ol>
+</li>
 </ul>
 <p>图形流水线分为两个部分</p>
-<h4 id="modeling-pipeline">Modeling Pipeline</h4>
-<figure class="image-bubble">
+<h4 id="Modeling-Pipeline"><a href="#Modeling-Pipeline" class="headerlink" title="Modeling Pipeline"></a>Modeling Pipeline</h4><figure class="image-bubble">
                 <div class="img-lightbox">
                     <div class="overlay"></div>
                     <img src="https://raw.githubusercontent.com/Yubiao-Li/cloudimg/master/data/20191220182908.png" alt="" title="">
@@ -234,47 +234,48 @@
                 <div class="image-caption"></div>
             </figure>
 <ul>
-<li>3D Model Coordinates
+<li><p>3D Model Coordinates</p>
 <ul>
 <li>您可以定义模型的各个部分，无论它们的坐标是什么</li>
 <li>您使用建模转换将模型的各个部分放在一起，然后将模型放置在一个世界空间中</li>
-</ul></li>
-<li>3D World Coordinates
+</ul>
+</li>
+<li><p>3D World Coordinates</p>
 <ul>
 <li>场景的所有部分都被放在同一个3D坐标系统中</li>
 <li>场景是独立于观察者的</li>
-</ul></li>
-<li>3D Eye Coordinate System
+</ul>
+</li>
+<li><p>3D Eye Coordinate System</p>
 <ul>
 <li>当有一个观察者与一个观察者上下文，这个场景就成为图像</li>
 <li><p>放置在世界空间的一个观察者（或摄像机）拥有一个位置与方向</p>
-<div class="figure">
-<img src="https://raw.githubusercontent.com/Yubiao-Li/cloudimg/master/data/20191220184106.png" />
-
-</div></li>
-</ul></li>
-<li>2D Eye Coordinates
+<p>  <img src="https://raw.githubusercontent.com/Yubiao-Li/cloudimg/master/data/20191220184106.png" alt=""></p>
+</li>
+</ul>
+</li>
+<li><p>2D Eye Coordinates</p>
 <ul>
 <li><p>透视投影与正交投影</p>
-<div class="figure">
-<img src="https://raw.githubusercontent.com/Yubiao-Li/cloudimg/master/data/20191220184248.png" />
-
-</div>
-<div class="figure">
-<img src="https://raw.githubusercontent.com/Yubiao-Li/cloudimg/master/data/20191220184315.png" />
-
-</div></li>
-<li><p>将每个点投影到平面上对应的点使得场景被转换到这个坐标系</p></li>
-<li><p>在这个视图中深度信息会丢失</p></li>
-</ul></li>
-<li>2D Screen Coordinates
-<ul>
-<li><p>2D eye coordinates 被放缩到屏幕维度</p></li>
-<li><p>产生的实际坐标值被截断为屏幕上像素地址匹配的整数坐标</p></li>
-</ul></li>
+<p>  <img src="https://raw.githubusercontent.com/Yubiao-Li/cloudimg/master/data/20191220184248.png" alt=""></p>
+<p>  <img src="https://raw.githubusercontent.com/Yubiao-Li/cloudimg/master/data/20191220184315.png" alt=""></p>
+</li>
+<li><p>将每个点投影到平面上对应的点使得场景被转换到这个坐标系</p>
+</li>
+<li><p>在这个视图中深度信息会丢失</p>
+</li>
 </ul>
-<h4 id="rendering-pipeline">Rendering Pipeline</h4>
-<blockquote>
+</li>
+<li><p>2D Screen Coordinates</p>
+<ul>
+<li><p>2D eye coordinates 被放缩到屏幕维度</p>
+</li>
+<li><p>产生的实际坐标值被截断为屏幕上像素地址匹配的整数坐标</p>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="Rendering-Pipeline"><a href="#Rendering-Pipeline" class="headerlink" title="Rendering Pipeline"></a>Rendering Pipeline</h4><blockquote>
 <p>The modeling pipeline 只是在不同的空间映射顶点，所有顶点最终经过处理，在帧缓冲中形成一个图像</p>
 </blockquote>
 <figure class="image-bubble">
@@ -284,70 +285,67 @@
                 </div>
                 <div class="image-caption"></div>
             </figure>
-<h3 id="三色定理">三色定理</h3>
-<ul>
-<li>人类视觉系统有两种传感器
+<h3 id="三色定理"><a href="#三色定理" class="headerlink" title="三色定理"></a>三色定理</h3><ul>
+<li><p>人类视觉系统有两种传感器</p>
 <ul>
 <li>杆状细胞（Rods）：单色，夜视，感知亮度</li>
 <li>锥状细胞（Cones）：颜色敏感</li>
-</ul></li>
-<li><p>人眼对红、绿、蓝最为敏感，人的眼睛像一个三色接收器的体系，大多数的颜色可以通过红、绿、蓝三色按照不同的比例合成产生。同样，绝大多数单色光也可以分解成红、绿、蓝三种色光，这是色度学的最基本的原理，也称三原色原理</p></li>
-<li><p>屏幕是一个发射显示器，而不是反射</p></li>
 </ul>
-<h2 id="图形学编程">图形学编程</h2>
-<h3 id="opengl-介绍"><a href="https://learnopengl-cn.github.io/" target="_blank" rel="noopener">OpenGL</a> 介绍</h3>
-<ul>
-<li>OpenGL是一个状态机，它的函数有两种类型
-<ul>
+</li>
+<li><p>人眼对红、绿、蓝最为敏感，人的眼睛像一个三色接收器的体系，大多数的颜色可以通过红、绿、蓝三色按照不同的比例合成产生。同样，绝大多数单色光也可以分解成红、绿、蓝三种色光，这是色度学的最基本的原理，也称三原色原理</p>
+</li>
+<li><p>屏幕是一个发射显示器，而不是反射</p>
+</li>
+</ul>
+<h2 id="图形学编程"><a href="#图形学编程" class="headerlink" title="图形学编程"></a>图形学编程</h2><h3 id="OpenGL-介绍"><a href="#OpenGL-介绍" class="headerlink" title="OpenGL 介绍"></a><a href="https://learnopengl-cn.github.io/" target="_blank" rel="noopener">OpenGL</a> 介绍</h3><ul>
+<li>OpenGL是一个状态机，它的函数有两种类型<ul>
 <li>图元生成</li>
 <li>状态改变</li>
-</ul></li>
 </ul>
-<h3 id="glslopengl-shading-language">GLSL(OpenGL Shading Language)</h3>
-<ul>
+</li>
+</ul>
+<h3 id="GLSL-OpenGL-Shading-Language"><a href="#GLSL-OpenGL-Shading-Language" class="headerlink" title="GLSL(OpenGL Shading Language)"></a>GLSL(OpenGL Shading Language)</h3><ul>
 <li>GLSL是一种类C风格的着色器语言</li>
 </ul>
-<h3 id="opengl图元">OpenGL图元</h3>
-<figure class="image-bubble">
+<h3 id="OpenGL图元"><a href="#OpenGL图元" class="headerlink" title="OpenGL图元"></a>OpenGL图元</h3><figure class="image-bubble">
                 <div class="img-lightbox">
                     <div class="overlay"></div>
                     <img src="https://raw.githubusercontent.com/Yubiao-Li/cloudimg/master/data/20191223101912.png" alt="" title="">
                 </div>
                 <div class="image-caption"></div>
             </figure>
-<h3 id="vaovertex-array-object">VAO(Vertex Array Object)</h3>
-<ul>
+<h3 id="VAO-Vertex-Array-Object"><a href="#VAO-Vertex-Array-Object" class="headerlink" title="VAO(Vertex Array Object)"></a>VAO(Vertex Array Object)</h3><ul>
 <li>绑定了所有需要的顶点数据（位置，颜色。。。）</li>
 </ul>
-<h3 id="vbovertex-buffer-object">VBO(Vertex Buffer Object)</h3>
-<ul>
+<h3 id="VBO-Vertex-Buffer-Object"><a href="#VBO-Vertex-Buffer-Object" class="headerlink" title="VBO(Vertex Buffer Object)"></a>VBO(Vertex Buffer Object)</h3><ul>
 <li>缓冲对象让我们可以一次性传输大量数据到GPU</li>
 </ul>
-<h2 id="几何对象和变换">几何对象和变换</h2>
-<ul>
-<li><p>反射向量 <img src="https://img-blog.csdn.net/20180307124330611?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQveWluaHVuMjAxMg==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" /></p></li>
-<li><p>平面方程 <span class="math display">\[(A,B,C)\cdot (x-x_0,y-y_0,z-z_0) = 0 \]</span></p>
-<p><span class="math display">\[ Ax + By + Cz + D = 0 \]</span></p></li>
-<li>碰撞检测算法
-<ol style="list-style-type: decimal">
-<li><p>比较两个包围球或者包围盒：两个球心距离小于两个半径的和，则可能碰撞</p></li>
-<li><p>可能碰撞时，一个物体的每个三角形与另一个包围体比较，假设是包围球：比较三角形的每个顶点，如果顶点与球心距离小于三角形最长边 + 球的半径，则可能碰撞；或者比较三角形外接圆与包围球，如果外接圆心与球心的距离小于外接圆半径 + 球的半径，则可能碰撞</p></li>
-<li><p>比较两个三角形是否碰撞：一个三角形的每个顶点是否在另一个三角形平面的一边，即<span class="math inline">\(Ax + By + Cz + D &gt; 0\)</span> 或 <span class="math inline">\(Ax + By + Cz + D &lt; 0\)</span>，如果在一边则不会碰撞，否则可能发生碰撞</p></li>
-<li><p>判断一个三角形是否与另一个三角形相交：一个三角形的边<span class="math inline">\(Q_0Q_1\)</span>与另一个三角形平面的交点Q是否在另一个三角形<span class="math inline">\(P_0P_1P_2\)</span>里面，即以下三个不等式同时成立 <span class="math display">\[ N \cdot ((P1-P0) × (Q-P0)) &gt; 0 \]</span></p>
-<p><span class="math display">\[ N \cdot ((P2-P1) × (Q-P1)) &gt; 0 \]</span></p>
-<p><span class="math display">\[ N \cdot ((P0-P2) × (Q-P2)) &gt; 0 \]</span> 则Q在三角形<span class="math inline">\(P_0P_1P_2\)</span>里面</p></li>
-</ol></li>
+<h2 id="几何对象和变换"><a href="#几何对象和变换" class="headerlink" title="几何对象和变换"></a>几何对象和变换</h2><ul>
+<li><p>反射向量<br>  <img src="https://img-blog.csdn.net/20180307124330611?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQveWluaHVuMjAxMg==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt=""></p>
+</li>
+<li><p>平面方程</p>
+<script type="math/tex; mode=display">(A,B,C)\cdot (x-x_0,y-y_0,z-z_0) = 0</script><script type="math/tex; mode=display">Ax + By + Cz + D = 0</script></li>
+<li><p>碰撞检测算法</p>
+<ol>
+<li><p>比较两个包围球或者包围盒：两个球心距离小于两个半径的和，则可能碰撞</p>
+</li>
+<li><p>可能碰撞时，一个物体的每个三角形与另一个包围体比较，假设是包围球：比较三角形的每个顶点，如果顶点与球心距离小于三角形最长边 + 球的半径，则可能碰撞；或者比较三角形外接圆与包围球，如果外接圆心与球心的距离小于外接圆半径 + 球的半径，则可能碰撞</p>
+</li>
+<li><p>比较两个三角形是否碰撞：一个三角形的每个顶点是否在另一个三角形平面的一边，即$Ax + By + Cz + D &gt; 0$ 或 $Ax + By + Cz + D &lt; 0$，如果在一边则不会碰撞，否则可能发生碰撞</p>
+</li>
+<li><p>判断一个三角形是否与另一个三角形相交：一个三角形的边$Q_0Q_1$与另一个三角形平面的交点Q是否在另一个三角形$P_0P_1P_2$里面，即以下三个不等式同时成立 </p>
+<script type="math/tex; mode=display">N \cdot ((P1-P0) × (Q-P0)) > 0</script><script type="math/tex; mode=display">N \cdot ((P2-P1) × (Q-P1)) > 0</script><script type="math/tex; mode=display">N \cdot ((P0-P2) × (Q-P2)) > 0</script><p>则Q在三角形$P_0P_1P_2$里面</p>
+</li>
+</ol>
+</li>
 </ul>
-<h3 id="基本变换">基本变换</h3>
-<h4 id="齐次坐标">齐次坐标</h4>
-<blockquote>
-<p>我们使用齐次坐标来将所有的转换表示为矩阵，并允许它们很容易地组合在一起：<span class="math inline">\(P&#39; = (M3*(M2 *(M1 *P)))\)</span></p>
+<h3 id="基本变换"><a href="#基本变换" class="headerlink" title="基本变换"></a>基本变换</h3><h4 id="齐次坐标"><a href="#齐次坐标" class="headerlink" title="齐次坐标"></a>齐次坐标</h4><blockquote>
+<p>我们使用齐次坐标来将所有的转换表示为矩阵，并允许它们很容易地组合在一起：$P’ = (M3<em>(M2 </em>(M1 *P)))$</p>
 </blockquote>
 <ul>
-<li>在齐次坐标，一个3D点可以表示为$ P = (x,y,z,1)^$</li>
+<li>在齐次坐标，一个3D点可以表示为$ P = (x,y,z,1)^\top $</li>
 </ul>
-<h4 id="平移">平移</h4>
-<figure class="image-bubble">
+<h4 id="平移"><a href="#平移" class="headerlink" title="平移"></a>平移</h4><figure class="image-bubble">
                 <div class="img-lightbox">
                     <div class="overlay"></div>
                     <img src="https://raw.githubusercontent.com/Yubiao-Li/cloudimg/master/data/20191223142009.png" alt="" title="">
@@ -357,8 +355,7 @@
 <ul>
 <li>逆矩阵： $T^{-1}(d_x, d_y, d_z) = T(-d_x, -d_y, -d_z) $</li>
 </ul>
-<h4 id="缩放">缩放</h4>
-<figure class="image-bubble">
+<h4 id="缩放"><a href="#缩放" class="headerlink" title="缩放"></a>缩放</h4><figure class="image-bubble">
                 <div class="img-lightbox">
                     <div class="overlay"></div>
                     <img src="https://raw.githubusercontent.com/Yubiao-Li/cloudimg/master/data/20191223142155.png" alt="" title="">
@@ -366,10 +363,9 @@
                 <div class="image-caption"></div>
             </figure>
 <ul>
-<li>逆矩阵：<span class="math inline">\(S^{-1}(s_x, s_y, s_z)= S(1/s_x, 1/s_y, 1/s_z)\)</span></li>
+<li>逆矩阵：$S^{-1}(s_x, s_y, s_z)= S(1/s_x, 1/s_y, 1/s_z)$</li>
 </ul>
-<h4 id="旋转">旋转</h4>
-<figure class="image-bubble">
+<h4 id="旋转"><a href="#旋转" class="headerlink" title="旋转"></a>旋转</h4><figure class="image-bubble">
                 <div class="img-lightbox">
                     <div class="overlay"></div>
                     <img src="https://raw.githubusercontent.com/Yubiao-Li/cloudimg/master/data/20191223142253.png" alt="" title="">
@@ -377,20 +373,16 @@
                 <div class="image-caption"></div>
             </figure>
 <ul>
-<li>逆矩阵： $ R^{-1}() = R(-) = R^() $</li>
+<li>逆矩阵： $  R^{-1}(\theta) = R(-\theta) = R^\top(\theta) $</li>
 </ul>
-<h4 id="错切变换">错切变换</h4>
-<figure class="image-bubble">
+<h4 id="错切变换"><a href="#错切变换" class="headerlink" title="错切变换"></a>错切变换</h4><figure class="image-bubble">
                 <div class="img-lightbox">
                     <div class="overlay"></div>
                     <img src="https://raw.githubusercontent.com/Yubiao-Li/cloudimg/master/data/20191223145653.png" alt="" title="">
                 </div>
                 <div class="image-caption"></div>
             </figure>
-<h2 id="投影和视见变换">投影和视见变换</h2>
-<h3 id="投影矩阵">投影矩阵</h3>
-<h4 id="投影中心在原点">投影中心在原点</h4>
-<p>投影到 z = d 的平面的投影矩阵</p>
+<h2 id="投影和视见变换"><a href="#投影和视见变换" class="headerlink" title="投影和视见变换"></a>投影和视见变换</h2><h3 id="投影矩阵"><a href="#投影矩阵" class="headerlink" title="投影矩阵"></a>投影矩阵</h3><h4 id="投影中心在原点"><a href="#投影中心在原点" class="headerlink" title="投影中心在原点"></a>投影中心在原点</h4><p>投影到 z = d 的平面的投影矩阵</p>
 <figure class="image-bubble">
                 <div class="img-lightbox">
                     <div class="overlay"></div>
@@ -398,22 +390,21 @@
                 </div>
                 <div class="image-caption"></div>
             </figure>
-<h4 id="投影中心不在原点">投影中心不在原点</h4>
-<figure class="image-bubble">
+<h4 id="投影中心不在原点"><a href="#投影中心不在原点" class="headerlink" title="投影中心不在原点"></a>投影中心不在原点</h4><figure class="image-bubble">
                 <div class="img-lightbox">
                     <div class="overlay"></div>
                     <img src="https://raw.githubusercontent.com/Yubiao-Li/cloudimg/master/data/20191223152126.png" alt="" title="">
                 </div>
                 <div class="image-caption"></div>
             </figure>
-<h3 id="投影规范化">投影规范化</h3>
-<blockquote>
+<h3 id="投影规范化"><a href="#投影规范化" class="headerlink" title="投影规范化"></a>投影规范化</h3><blockquote>
 <p>使用平移和旋转变换将照相机坐标系下的顶点变换到默认的视见体的内部</p>
 </blockquote>
-<h4 id="平行投影">平行投影</h4>
-<ol style="list-style-type: decimal">
-<li><p>通过平移把指定视见体的中心移到规范视见体的中心（原点）</p></li>
-<li><p>通过缩放指定的视见体使得它的每条边的长度为2</p></li>
+<h4 id="平行投影"><a href="#平行投影" class="headerlink" title="平行投影"></a>平行投影</h4><ol>
+<li><p>通过平移把指定视见体的中心移到规范视见体的中心（原点）</p>
+</li>
+<li><p>通过缩放指定的视见体使得它的每条边的长度为2</p>
+</li>
 </ol>
 <figure class="image-bubble">
                 <div class="img-lightbox">
@@ -422,31 +413,36 @@
                 </div>
                 <div class="image-caption"></div>
             </figure>
-<h4 id="透视投影">透视投影</h4>
-<figure class="image-bubble">
+<h4 id="透视投影"><a href="#透视投影" class="headerlink" title="透视投影"></a>透视投影</h4><figure class="image-bubble">
                 <div class="img-lightbox">
                     <div class="overlay"></div>
                     <img src="https://raw.githubusercontent.com/Yubiao-Li/cloudimg/master/data/20191223163450.png" alt="" title="">
                 </div>
                 <div class="image-caption"></div>
             </figure>
-<h3 id="视见变换">视见变换</h3>
-<ol style="list-style-type: decimal">
-<li><p>指定眼睛（或者视图参考点）作为原点</p></li>
-<li><p>将视图平面法向量n指定为z轴</p></li>
-<li><p>将视图向量(VUP) v指定为y轴</p></li>
-<li><p>x轴(第三个向量u)可以用叉乘计算:u = v×n <img src="https://raw.githubusercontent.com/Yubiao-Li/cloudimg/master/data/20191223171548.png" /></p></li>
-<li><p>将世界坐标系转换为眼睛坐标系 <img src="https://raw.githubusercontent.com/Yubiao-Li/cloudimg/master/data/20191223221912.png" /></p></li>
+<h3 id="视见变换"><a href="#视见变换" class="headerlink" title="视见变换"></a>视见变换</h3><ol>
+<li><p>指定眼睛（或者视图参考点）作为原点</p>
+</li>
+<li><p>将视图平面法向量n指定为z轴</p>
+</li>
+<li><p>将视图向量(VUP) v指定为y轴</p>
+</li>
+<li><p>x轴(第三个向量u)可以用叉乘计算:u = v×n<br> <img src="https://raw.githubusercontent.com/Yubiao-Li/cloudimg/master/data/20191223171548.png" alt=""></p>
+</li>
+<li><p>将世界坐标系转换为眼睛坐标系<br> <img src="https://raw.githubusercontent.com/Yubiao-Li/cloudimg/master/data/20191223221912.png" alt=""></p>
+</li>
 </ol>
-<h3 id="视口">视口</h3>
-<ul>
-<li><p>视口是窗口的一个你可以在上面绘画的矩形区域</p></li>
-<li><p>默认的视口是整个窗口</p></li>
-<li><p>可以定义一个更小的窗口使得所有绘制被限制在那个区域</p></li>
-<li><p>你可以为每个视口端口使用单独的建模</p></li>
+<h3 id="视口"><a href="#视口" class="headerlink" title="视口"></a>视口</h3><ul>
+<li><p>视口是窗口的一个你可以在上面绘画的矩形区域</p>
+</li>
+<li><p>默认的视口是整个窗口</p>
+</li>
+<li><p>可以定义一个更小的窗口使得所有绘制被限制在那个区域</p>
+</li>
+<li><p>你可以为每个视口端口使用单独的建模</p>
+</li>
 </ul>
-<h3 id="ctmcurrent-transformation-matrix">CTM（Current Transformation Matrix）</h3>
-<blockquote>
+<h3 id="CTM（Current-Transformation-Matrix）"><a href="#CTM（Current-Transformation-Matrix）" class="headerlink" title="CTM（Current Transformation Matrix）"></a>CTM（Current Transformation Matrix）</h3><blockquote>
 <p>从概念上讲，有一个4×4的齐次坐标矩阵，即当前变换矩阵(CTM)，它是状态的一部分，适用于沿管道向下传递的所有顶点</p>
 </blockquote>
 <figure class="image-bubble">
@@ -456,168 +452,171 @@
                 </div>
                 <div class="image-caption"></div>
             </figure>
-<h2 id="光照和着色">光照和着色</h2>
-<h3 id="光照概念">光照概念</h3>
-<ul>
-<li><p>光线从光源照射到物体上，透射出反射光、透明光和吸收光(不可见)。</p></li>
-<li><p>反射光包括漫射光和反射光，反射光与物体的材质有关</p></li>
+<h2 id="光照和着色"><a href="#光照和着色" class="headerlink" title="光照和着色"></a>光照和着色</h2><h3 id="光照概念"><a href="#光照概念" class="headerlink" title="光照概念"></a>光照概念</h3><ul>
+<li><p>光线从光源照射到物体上，透射出反射光、透明光和吸收光(不可见)。</p>
+</li>
+<li><p>反射光包括漫射光和反射光，反射光与物体的材质有关</p>
+</li>
 </ul>
-<h3 id="光照模型">光照模型</h3>
+<h3 id="光照模型"><a href="#光照模型" class="headerlink" title="光照模型"></a>光照模型</h3><ul>
+<li><p>我们使用的是局部光照模型（Local Illumination Model）：光线只来自定义在场景中的光源，忽视被其他物体或者表面反射的光</p>
+</li>
+<li><p>光照被看作由三个部分组成</p>
 <ul>
-<li><p>我们使用的是局部光照模型（Local Illumination Model）：光线只来自定义在场景中的光源，忽视被其他物体或者表面反射的光</p></li>
-<li>光照被看作由三个部分组成
-<ul>
-<li>环境光（Ambient）
+<li><p>环境光（Ambient）</p>
 <ul>
 <li>不关心光照位置</li>
 <li>不关心观察者位置</li>
-<li>不关心表面法向量</li>
+<li><p>不关心表面法向量</p>
+<script type="math/tex; mode=display">A = L_0 + \sum_{lights}(L_A * C_A)</script></li>
 </ul>
-<p><span class="math display">\[ A = L_0 + \sum_{lights}(L_A * C_A) \]</span></p></li>
-<li>漫反射光（Diffuse）
+</li>
+<li><p>漫反射光（Diffuse）</p>
 <ul>
-<li>区域对光来说是否可见取决于光的角度——光向量与平面法向量的点乘</li>
+<li><p>区域对光来说是否可见取决于光的角度——光向量与平面法向量的点乘</p>
+<script type="math/tex; mode=display">D = \sum_{lights}L_D* C_D*(L \cdot N)</script></li>
 </ul>
-<p><span class="math display">\[ D = \sum_{lights}L_D* C_D*(L \cdot N)\]</span></p></li>
-<li>镜面反射光（Specular）
+</li>
+<li><p>镜面反射光（Specular）</p>
 <ul>
-<li>取决于反射光与观察方向的角度</li>
-</ul>
-<p><span class="math display">\[ S = \sum_{lights}L_S * C_S * (V \cdot R)^k \]</span></p>
-<ul>
-<li><p>K：感光度，改变光的衰减速率 <img src="https://raw.githubusercontent.com/Yubiao-Li/cloudimg/master/data/20191228195233.png" /></p></li>
-<li><p>没有物理基础，但在实践中是可行的</p></li>
-</ul>
+<li><p>取决于反射光与观察方向的角度</p>
+<script type="math/tex; mode=display">S = \sum_{lights}L_S * C_S * (V \cdot R)^k</script></li>
+<li><p>K：感光度，改变光的衰减速率<br>  <img src="https://raw.githubusercontent.com/Yubiao-Li/cloudimg/master/data/20191228195233.png" alt=""></p>
+</li>
+<li><p>没有物理基础，但在实践中是可行的</p>
 <blockquote>
 <p>另一种光照模型是Blinn-Phong光照模型，唯一不同的地方是计算镜面反射光是使用法向量<strong>点乘</strong>观察方向与入射方向的半角</p>
-</blockquote></li>
-</ul></li>
-<li><p>所有光使用RGB颜色模型</p></li>
+</blockquote>
+</li>
 </ul>
-<h3 id="表面定向与材质">表面定向与材质</h3>
-<ul>
+</li>
+</ul>
+</li>
+<li><p>所有光使用RGB颜色模型</p>
+</li>
+</ul>
+<h3 id="表面定向与材质"><a href="#表面定向与材质" class="headerlink" title="表面定向与材质"></a>表面定向与材质</h3><ul>
 <li>为了使用光照，你必须获得每个顶点的法向量与每个对象的材质</li>
 </ul>
-<h4 id="法向量">法向量</h4>
-<ul>
+<h4 id="法向量"><a href="#法向量" class="headerlink" title="法向量"></a>法向量</h4><ul>
 <li>可以计算为两个相邻边的外积</li>
 </ul>
-<h3 id="光的属性">光的属性</h3>
-<ul>
-<li>光的类型
+<h3 id="光的属性"><a href="#光的属性" class="headerlink" title="光的属性"></a>光的属性</h3><ul>
+<li><p>光的类型</p>
 <ul>
 <li>点光源</li>
 <li>定向光</li>
 <li>聚光</li>
 <li>环境光</li>
-</ul></li>
-<li>光的位置</li>
+</ul>
+</li>
+<li><p>光的位置</p>
+</li>
 <li>光的方向</li>
 <li>聚光灯的方向和截止</li>
 <li>光的衰减</li>
 <li>光的颜色</li>
 </ul>
-<h3 id="光照着色">光照着色</h3>
-<ul>
+<h3 id="光照着色"><a href="#光照着色" class="headerlink" title="光照着色"></a>光照着色</h3><ul>
 <li>计算图形对象各部分的颜色，尤指多边形</li>
 </ul>
-<h4 id="constantflat-shading">Constant(Flat) Shading</h4>
-<ul>
-<li><p>对于多边形只计算其上的一个点，生成的结果被分配给多边形覆盖的所有像素</p></li>
-<li><p>效率很高但通常十分粗糙</p></li>
-<li><p>着色的离散变化（马赫带，Mach band）通常发生在constant shading <img src="https://raw.githubusercontent.com/Yubiao-Li/cloudimg/master/data/20191228202350.png" /></p></li>
+<h4 id="Constant-Flat-Shading"><a href="#Constant-Flat-Shading" class="headerlink" title="Constant(Flat) Shading"></a>Constant(Flat) Shading</h4><ul>
+<li><p>对于多边形只计算其上的一个点，生成的结果被分配给多边形覆盖的所有像素</p>
+</li>
+<li><p>效率很高但通常十分粗糙</p>
+</li>
+<li><p>着色的离散变化（马赫带，Mach band）通常发生在constant shading<br>  <img src="https://raw.githubusercontent.com/Yubiao-Li/cloudimg/master/data/20191228202350.png" alt=""></p>
+</li>
 </ul>
-<h4 id="gouraud-smooth-shading">Gouraud (Smooth) Shading</h4>
-<ul>
-<li><p>平面的每一个顶点都进行渲染计算</p></li>
-<li><p>每个顶点都会有一个法向量，或者是由相邻的几个平面求平均得到的法向量</p></li>
-<li><p>平面的其他像素颜色通过对颜色线性插值获取</p></li>
+<h4 id="Gouraud-Smooth-Shading"><a href="#Gouraud-Smooth-Shading" class="headerlink" title="Gouraud (Smooth) Shading"></a>Gouraud (Smooth) Shading</h4><ul>
+<li><p>平面的每一个顶点都进行渲染计算</p>
+</li>
+<li><p>每个顶点都会有一个法向量，或者是由相邻的几个平面求平均得到的法向量</p>
+</li>
+<li><p>平面的其他像素颜色通过对颜色线性插值获取</p>
+</li>
 </ul>
-<h4 id="phong-shading">Phong Shading</h4>
-<ul>
-<li><p>对法向量进行线性插值</p></li>
-<li><p>对每个像素使用局部光照模型</p></li>
+<h4 id="Phong-Shading"><a href="#Phong-Shading" class="headerlink" title="Phong Shading"></a>Phong Shading</h4><ul>
+<li><p>对法向量进行线性插值</p>
+</li>
+<li><p>对每个像素使用局部光照模型</p>
+</li>
 </ul>
-<h3 id="全局光照">全局光照</h3>
-<ul>
-<li><p>不止考虑来自场景中的光，也考虑反射光</p></li>
-<li><p>更复杂，但更真实</p></li>
-<li><p>热辐射、射线追踪</p></li>
+<h3 id="全局光照"><a href="#全局光照" class="headerlink" title="全局光照"></a>全局光照</h3><ul>
+<li><p>不止考虑来自场景中的光，也考虑反射光</p>
+</li>
+<li><p>更复杂，但更真实</p>
+</li>
+<li><p>热辐射、射线追踪</p>
+</li>
 </ul>
-<h2 id="渲染从顶点到片段">渲染——从顶点到片段</h2>
-<h3 id="线段裁剪算法">线段裁剪算法</h3>
-<h4 id="cohen-sutherland-线段裁剪算法">Cohen-Sutherland 线段裁剪算法</h4>
-<ul>
-<li>该算法有4种情况
-<ol style="list-style-type: decimal">
-<li><p>线段的两点都在区域内</p></li>
-<li><p>线段的两点都在区域外并且在一条边界的同一侧</p></li>
-<li><p>一个点在区域内一个点在区域外</p></li>
-<li><p>两点都在区域外但不在一条边界的同一侧</p></li>
-</ol></li>
-<li>可以将情况的两点进行编码，然后两点运算来裁剪线段 <img src="https://raw.githubusercontent.com/Yubiao-Li/cloudimg/master/data/20191229104456.png" /></li>
+<h2 id="渲染——从顶点到片段"><a href="#渲染——从顶点到片段" class="headerlink" title="渲染——从顶点到片段"></a>渲染——从顶点到片段</h2><h3 id="线段裁剪算法"><a href="#线段裁剪算法" class="headerlink" title="线段裁剪算法"></a>线段裁剪算法</h3><h4 id="Cohen-Sutherland-线段裁剪算法"><a href="#Cohen-Sutherland-线段裁剪算法" class="headerlink" title="Cohen-Sutherland 线段裁剪算法"></a>Cohen-Sutherland 线段裁剪算法</h4><ul>
+<li><p>该算法有4种情况</p>
+<ol>
+<li><p>线段的两点都在区域内</p>
+</li>
+<li><p>线段的两点都在区域外并且在一条边界的同一侧</p>
+</li>
+<li><p>一个点在区域内一个点在区域外</p>
+</li>
+<li><p>两点都在区域外但不在一条边界的同一侧</p>
+</li>
+</ol>
+</li>
+<li><p>可以将情况的两点进行编码，然后两点运算来裁剪线段<br>  <img src="https://raw.githubusercontent.com/Yubiao-Li/cloudimg/master/data/20191229104456.png" alt=""></p>
+</li>
 </ul>
-<h4 id="梁友栋-barsky-线段裁剪算法">梁友栋-Barsky 线段裁剪算法</h4>
-<blockquote>
+<h4 id="梁友栋-Barsky-线段裁剪算法"><a href="#梁友栋-Barsky-线段裁剪算法" class="headerlink" title="梁友栋-Barsky 线段裁剪算法"></a>梁友栋-Barsky 线段裁剪算法</h4><blockquote>
 <p>使用参数方程求出与裁剪窗口四条边的交点，通过交点顺序来判断是否需要裁剪</p>
 </blockquote>
-<h4 id="多边形填充区域裁剪">多边形填充区域裁剪</h4>
-<figure class="image-bubble">
+<h4 id="多边形填充区域裁剪"><a href="#多边形填充区域裁剪" class="headerlink" title="多边形填充区域裁剪"></a>多边形填充区域裁剪</h4><figure class="image-bubble">
                 <div class="img-lightbox">
                     <div class="overlay"></div>
                     <img src="https://raw.githubusercontent.com/Yubiao-Li/cloudimg/master/data/20191229110902.png" alt="" title="">
                 </div>
                 <div class="image-caption"></div>
             </figure>
-<h3 id="光栅化">光栅化</h3>
-<ul>
-<li><p>根据一组顶点确定需要着色的像素</p></li>
-<li><p>生成一组片段</p></li>
-<li><p>片段有一个位置(像素位置)和其他属性，比如颜色和纹理坐标，这些属性是通过在顶点上插入值来确定的</p></li>
+<h3 id="光栅化"><a href="#光栅化" class="headerlink" title="光栅化"></a>光栅化</h3><ul>
+<li><p>根据一组顶点确定需要着色的像素</p>
+</li>
+<li><p>生成一组片段</p>
+</li>
+<li><p>片段有一个位置(像素位置)和其他属性，比如颜色和纹理坐标，这些属性是通过在顶点上插入值来确定的</p>
+</li>
 </ul>
-<h4 id="dda-算法">DDA 算法</h4>
-<figure class="image-bubble">
+<h4 id="DDA-算法"><a href="#DDA-算法" class="headerlink" title="DDA 算法"></a>DDA 算法</h4><figure class="image-bubble">
                 <div class="img-lightbox">
                     <div class="overlay"></div>
                     <img src="https://raw.githubusercontent.com/Yubiao-Li/cloudimg/master/data/20191229112429.png" alt="" title="">
                 </div>
                 <div class="image-caption"></div>
             </figure>
-<h4 id="行扫描转换bresenham-algorithm">行扫描转换——Bresenham Algorithm</h4>
-<ul>
-<li>判断交点更接近<span class="math inline">\(y_i\)</span>还是<span class="math inline">\(y_{i+1}\)</span> <img src="https://raw.githubusercontent.com/Yubiao-Li/cloudimg/master/data/20191229153645.png" /></li>
+<h4 id="行扫描转换——Bresenham-Algorithm"><a href="#行扫描转换——Bresenham-Algorithm" class="headerlink" title="行扫描转换——Bresenham Algorithm"></a>行扫描转换——Bresenham Algorithm</h4><ul>
+<li>判断交点更接近$y<em>i$还是$y</em>{i+1}$<br>  <img src="https://raw.githubusercontent.com/Yubiao-Li/cloudimg/master/data/20191229153645.png" alt=""></li>
 </ul>
-<h4 id="扫描转换多边形扫描线填充算法">扫描转换多边形——扫描线填充算法</h4>
-<figure class="image-bubble">
+<h4 id="扫描转换多边形——扫描线填充算法"><a href="#扫描转换多边形——扫描线填充算法" class="headerlink" title="扫描转换多边形——扫描线填充算法"></a>扫描转换多边形——扫描线填充算法</h4><figure class="image-bubble">
                 <div class="img-lightbox">
                     <div class="overlay"></div>
                     <img src="https://raw.githubusercontent.com/Yubiao-Li/cloudimg/master/data/20191229155614.png" alt="" title="">
                 </div>
                 <div class="image-caption"></div>
             </figure>
-<h3 id="隐藏面消除">隐藏面消除</h3>
-<h4 id="z-buffer-算法">z-Buffer 算法</h4>
-<ul>
+<h3 id="隐藏面消除"><a href="#隐藏面消除" class="headerlink" title="隐藏面消除"></a>隐藏面消除</h3><h4 id="z-Buffer-算法"><a href="#z-Buffer-算法" class="headerlink" title="z-Buffer 算法"></a>z-Buffer 算法</h4><ul>
 <li>深度缓冲区与帧缓冲区相同</li>
 <li>保存最近的交点的距离</li>
 </ul>
-<h4 id="画家算法">画家算法</h4>
-<ul>
+<h4 id="画家算法"><a href="#画家算法" class="headerlink" title="画家算法"></a>画家算法</h4><ul>
 <li>从后往前渲染</li>
 <li>对所有多边形进行深度排序</li>
 <li>如果有多个多边形循环重叠，需要把多边形分为多个部分</li>
 </ul>
-<h3 id="反走样">反走样</h3>
-<ul>
-<li>计算线与附近像素方块的重叠比例，像素颜色计算公式<span class="math display">\[\alpha \times current\_color + (1- \alpha) \times existing\_color \]</span></li>
+<h3 id="反走样"><a href="#反走样" class="headerlink" title="反走样"></a>反走样</h3><ul>
+<li>计算线与附近像素方块的重叠比例，像素颜色计算公式<script type="math/tex">\alpha \times current\_color + (1- \alpha) \times existing\_color</script></li>
 </ul>
-<h3 id="多边形混叠">多边形混叠</h3>
-<ul>
+<h3 id="多边形混叠"><a href="#多边形混叠" class="headerlink" title="多边形混叠"></a>多边形混叠</h3><ul>
 <li>像素的颜色取决于多多边形的颜色</li>
 </ul>
-<h2 id="离散技术">离散技术</h2>
-<h3 id="写缓存模式">写缓存模式</h3>
-<figure class="image-bubble">
+<h2 id="离散技术"><a href="#离散技术" class="headerlink" title="离散技术"></a>离散技术</h2><h3 id="写缓存模式"><a href="#写缓存模式" class="headerlink" title="写缓存模式"></a>写缓存模式</h3><figure class="image-bubble">
                 <div class="img-lightbox">
                     <div class="overlay"></div>
                     <img src="https://raw.githubusercontent.com/Yubiao-Li/cloudimg/master/data/20191229194140.png" alt="" title="">
@@ -632,31 +631,33 @@
                 <div class="image-caption"></div>
             </figure>
 <ul>
-<li>重点注意XOR写入模式，即模式6，有如下特性<span class="math display">\[ d = (d \oplus s) \oplus s \]</span></li>
+<li>重点注意XOR写入模式，即模式6，有如下特性<script type="math/tex">d = (d \oplus s) \oplus s</script></li>
 </ul>
-<h3 id="纹理贴图">纹理贴图</h3>
+<h3 id="纹理贴图"><a href="#纹理贴图" class="headerlink" title="纹理贴图"></a>纹理贴图</h3><ul>
+<li><p>凹凸贴图</p>
 <ul>
-<li>凹凸贴图
-<ul>
-<li><p>在Gouraud shading中，光强度是在顶点处计算的。线上其他像素的强度由两个顶点的强度混合而成</p></li>
-<li><p>在凹凸贴图中，光强度是在每个像素处计算的。使用原始曲面的法线。(注意曲线仍然是用直线近似。)</p></li>
-</ul></li>
+<li><p>在Gouraud shading中，光强度是在顶点处计算的。线上其他像素的强度由两个顶点的强度混合而成</p>
+</li>
+<li><p>在凹凸贴图中，光强度是在每个像素处计算的。使用原始曲面的法线。(注意曲线仍然是用直线近似。)</p>
+</li>
 </ul>
-<h2 id="层级建模方法">层级建模方法</h2>
-<h2 id="全局光照-1">全局光照</h2>
-<h3 id="射线追踪">射线追踪</h3>
-<ol style="list-style-type: decimal">
-<li><p>对于每个射线，寻找最近的阻挡光路的物体</p></li>
-<li><p>计算这个物体的像素颜色</p></li>
-<li><p>可以确定物体的阴影，光线是否会到达那个表面</p></li>
-<li><p>详情借鉴别人的<a href="https://blog.csdn.net/hmbxsy/article/details/80509876" target="_blank" rel="noopener">博客</a></p></li>
+</li>
+</ul>
+<h2 id="层级建模方法"><a href="#层级建模方法" class="headerlink" title="层级建模方法"></a>层级建模方法</h2><h2 id="全局光照-1"><a href="#全局光照-1" class="headerlink" title="全局光照"></a>全局光照</h2><h3 id="射线追踪"><a href="#射线追踪" class="headerlink" title="射线追踪"></a>射线追踪</h3><ol>
+<li><p>对于每个射线，寻找最近的阻挡光路的物体</p>
+</li>
+<li><p>计算这个物体的像素颜色</p>
+</li>
+<li><p>可以确定物体的阴影，光线是否会到达那个表面</p>
+</li>
+<li><p>详情借鉴别人的<a href="https://blog.csdn.net/hmbxsy/article/details/80509876" target="_blank" rel="noopener">博客</a></p>
+</li>
 </ol>
-<h3 id="辐射度算法">辐射度算法</h3>
-<ul>
+<h3 id="辐射度算法"><a href="#辐射度算法" class="headerlink" title="辐射度算法"></a>辐射度算法</h3><ul>
 <li>辐射度算法的原理就是模拟真实世界中的光照原理，在场景中的每个位置收集所有在该位置所能看到的光照信息，然后对这些颜色信息进行汇总处理，作为最终该位置的颜色并对当前的位置进行着色。在现实世界中，这个位置就代表了无穷多个无限小的像素点，但在计算机中却不可能做到这样一点，因此只能进行近似的模拟操作，这就是将几何空间场景进行分割处理，得到一些相对于整个场景来说很小的多边形面片，然后以这些面片为单位来代替现实世界中的无限小的像素点进行渲染着色。当然，如果我们对整个场景分割得越发细小，得到的最终光照效果也就是越好，但随之而来的代价就是渲染的时间越长。<a href="https://blog.csdn.net/pizi0475/article/details/7933752" target="_blank" rel="noopener">讲的不错的一篇博客</a></li>
 </ul>
-<hr />
-<p>最后附上找到的一个学习OpenGL编程的很好的<a href="https://learnopengl-cn.github.io/" target="_blank" rel="noopener">教程</a></p>
+<hr>
+<p>最后附上找到的一个学习OpenGL编程的很好的<a href="https://learnopengl-cn.github.io/" target="_blank" rel="noopener">教程</a> </p>
 
         </div>
 
@@ -1003,5 +1004,21 @@ MathJax.Hub.Queue(function() {
 
 
 
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<!-- <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
 </body>
 </html>

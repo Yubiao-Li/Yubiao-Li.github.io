@@ -28,13 +28,13 @@
     
     
     <meta name="keywords" content="OpenGL">
-    <meta name="description" content="问题描述  明明我使用的贴图是彩色的，加载到OpenGl却显示为黑白的       解决方案  原来我使用的贴图是从网上找的，而OpenGL对纹理的要求好像是大小满足2的倍数，用PS改一下图片大小即可">
+    <meta name="description" content="问题描述 明明我使用的贴图是彩色的，加载到OpenGl却显示为黑白的        解决方案 原来我使用的贴图是从网上找的，而OpenGL对纹理的要求好像是大小满足2的倍数，用PS改一下图片大小即可">
 <meta name="keywords" content="OpenGL">
 <meta property="og:type" content="article">
 <meta property="og:title" content="OpenGL纹理贴图呈现黑白">
 <meta property="og:url" content="http:&#x2F;&#x2F;yubiao-li.gitee.io&#x2F;2019&#x2F;12&#x2F;13&#x2F;OpenGL%E7%BA%B9%E7%90%86%E8%B4%B4%E5%9B%BE%E5%91%88%E7%8E%B0%E9%BB%91%E7%99%BD&#x2F;index.html">
 <meta property="og:site_name" content="LYB的部落格">
-<meta property="og:description" content="问题描述  明明我使用的贴图是彩色的，加载到OpenGl却显示为黑白的       解决方案  原来我使用的贴图是从网上找的，而OpenGL对纹理的要求好像是大小满足2的倍数，用PS改一下图片大小即可">
+<meta property="og:description" content="问题描述 明明我使用的贴图是彩色的，加载到OpenGl却显示为黑白的        解决方案 原来我使用的贴图是从网上找的，而OpenGL对纹理的要求好像是大小满足2的倍数，用PS改一下图片大小即可">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;Yubiao-Li&#x2F;cloudimg&#x2F;master&#x2F;data&#x2F;lava.jpg">
 <meta property="og:image" content="https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;Yubiao-Li&#x2F;cloudimg&#x2F;master&#x2F;data&#x2F;20191213115448.png">
@@ -190,16 +190,12 @@
 
         </div>
         <div class="post-content" id="post-content" itemprop="postContent">
-            <h2 id="问题描述">问题描述</h2>
-<ul>
-<li><p>明明我使用的贴图是彩色的，加载到OpenGl却显示为黑白的 <img src="https://raw.githubusercontent.com/Yubiao-Li/cloudimg/master/data/lava.jpg" /></p>
-<div class="figure">
-<img src="https://raw.githubusercontent.com/Yubiao-Li/cloudimg/master/data/20191213115448.png" />
-
-</div></li>
+            <h2 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h2><ul>
+<li><p>明明我使用的贴图是彩色的，加载到OpenGl却显示为黑白的<br>  <img src="https://raw.githubusercontent.com/Yubiao-Li/cloudimg/master/data/lava.jpg" alt=""></p>
+<p>  <img src="https://raw.githubusercontent.com/Yubiao-Li/cloudimg/master/data/20191213115448.png" alt=""></p>
+</li>
 </ul>
-<h2 id="解决方案">解决方案</h2>
-<ul>
+<h2 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h2><ul>
 <li>原来我使用的贴图是从网上找的，而OpenGL对纹理的要求好像是大小满足2的倍数，用PS改一下图片大小即可</li>
 </ul>
 
@@ -548,5 +544,21 @@ MathJax.Hub.Queue(function() {
 
 
 
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<!-- <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
 </body>
 </html>

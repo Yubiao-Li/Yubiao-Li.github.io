@@ -14,29 +14,29 @@
     <meta name="google-site-verification" content="ZJO2ontgtPIhUUi-sjcBT02XwMEIfepFYX1wSv-FS40">
     
     
-    <meta name="baidu-site-verification" content="gB96P9P70A" />
+    <meta name="baidu-site-verification" content="8BjbSAelf8" />
     
     
     <meta name="sogou_site_verification" content="lSs4R7pRIa"/>
     
     
     
-    <title>2020-SCUT-信息安全期末复习 | LYB的部落格 | 念念不忘，必有回响</title>
+    <title>HTTP协议的前世今生 | LYB的部落格 | 念念不忘，必有回响</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
     <meta name="theme-color" content="#ff00ff">
     
     
-    <meta name="keywords" content="复习笔记">
-    <meta name="description" content="ARP欺骗  首先暴力扫描，获得ip对应的mac地址 黑客告诉其他机器，我就是“所有人”">
-<meta name="keywords" content="复习笔记">
+    <meta name="keywords" content="">
+    <meta name="description" content="HTTP 0.9 和 HTTP 1.0 HTTP 0.9 只有一个简单的get方法，没有首部，设计目标就是为了获取HTML（没有图片，只有文本）  HTTP 1.0 是 0.9版本的一个完善，包含了：  首部 响应码 重定向 内容编码 更多请求方法    HTTP 1.1 引入的持久链接，即TCP连接默认不关闭，可以被多个请求复用；  加入了管道机制，允许在一个TCP连接里面同时发送多个请求，增加">
+<meta name="keywords" content="博客，前端，后端，期末复习，运维，图形学">
 <meta property="og:type" content="article">
-<meta property="og:title" content="2020-SCUT-信息安全期末复习">
-<meta property="og:url" content="http:&#x2F;&#x2F;yubiao-li.gitee.io&#x2F;2020&#x2F;02&#x2F;24&#x2F;2020-SCUT-%E4%BF%A1%E6%81%AF%E5%AE%89%E5%85%A8%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0&#x2F;index.html">
+<meta property="og:title" content="HTTP协议的前世今生">
+<meta property="og:url" content="http:&#x2F;&#x2F;yubiao-li.gitee.io&#x2F;2020&#x2F;09&#x2F;02&#x2F;HTTP%E5%8D%8F%E8%AE%AE%E7%9A%84%E5%89%8D%E4%B8%96%E4%BB%8A%E7%94%9F&#x2F;index.html">
 <meta property="og:site_name" content="LYB的部落格">
-<meta property="og:description" content="ARP欺骗  首先暴力扫描，获得ip对应的mac地址 黑客告诉其他机器，我就是“所有人”">
+<meta property="og:description" content="HTTP 0.9 和 HTTP 1.0 HTTP 0.9 只有一个简单的get方法，没有首部，设计目标就是为了获取HTML（没有图片，只有文本）  HTTP 1.0 是 0.9版本的一个完善，包含了：  首部 响应码 重定向 内容编码 更多请求方法    HTTP 1.1 引入的持久链接，即TCP连接默认不关闭，可以被多个请求复用；  加入了管道机制，允许在一个TCP连接里面同时发送多个请求，增加">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2020-02-24T07:06:54.777Z">
+<meta property="og:updated_time" content="2020-09-04T06:55:36.758Z">
 <meta name="twitter:card" content="summary">
     
         <link rel="alternate" type="application/atom+xml" title="LYB的部落格" href="/atom.xml">
@@ -94,7 +94,7 @@
             </li>
         
             <li class="waves-block waves-effect">
-              <a href="/http:/yubiao-li.gitee.io/resume/" target="_blank" >
+              <a href="/resume"  >
                 <i class="icon icon-lg icon-user-o"></i>
                 关于我
               </a>
@@ -118,7 +118,7 @@
         <a class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
           <i class="icon icon-lg icon-navicon"></i>
         </a>
-        <div class="flex-col header-title ellipsis">2020-SCUT-信息安全期末复习</div>
+        <div class="flex-col header-title ellipsis">HTTP协议的前世今生</div>
         
         <div class="search-wrap" id="search-wrap">
             <a class="header-icon waves-effect waves-circle waves-light" id="back">
@@ -140,11 +140,11 @@
 <header class="content-header post-header">
 
     <div class="container fade-scale">
-        <h1 class="title">2020-SCUT-信息安全期末复习</h1>
+        <h1 class="title">HTTP协议的前世今生</h1>
         <h5 class="subtitle">
             
-                <time datetime="2020-02-24T06:42:29.000Z" itemprop="datePublished" class="page-time">
-  2020-02-24
+                <time datetime="2020-09-02T14:52:10.000Z" itemprop="datePublished" class="page-time">
+  2020-09-02
 </time>
 
 
@@ -163,18 +163,18 @@
     <aside class="post-widget">
         <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
             <h4>TOC</h4>
-            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#arp欺骗"><span class="post-toc-number">1.</span> <span class="post-toc-text">ARP欺骗</span></a></li></ol>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#HTTP-0-9-和-HTTP-1-0"><span class="post-toc-number">1.</span> <span class="post-toc-text">HTTP 0.9 和 HTTP 1.0</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#HTTP-1-1"><span class="post-toc-number">2.</span> <span class="post-toc-text">HTTP 1.1</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#HTTP-2-0"><span class="post-toc-number">3.</span> <span class="post-toc-text">HTTP 2.0</span></a></li></ol>
         </nav>
     </aside>
 
 
-<article id="post-2020-SCUT-信息安全期末复习"
+<article id="post-HTTP协议的前世今生"
   class="post-article article-type-post fade" itemprop="blogPost">
 
     <div class="post-card">
-        <h1 class="post-card-title">2020-SCUT-信息安全期末复习</h1>
+        <h1 class="post-card-title">HTTP协议的前世今生</h1>
         <div class="post-meta">
-            <time class="post-time" title="2020-02-24 14:42:29" datetime="2020-02-24T06:42:29.000Z"  itemprop="datePublished">2020-02-24</time>
+            <time class="post-time" title="2020-09-02 22:52:10" datetime="2020-09-02T14:52:10.000Z"  itemprop="datePublished">2020-09-02</time>
 
             
 
@@ -187,10 +187,40 @@
 
         </div>
         <div class="post-content" id="post-content" itemprop="postContent">
-            <h2 id="arp欺骗">ARP欺骗</h2>
-<ol style="list-style-type: decimal">
-<li><p>首先暴力扫描，获得ip对应的mac地址</p></li>
-<li><p>黑客告诉其他机器，我就是“所有人”</p></li>
+            <h2 id="HTTP-0-9-和-HTTP-1-0"><a href="#HTTP-0-9-和-HTTP-1-0" class="headerlink" title="HTTP 0.9 和 HTTP 1.0"></a>HTTP 0.9 和 HTTP 1.0</h2><ol>
+<li><p>HTTP 0.9 只有一个简单的get方法，没有首部，设计目标就是为了获取HTML（没有图片，只有文本）</p>
+</li>
+<li><p>HTTP 1.0 是 0.9版本的一个完善，包含了：</p>
+<ul>
+<li>首部</li>
+<li>响应码</li>
+<li>重定向</li>
+<li>内容编码</li>
+<li>更多请求方法</li>
+</ul>
+</li>
+</ol>
+<h2 id="HTTP-1-1"><a href="#HTTP-1-1" class="headerlink" title="HTTP 1.1"></a>HTTP 1.1</h2><ol>
+<li><p>引入的持久链接，即TCP连接默认不关闭，可以被多个请求复用；</p>
+</li>
+<li><p>加入了管道机制，允许在一个TCP连接里面同时发送多个请求，增加了并发；</p>
+</li>
+<li><p>但是服务器只能顺序处理请求，造成“队头阻塞”</p>
+</li>
+<li><p>增加了新的请求方式PUT、PATCH、OPTIONS等</p>
+</li>
+<li><p>客户端请求增加了HOST字段</p>
+</li>
+</ol>
+<h2 id="HTTP-2-0"><a href="#HTTP-2-0" class="headerlink" title="HTTP 2.0"></a>HTTP 2.0</h2><ol>
+<li><p>不用按顺序一一回复请求，避免了“队头阻塞”</p>
+</li>
+<li><p>允许服务器未经请求，主动向客户端发送请求，即服务器推送</p>
+</li>
+<li><p>头部和数据体都是二进制，称为头信息帧和数据帧</p>
+</li>
+<li><p>引入头信息压缩机制，头信息使用gzip或compress压缩后发送，客户端和服务器同时维护一张头信息表，所有字段都会存入表中，生成一个索引号，不发送同样字段只发送索引号提高速度</p>
+</li>
 </ol>
 
         </div>
@@ -200,12 +230,12 @@
     <div class="content">
         
 <span class="post-time">
-    最后更新时间：<time datetime="2020-02-24T07:06:54.777Z" itemprop="dateUpdated">2020-02-24 15:06:54</time>
+    最后更新时间：<time datetime="2020-09-04T06:55:36.758Z" itemprop="dateUpdated">2020-09-04 14:55:36</time>
 </span><br>
 
 
         
-        <hr>念念不忘，必有回响~
+        <hr>推荐一个在线作业管理系统 https://www.makeitone.cn，有兴趣的朋友可以试试看~
         
     </div>
     
@@ -226,8 +256,6 @@
 
         <div class="post-footer">
             
-	<ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/" rel="tag">复习笔记</a></li></ul>
-
 
             
 <div class="page-share-wrap">
@@ -236,7 +264,7 @@
 <div class="page-share" id="pageShare">
     <ul class="reset share-icons">
       <li>
-        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yubiao-li.gitee.io/2020/02/24/2020-SCUT-%E4%BF%A1%E6%81%AF%E5%AE%89%E5%85%A8%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/&title=《2020-SCUT-信息安全期末复习》 — LYB的部落格&pic=http://yubiao-li.gitee.io/img/avatar.jpg" data-title="微博">
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yubiao-li.gitee.io/2020/09/02/HTTP%E5%8D%8F%E8%AE%AE%E7%9A%84%E5%89%8D%E4%B8%96%E4%BB%8A%E7%94%9F/&title=《HTTP协议的前世今生》 — LYB的部落格&pic=http://yubiao-li.gitee.io/img/avatar.jpg" data-title="微博">
           <i class="icon icon-weibo"></i>
         </a>
       </li>
@@ -246,22 +274,22 @@
         </a>
       </li>
       <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yubiao-li.gitee.io/2020/02/24/2020-SCUT-%E4%BF%A1%E6%81%AF%E5%AE%89%E5%85%A8%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/&title=《2020-SCUT-信息安全期末复习》 — LYB的部落格&source=这是我的个人博客，收录了我学习工作上遇到的一些问题。很高兴能够帮助到你，陌生人！" data-title=" QQ">
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yubiao-li.gitee.io/2020/09/02/HTTP%E5%8D%8F%E8%AE%AE%E7%9A%84%E5%89%8D%E4%B8%96%E4%BB%8A%E7%94%9F/&title=《HTTP协议的前世今生》 — LYB的部落格&source=这是我的个人博客，收录了我学习工作上遇到的一些问题。很高兴能够帮助到你，陌生人！" data-title=" QQ">
           <i class="icon icon-qq"></i>
         </a>
       </li>
       <li>
-        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yubiao-li.gitee.io/2020/02/24/2020-SCUT-%E4%BF%A1%E6%81%AF%E5%AE%89%E5%85%A8%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/" data-title=" Facebook">
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yubiao-li.gitee.io/2020/09/02/HTTP%E5%8D%8F%E8%AE%AE%E7%9A%84%E5%89%8D%E4%B8%96%E4%BB%8A%E7%94%9F/" data-title=" Facebook">
           <i class="icon icon-facebook"></i>
         </a>
       </li>
       <li>
-        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《2020-SCUT-信息安全期末复习》 — LYB的部落格&url=http://yubiao-li.gitee.io/2020/02/24/2020-SCUT-%E4%BF%A1%E6%81%AF%E5%AE%89%E5%85%A8%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/&via=http://yubiao-li.gitee.io" data-title=" Twitter">
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《HTTP协议的前世今生》 — LYB的部落格&url=http://yubiao-li.gitee.io/2020/09/02/HTTP%E5%8D%8F%E8%AE%AE%E7%9A%84%E5%89%8D%E4%B8%96%E4%BB%8A%E7%94%9F/&via=http://yubiao-li.gitee.io" data-title=" Twitter">
           <i class="icon icon-twitter"></i>
         </a>
       </li>
       <li>
-        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yubiao-li.gitee.io/2020/02/24/2020-SCUT-%E4%BF%A1%E6%81%AF%E5%AE%89%E5%85%A8%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/" data-title=" Google+">
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yubiao-li.gitee.io/2020/09/02/HTTP%E5%8D%8F%E8%AE%AE%E7%9A%84%E5%89%8D%E4%B8%96%E4%BB%8A%E7%94%9F/" data-title=" Google+">
           <i class="icon icon-google-plus"></i>
         </a>
       </li>
@@ -281,14 +309,21 @@
     </div>
 
     
-<nav class="post-nav flex-row flex-justify-between flex-row-reverse">
+<nav class="post-nav flex-row flex-justify-between">
+  
+    <div class="waves-block waves-effect prev">
+      <a href="/2020/09/04/%E4%B8%80%E5%A4%A9%E4%B8%80%E4%B8%AA%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" id="post-prev" class="post-nav-link">
+        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
+        <h4 class="title">一天一个数据结构</h4>
+      </a>
+    </div>
   
 
   
     <div class="waves-block waves-effect next">
-      <a href="/2020/02/19/nginx-webpack%E4%BD%BF%E7%94%A8vue-router%E5%8E%BB%E9%99%A4%E9%93%BE%E6%8E%A5%E7%9A%84/" id="post-next" class="post-nav-link">
+      <a href="/2020/09/02/JS%E5%AE%9E%E7%8E%B0%E4%B8%80%E4%B8%AA%E6%B7%B1%E6%8B%B7%E8%B4%9D/" id="post-next" class="post-nav-link">
         <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
-        <h4 class="title">nginx+webpack使用vue-router去除链接的#</h4>
+        <h4 class="title">JS实现一个深拷贝</h4>
       </a>
     </div>
   
@@ -411,7 +446,7 @@
 <div class="global-share" id="globalShare">
     <ul class="reset share-icons">
       <li>
-        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yubiao-li.gitee.io/2020/02/24/2020-SCUT-%E4%BF%A1%E6%81%AF%E5%AE%89%E5%85%A8%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/&title=《2020-SCUT-信息安全期末复习》 — LYB的部落格&pic=http://yubiao-li.gitee.io/img/avatar.jpg" data-title="微博">
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yubiao-li.gitee.io/2020/09/02/HTTP%E5%8D%8F%E8%AE%AE%E7%9A%84%E5%89%8D%E4%B8%96%E4%BB%8A%E7%94%9F/&title=《HTTP协议的前世今生》 — LYB的部落格&pic=http://yubiao-li.gitee.io/img/avatar.jpg" data-title="微博">
           <i class="icon icon-weibo"></i>
         </a>
       </li>
@@ -421,22 +456,22 @@
         </a>
       </li>
       <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yubiao-li.gitee.io/2020/02/24/2020-SCUT-%E4%BF%A1%E6%81%AF%E5%AE%89%E5%85%A8%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/&title=《2020-SCUT-信息安全期末复习》 — LYB的部落格&source=这是我的个人博客，收录了我学习工作上遇到的一些问题。很高兴能够帮助到你，陌生人！" data-title=" QQ">
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yubiao-li.gitee.io/2020/09/02/HTTP%E5%8D%8F%E8%AE%AE%E7%9A%84%E5%89%8D%E4%B8%96%E4%BB%8A%E7%94%9F/&title=《HTTP协议的前世今生》 — LYB的部落格&source=这是我的个人博客，收录了我学习工作上遇到的一些问题。很高兴能够帮助到你，陌生人！" data-title=" QQ">
           <i class="icon icon-qq"></i>
         </a>
       </li>
       <li>
-        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yubiao-li.gitee.io/2020/02/24/2020-SCUT-%E4%BF%A1%E6%81%AF%E5%AE%89%E5%85%A8%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/" data-title=" Facebook">
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yubiao-li.gitee.io/2020/09/02/HTTP%E5%8D%8F%E8%AE%AE%E7%9A%84%E5%89%8D%E4%B8%96%E4%BB%8A%E7%94%9F/" data-title=" Facebook">
           <i class="icon icon-facebook"></i>
         </a>
       </li>
       <li>
-        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《2020-SCUT-信息安全期末复习》 — LYB的部落格&url=http://yubiao-li.gitee.io/2020/02/24/2020-SCUT-%E4%BF%A1%E6%81%AF%E5%AE%89%E5%85%A8%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/&via=http://yubiao-li.gitee.io" data-title=" Twitter">
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《HTTP协议的前世今生》 — LYB的部落格&url=http://yubiao-li.gitee.io/2020/09/02/HTTP%E5%8D%8F%E8%AE%AE%E7%9A%84%E5%89%8D%E4%B8%96%E4%BB%8A%E7%94%9F/&via=http://yubiao-li.gitee.io" data-title=" Twitter">
           <i class="icon icon-twitter"></i>
         </a>
       </li>
       <li>
-        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yubiao-li.gitee.io/2020/02/24/2020-SCUT-%E4%BF%A1%E6%81%AF%E5%AE%89%E5%85%A8%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/" data-title=" Google+">
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yubiao-li.gitee.io/2020/09/02/HTTP%E5%8D%8F%E8%AE%AE%E7%9A%84%E5%89%8D%E4%B8%96%E4%BB%8A%E7%94%9F/" data-title=" Google+">
           <i class="icon icon-google-plus"></i>
         </a>
       </li>
@@ -447,7 +482,7 @@
 <div class="page-modal wx-share" id="wxShare">
     <a class="close" ><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
-    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAQ4AAAEOCAAAAABd2qZ5AAAD5ElEQVR42u3bQXLbQAwEQP3/0841B4eaASA7h+bJFUnksqmqEbDI6xUfX38dz68+v6e9Sv7382ePDxw4cODAES8iP/VXfDyjPJ854X5+f36POHDgwIHjluM5GpOL5eG6+exzPh6sEAcOHDhw/BJHsqzkX9pgTm5+hY4DBw4cOH6QI4dIyqpZi7BtWeLAgQMHjt/iSJqD7QXahl0b3nlr8iO9Uhw4cODAkSbdq73J///vj8x34MCBAweOxxJoM5qQj9Dt24JXQwzfXB0HDhw4cKw52hIuX9BVczBp/7XvfFMi4sCBAweOI45k1CBvEW4iOW8RtteNQh0HDhw4cBxxtMMKt3GbE8/emWxi4cCBAweOPcesVMtjbNZ2zMcd8iZm9Hhw4MCBA8eaYxZ+begmLcX8DMmZ84dX/O7AgQMHDhxrjiRE28DbDOHNVlj/jMCBAwcOHEcceegmTbqfKfySh9RuUOHAgQMHjg1HvoGUF07FUFo5iFCPJrTDEDhw4MCBY83RDjTkt3o7djAbmxiWlzhw4MCB47JTN/zPlnkReLAtFCdj/kPhlX8LcODAgQPHiOOqxmmhc7i84GxxceDAgQPHniO/8GwbqT3nLFzzNuWwosWBAwcOHAFHsqw8dFcJH9/qDDdqd+LAgQMHjjVHvtmTF2ybDaH9UMJ+/Thw4MCB49McSRWYFGyza7W4m/PjwIEDB449x2zbJl/oppnYUrbrL1IaBw4cOHCUvb62hTe7gU0ZNtuImjU0ceDAgQPHhmM2drAZdNvA5bGdbzJF3wscOHDgwFFyJAVYW8glx4a+Le2SgQkcOHDgwLHn2BRRSWtv1nObNRlzvgICBw4cOHAsODbjC3l0tUGbnK19PNF2FA4cOHDgWHDMxho2rb3ZometzPoucODAgQPHgmMWTpstqyug9odCVEziwIEDB441RzsKMBuhy0u4Fvo22nHgwIEDx54jCa2rQbe2OfjpUP/mVRw4cODAsebYDwdclYL5CMXHHx4OHDhw4FhwtCNlLUr7qVms5o/wzRlw4MCBA8cRRxJRswvn58lbgXmc161JHDhw4MCx5mh3qGbBOdu+uirh2qvgwIEDB44NR13k5HE1iurZOMLs1TffCxw4cODAMeJoYymPybbQ2heHs8DO7wsHDhw4cOQcm3CdQbRB2DYQV0GLAwcOHDiOOJKgyrep2g2h/a22vx3++VkcOHDgwPFLHO0wxP7VfYMyagviwIEDB44f52i3iPIm4KywbB/Ym3jGgQMHDhxHHO3wQdsobMu/liO/7eNtJxw4cODAsRhomA2uJeF6Fcb7+MeBAwcOHAuOP+Puphimdul2AAAAAElFTkSuQmCC" alt="微信分享二维码">
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPYAAAD2CAAAAADAeSUUAAADJ0lEQVR42u3ay27iQBAFUP7/pxlpVhMl49xbBVLcOb1CYNo+zaKox+MRr+fflXz6/Gcl+3y+/vlpJXd8vGNhY2Nj34T9vFzX17SHdb1/+zyz72JjY2Ofys6DRH4os51n0Se3YGNjY/9mdvtO/qA5Pg9m2NjY2NhJoWf/iMme1+9gY2NjY7dFnLxJkOy/OZpVUoSNjY19ELtt9P7k12/sb2NjY2P/SPZzvZIhm02TYB8Uv3g2bGxs7IPY+V//GeC6bbB/f9VywMbGxj6IPdvifWWdWYAcNqGxsbGxj2DnG20KPW2DIQ9p+cDQI+keY2NjY9+KnQ/cJJvOEphZKtKmJR9eY2NjYx/ETm42C2l5DpSHpXy3IhHCxsbGPppd5zSLktBm1LKdxsHGxsY+j50nG6/lvXuIJ6qlYWNjY9+cPfsrn3w6axLPykN1+oSNjY19EHsWWtrmQTsQ2TYMhkUlbGxs7IPYm6/NQld+97YlXIOxsbGxb87Og0o+7DgMIetiU74bNjY29nnsdjSnLei0Ldt9Y+CbnwcbGxv7UHbUEy4/3bd72wBWlJCwsbGxj2DPZnxeVRhKeLMd6tISNjY29s3ZeYhqh3j2DYZNLagOadjY2NjHsdvEoG0AzwpP+R3b5gc2Njb2HdmzMNOWpfJmw6yFnBe2sLGxsc9j79OP9kHzMtaseZA/GzY2NvZJ7LYpOwt4efGoTS1WORY2Njb2zdn12GJZgt+Evdce8YcdsLGxsQ9iz9qubSKRX5MHtnZsqMjAsLGxsW/FTrbOw9gmRG0KWG0jGRsbG/skdgIe/rl/USGprQ7lLWpsbGzsM9h5SpCvTXozG/1JQu9/a2nY2NjYN2fPWr95mGmHctog1zawsbGxsc9jz4LTLHTlCU97x7r4hY2NjX0QO1+bLyclqrxtsC9dYWNjY5/HngWtWQqxaesmiU1+WNjY2Njnsdvhm3ZQZj/KMwulw3klbGxs7KPZs4fYhK52n+iwsLGxsX8lOw9v7RFsDrEtPGFjY2Ofyt4UldoK/KwxMLv+m1QEGxsb+wj2PmBsglBbWmpTjiEYGxsb+x7sP0fmRShcz3ENAAAAAElFTkSuQmCC" alt="微信分享二维码">
 </div>
 
 
@@ -517,10 +552,10 @@ MathJax.Hub.Queue(function() {
     var OriginTitile = document.title, titleTime;
     document.addEventListener('visibilitychange', function() {
         if (document.hidden) {
-            document.title = '死鬼去哪里了！';
+            document.title = '您有一条未读消息';
             clearTimeout(titleTime);
         } else {
-            document.title = '(つェ⊂)咦!又好了!';
+            document.title = '(つェ⊂)骗你的啦!';
             titleTime = setTimeout(function() {
                 document.title = OriginTitile;
             },2000);
@@ -531,5 +566,21 @@ MathJax.Hub.Queue(function() {
 
 
 
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<!-- <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
 </body>
 </html>

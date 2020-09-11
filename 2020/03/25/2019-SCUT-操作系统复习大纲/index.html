@@ -28,16 +28,19 @@
     
     
     <meta name="keywords" content="复习笔记">
-    <meta name="description" content="冯·诺伊曼计算机模型                                                                                                            进程与线程 进程PCB  进程PCB包含的内容  一个独立的进程空间，可装入进程映像； 一个独立的进程相关联的执行文件 进程所用的系统资源； 一">
+    <meta name="description" content="冯·诺伊曼计算机模型                                                                                                           进程与线程进程PCB 进程PCB包含的内容 一个独立的进程空间，可装入进程映像；  一个独立的进程相关联的执行文件 进程所用的系统资源；  一个或多个线程。（进程在创">
 <meta name="keywords" content="复习笔记">
 <meta property="og:type" content="article">
 <meta property="og:title" content="2019-SCUT-操作系统复习大纲">
 <meta property="og:url" content="http:&#x2F;&#x2F;yubiao-li.gitee.io&#x2F;2020&#x2F;03&#x2F;25&#x2F;2019-SCUT-%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%A4%8D%E4%B9%A0%E5%A4%A7%E7%BA%B2&#x2F;index.html">
 <meta property="og:site_name" content="LYB的部落格">
-<meta property="og:description" content="冯·诺伊曼计算机模型                                                                                                            进程与线程 进程PCB  进程PCB包含的内容  一个独立的进程空间，可装入进程映像； 一个独立的进程相关联的执行文件 进程所用的系统资源； 一">
+<meta property="og:description" content="冯·诺伊曼计算机模型                                                                                                           进程与线程进程PCB 进程PCB包含的内容 一个独立的进程空间，可装入进程映像；  一个独立的进程相关联的执行文件 进程所用的系统资源；  一个或多个线程。（进程在创">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https:&#x2F;&#x2F;bkimg.cdn.bcebos.com&#x2F;pic&#x2F;574e9258d109b3de4ae00173ccbf6c81800a4c4a?x-bce-process&#x3D;image&#x2F;resize,m_lfit,w_220,h_220,limit_1">
 <meta property="og:image" content="https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;Yubiao-Li&#x2F;cloudimg&#x2F;master&#x2F;data&#x2F;20200310132454.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;c3wsq5.coding-pages.com&#x2F;e1befbe0d9fd67bab5732ca361ca7ccb65759e8f8923f5488a51200933116ecd.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;c3wsq5.coding-pages.com&#x2F;d22ccea16f553307129ec8b43443ecfe792fa98b5d491b4b76deb885bc4513ef.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;c3wsq5.coding-pages.com&#x2F;0d45a9257724ea644a3f11e6b1d183c8fdeee0cf37788d9a798be26f8468b6d9.png">
 <meta property="og:image" content="https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;Yubiao-Li&#x2F;cloudimg&#x2F;master&#x2F;data&#x2F;20200310160236.png">
 <meta property="og:image" content="https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;Yubiao-Li&#x2F;cloudimg&#x2F;master&#x2F;data&#x2F;20200310160506.png">
 <meta property="og:image" content="https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;Yubiao-Li&#x2F;cloudimg&#x2F;master&#x2F;data&#x2F;20200310160750.png">
@@ -47,7 +50,7 @@
 <meta property="og:image" content="https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;Yubiao-Li&#x2F;cloudimg&#x2F;master&#x2F;data&#x2F;20200311152650.png">
 <meta property="og:image" content="https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;Yubiao-Li&#x2F;cloudimg&#x2F;master&#x2F;data&#x2F;20200311161305.png">
 <meta property="og:image" content="https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;Yubiao-Li&#x2F;cloudimg&#x2F;master&#x2F;data&#x2F;20200311163322.png">
-<meta property="og:updated_time" content="2020-03-25T03:20:20.933Z">
+<meta property="og:updated_time" content="2020-09-10T10:30:04.481Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https:&#x2F;&#x2F;bkimg.cdn.bcebos.com&#x2F;pic&#x2F;574e9258d109b3de4ae00173ccbf6c81800a4c4a?x-bce-process&#x3D;image&#x2F;resize,m_lfit,w_220,h_220,limit_1">
     
@@ -175,7 +178,7 @@
     <aside class="post-widget">
         <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
             <h4>TOC</h4>
-            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#冯诺伊曼计算机模型"><span class="post-toc-number">1.</span> <span class="post-toc-text">冯·诺伊曼计算机模型</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#进程与线程"><span class="post-toc-number">2.</span> <span class="post-toc-text">进程与线程</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#进程pcb"><span class="post-toc-number">2.1.</span> <span class="post-toc-text">进程PCB</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#进程的状态"><span class="post-toc-number">3.</span> <span class="post-toc-text">进程的状态</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#进程调度"><span class="post-toc-number">3.1.</span> <span class="post-toc-text">进程调度</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#内存调度"><span class="post-toc-number">4.</span> <span class="post-toc-text">内存调度</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#存储层次"><span class="post-toc-number">4.1.</span> <span class="post-toc-text">存储层次</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#地址空间"><span class="post-toc-number">4.2.</span> <span class="post-toc-text">地址空间</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#内存分配"><span class="post-toc-number">4.3.</span> <span class="post-toc-text">内存分配</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#内存管理的方法"><span class="post-toc-number">4.3.1.</span> <span class="post-toc-text">内存管理的方法</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#空闲块的选择"><span class="post-toc-number">4.3.2.</span> <span class="post-toc-text">空闲块的选择</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#overlaying"><span class="post-toc-number">4.3.3.</span> <span class="post-toc-text">overlaying</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#虚拟内存"><span class="post-toc-number">4.4.</span> <span class="post-toc-text">虚拟内存</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#多级page-table"><span class="post-toc-number">4.4.1.</span> <span class="post-toc-text">多级page table</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#反转页表inverted-page-tables"><span class="post-toc-number">4.4.2.</span> <span class="post-toc-text">反转页表（Inverted Page Tables）</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#页面置换算法"><span class="post-toc-number">4.5.</span> <span class="post-toc-text">页面置换算法</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#文件系统"><span class="post-toc-number">5.</span> <span class="post-toc-text">文件系统</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#文件系统布局"><span class="post-toc-number">5.1.</span> <span class="post-toc-text">文件系统布局</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#文件实现"><span class="post-toc-number">5.2.</span> <span class="post-toc-text">文件实现</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#连续分配"><span class="post-toc-number">5.2.1.</span> <span class="post-toc-text">连续分配</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#linked-list-allocation"><span class="post-toc-number">5.2.2.</span> <span class="post-toc-text">Linked List Allocation</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#io控制"><span class="post-toc-number">6.</span> <span class="post-toc-text">I/O控制</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#separate-io-and-memory-space"><span class="post-toc-number">6.1.</span> <span class="post-toc-text">Separate I/O and memory space</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#memory-mapped-io"><span class="post-toc-number">6.2.</span> <span class="post-toc-text">Memory-mapped I/O</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#io中断"><span class="post-toc-number">6.3.</span> <span class="post-toc-text">I/O中断</span></a></li></ol></li></ol>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#冯·诺伊曼计算机模型"><span class="post-toc-number">1.</span> <span class="post-toc-text">冯·诺伊曼计算机模型</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#进程与线程"><span class="post-toc-number">2.</span> <span class="post-toc-text">进程与线程</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#进程PCB"><span class="post-toc-number">2.1.</span> <span class="post-toc-text">进程PCB</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#进程的状态"><span class="post-toc-number">3.</span> <span class="post-toc-text">进程的状态</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#进程间通信方式"><span class="post-toc-number">3.1.</span> <span class="post-toc-text">进程间通信方式</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#管道"><span class="post-toc-number">3.1.1.</span> <span class="post-toc-text">管道</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#FIFO（命名管道）"><span class="post-toc-number">3.1.2.</span> <span class="post-toc-text">FIFO（命名管道）</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#消息队列"><span class="post-toc-number">3.1.3.</span> <span class="post-toc-text">消息队列</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#信号量"><span class="post-toc-number">3.1.4.</span> <span class="post-toc-text">信号量</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#共享内存"><span class="post-toc-number">3.1.5.</span> <span class="post-toc-text">共享内存</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Socket"><span class="post-toc-number">3.1.6.</span> <span class="post-toc-text">Socket</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#进程调度"><span class="post-toc-number">3.2.</span> <span class="post-toc-text">进程调度</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#内存调度"><span class="post-toc-number">4.</span> <span class="post-toc-text">内存调度</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#存储层次"><span class="post-toc-number">4.1.</span> <span class="post-toc-text">存储层次</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#地址空间"><span class="post-toc-number">4.2.</span> <span class="post-toc-text">地址空间</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#内存分配"><span class="post-toc-number">4.3.</span> <span class="post-toc-text">内存分配</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#内存管理的方法"><span class="post-toc-number">4.3.1.</span> <span class="post-toc-text">内存管理的方法</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#空闲块的选择"><span class="post-toc-number">4.3.2.</span> <span class="post-toc-text">空闲块的选择</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#overlaying"><span class="post-toc-number">4.3.3.</span> <span class="post-toc-text">overlaying</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#虚拟内存"><span class="post-toc-number">4.4.</span> <span class="post-toc-text">虚拟内存</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#多级page-table"><span class="post-toc-number">4.4.1.</span> <span class="post-toc-text">多级page table</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#反转页表（Inverted-Page-Tables）"><span class="post-toc-number">4.4.2.</span> <span class="post-toc-text">反转页表（Inverted Page Tables）</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#页面置换算法"><span class="post-toc-number">4.5.</span> <span class="post-toc-text">页面置换算法</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#文件系统"><span class="post-toc-number">5.</span> <span class="post-toc-text">文件系统</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#文件系统布局"><span class="post-toc-number">5.1.</span> <span class="post-toc-text">文件系统布局</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#文件实现"><span class="post-toc-number">5.2.</span> <span class="post-toc-text">文件实现</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#连续分配"><span class="post-toc-number">5.2.1.</span> <span class="post-toc-text">连续分配</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Linked-List-Allocation"><span class="post-toc-number">5.2.2.</span> <span class="post-toc-text">Linked List Allocation</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#I-O控制"><span class="post-toc-number">6.</span> <span class="post-toc-text">I/O控制</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Separate-I-O-and-memory-space"><span class="post-toc-number">6.1.</span> <span class="post-toc-text">Separate I/O and memory space</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Memory-mapped-I-O"><span class="post-toc-number">6.2.</span> <span class="post-toc-text">Memory-mapped I/O</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#I-O中断"><span class="post-toc-number">6.3.</span> <span class="post-toc-text">I/O中断</span></a></li></ol></li></ol>
         </nav>
     </aside>
 
@@ -199,187 +202,294 @@
 
         </div>
         <div class="post-content" id="post-content" itemprop="postContent">
-            <h2 id="冯诺伊曼计算机模型">冯·诺伊曼计算机模型</h2>
-<figure class="image-bubble">
+            <h2 id="冯·诺伊曼计算机模型"><a href="#冯·诺伊曼计算机模型" class="headerlink" title="冯·诺伊曼计算机模型"></a>冯·诺伊曼计算机模型</h2><figure class="image-bubble">
                 <div class="img-lightbox">
                     <div class="overlay"></div>
                     <img src="https://bkimg.cdn.bcebos.com/pic/574e9258d109b3de4ae00173ccbf6c81800a4c4a?x-bce-process=image/resize,m_lfit,w_220,h_220,limit_1" alt="" title="">
                 </div>
                 <div class="image-caption"></div>
             </figure>
-<h2 id="进程与线程">进程与线程</h2>
-<h3 id="进程pcb">进程PCB</h3>
-<ul>
-<li>进程PCB包含的内容
-<ol style="list-style-type: decimal">
-<li>一个独立的进程空间，可装入进程映像；</li>
+<h2 id="进程与线程"><a href="#进程与线程" class="headerlink" title="进程与线程"></a>进程与线程</h2><h3 id="进程PCB"><a href="#进程PCB" class="headerlink" title="进程PCB"></a>进程PCB</h3><ul>
+<li>进程PCB包含的内容<ol>
+<li>一个独立的进程空间，可装入进程映像； </li>
 <li>一个独立的进程相关联的执行文件</li>
-<li>进程所用的系统资源；</li>
-<li>一个或多个线程。（进程在创建时一般同时创建好第一个线程， 其他线程按需要由用户程序请求创建）</li>
-</ol></li>
+<li>进程所用的系统资源； </li>
+<li>一个或多个线程。（进程在创建时一般同时创建好第一个线程， 其他线程按需要由用户程序请求创建） </li>
+</ol>
+</li>
 </ul>
-<h2 id="进程的状态">进程的状态</h2>
-<ol style="list-style-type: decimal">
-<li>进程有三大状态
+<h2 id="进程的状态"><a href="#进程的状态" class="headerlink" title="进程的状态"></a>进程的状态</h2><ol>
+<li><p>进程有三大状态</p>
 <ul>
 <li>running，正在使用CPU</li>
 <li>ready，可以被运行，正在等待</li>
 <li>blocked，不能运行直到外部事件发生</li>
-</ul></li>
-<li>状态转换 <img src="https://raw.githubusercontent.com/Yubiao-Li/cloudimg/master/data/20200310132454.png" /></li>
+</ul>
+</li>
+<li><p>状态转换<br> <img src="https://raw.githubusercontent.com/Yubiao-Li/cloudimg/master/data/20200310132454.png" alt=""></p>
+</li>
 </ol>
-<h3 id="进程调度">进程调度</h3>
-<ol style="list-style-type: decimal">
-<li><p>FCFS，先到先服务。缺点：护航效应</p></li>
-<li><p>JSF，最短作业优先。缺点：饿死</p></li>
-<li><p>Round-robin，时间片。缺点：频繁的上下文切换，没有考虑优先级</p></li>
-<li><p>Priority Scheduling，优先队列，每个任务分配一个优先级，每个优先级使用FCFS。缺点：也会饿死</p></li>
-<li><p>Multi-level Feedback Algorithm，循环遍历优先级队列，且时间片越来越长</p></li>
-<li><p>Guaranteed Scheduling，保证调度，保证每个进程都能分到1/n的CPU。缺点：其实不公平</p></li>
-<li><p>Lottery Scheduling，彩票调度</p></li>
+<h3 id="进程间通信方式"><a href="#进程间通信方式" class="headerlink" title="进程间通信方式"></a>进程间通信方式</h3><h4 id="管道"><a href="#管道" class="headerlink" title="管道"></a>管道</h4><ol>
+<li><p>特点</p>
+<ul>
+<li>它是半双工的，具有固定的读端和写端</li>
+<li>它只能用于<strong>具有亲缘关系</strong>的进程之间通信（也是父子进程或者兄弟进程之间）</li>
+<li>它可以看成是一种特殊的文件，对于它的读写也可以使用普通的read、write等函数，但是它不属于其他任何文件系统，并且只存在内存中</li>
+</ul>
+</li>
+<li><p>原型：当一个管道建立时，它会创建两个文件描述符：fd[0]为读而打开，fd[1]为写而打开<br> <img src="https://c3wsq5.coding-pages.com/e1befbe0d9fd67bab5732ca361ca7ccb65759e8f8923f5488a51200933116ecd.png" alt="图1">  </p>
+</li>
+<li><p>例子：单个进程中的管道几乎没有任何用处。所以调用pipe的进程调用fork，这样就创建了父进程与子进程之间的IPC通道。<br> <img src="https://c3wsq5.coding-pages.com/d22ccea16f553307129ec8b43443ecfe792fa98b5d491b4b76deb885bc4513ef.png" alt="图2">  </p>
+</li>
 </ol>
-<h2 id="内存调度">内存调度</h2>
-<h3 id="存储层次">存储层次</h3>
-<ol style="list-style-type: decimal">
-<li><p>理想的内存：大、快、非易失性、便宜</p></li>
-<li><p>实际的内存：小内存快速，昂贵，易失；大内存慢，便宜、非易失</p></li>
+<h4 id="FIFO（命名管道）"><a href="#FIFO（命名管道）" class="headerlink" title="FIFO（命名管道）"></a>FIFO（命名管道）</h4><ol>
+<li><p>特点</p>
+<ul>
+<li>可以在<strong>无关</strong>的进程之间交换数据，与无名管道不同</li>
+<li>FIFO有路径名与之相关联，它以一种特殊设备文件形式存在于文件系统之中</li>
+</ul>
+</li>
+<li><p>例子：FIFO的通信方式类似于在进程中使用文件来传输数据，只不过FIFO类型文件同时具有管道的特性。在数据读出时，FIFO管道同时清除数据，并且“先进先出”<br> <img src="https://c3wsq5.coding-pages.com/0d45a9257724ea644a3f11e6b1d183c8fdeee0cf37788d9a798be26f8468b6d9.png" alt="图3">  </p>
+</li>
 </ol>
-<h3 id="地址空间">地址空间</h3>
-<ol style="list-style-type: decimal">
-<li><p>每个进程有自己的地址空间，独立于于其他进程的空间</p></li>
-<li><p>动态定位：将进程的地址空间放在内存的不同部分</p></li>
+<h4 id="消息队列"><a href="#消息队列" class="headerlink" title="消息队列"></a>消息队列</h4><blockquote>
+<p>是消息的链表，存放在内核中。一个消息队列由一个标识符（队列ID）来标识</p>
+</blockquote>
+<ol>
+<li>特点<ul>
+<li>消息队列是面向记录的，其中的消息具有特定的格式以及特定的优先级</li>
+<li>消息队列独立于发送与接受进程。进程终止时，消息队列及其内容不会被删除</li>
+<li>消息队列可以实现消息的随机查询，消息不一定要以先进先出的次序读取，也可以按照消息的类型读取</li>
+</ul>
+</li>
 </ol>
-<h3 id="内存分配">内存分配</h3>
-<h4 id="内存管理的方法">内存管理的方法</h4>
-<ol style="list-style-type: decimal">
-<li><p>外部碎片：进程被交换进物理内存和交换出物理内存，时间长了会形成很多空洞 <img src="https://raw.githubusercontent.com/Yubiao-Li/cloudimg/master/data/20200310160236.png" /></p></li>
-<li><p>使用bitmap进行内存管理 <img src="https://raw.githubusercontent.com/Yubiao-Li/cloudimg/master/data/20200310160506.png" /></p>
-<ol style="list-style-type: decimal">
+<h4 id="信号量"><a href="#信号量" class="headerlink" title="信号量"></a>信号量</h4><ol>
+<li>特点<ul>
+<li>信号量用于进程间同步，若要在进程间传递数据需要结合共享内存</li>
+<li>信号量基于操作系统的PV操作，程序对信号量的操作都是原子操作</li>
+<li>每次对信号量的PV操作不仅限于对信号量值+1或者-1，而且可以加减任意正整数</li>
+<li>支持信号量组</li>
+</ul>
+</li>
+</ol>
+<h4 id="共享内存"><a href="#共享内存" class="headerlink" title="共享内存"></a>共享内存</h4><blockquote>
+<p>指多个进程共享一个给定的存储区</p>
+</blockquote>
+<ol>
+<li>特点<ul>
+<li>共享内存是最快的一种IPC，因为是进程直接读取内存</li>
+<li>因为是多个进程同时操作，所以需要同步</li>
+<li>信号量常和共享内存一同使用，信号量用来同步对共享内存的访问</li>
+</ul>
+</li>
+</ol>
+<h4 id="Socket"><a href="#Socket" class="headerlink" title="Socket"></a>Socket</h4><ol>
+<li>特点：<ul>
+<li>可以用于不同机器之间的进程通信</li>
+</ul>
+</li>
+</ol>
+<h3 id="进程调度"><a href="#进程调度" class="headerlink" title="进程调度"></a>进程调度</h3><ol>
+<li><p>FCFS，先到先服务。缺点：护航效应</p>
+</li>
+<li><p>JSF，最短作业优先。缺点：饿死</p>
+</li>
+<li><p>Round-robin，时间片。缺点：频繁的上下文切换，没有考虑优先级</p>
+</li>
+<li><p>Priority Scheduling，优先队列，每个任务分配一个优先级，每个优先级使用FCFS。缺点：也会饿死</p>
+</li>
+<li><p>Multi-level Feedback Algorithm，循环遍历优先级队列，且时间片越来越长</p>
+</li>
+<li><p>Guaranteed Scheduling，保证调度，保证每个进程都能分到1/n的CPU。缺点：其实不公平</p>
+</li>
+<li><p>Lottery Scheduling，彩票调度</p>
+</li>
+</ol>
+<h2 id="内存调度"><a href="#内存调度" class="headerlink" title="内存调度"></a>内存调度</h2><h3 id="存储层次"><a href="#存储层次" class="headerlink" title="存储层次"></a>存储层次</h3><ol>
+<li><p>理想的内存：大、快、非易失性、便宜</p>
+</li>
+<li><p>实际的内存：小内存快速，昂贵，易失；大内存慢，便宜、非易失</p>
+</li>
+</ol>
+<h3 id="地址空间"><a href="#地址空间" class="headerlink" title="地址空间"></a>地址空间</h3><ol>
+<li><p>每个进程有自己的地址空间，独立于于其他进程的空间</p>
+</li>
+<li><p>动态定位：将进程的地址空间放在内存的不同部分</p>
+</li>
+</ol>
+<h3 id="内存分配"><a href="#内存分配" class="headerlink" title="内存分配"></a>内存分配</h3><h4 id="内存管理的方法"><a href="#内存管理的方法" class="headerlink" title="内存管理的方法"></a>内存管理的方法</h4><ol>
+<li><p>外部碎片：进程被交换进物理内存和交换出物理内存，时间长了会形成很多空洞<br> <img src="https://raw.githubusercontent.com/Yubiao-Li/cloudimg/master/data/20200310160236.png" alt=""></p>
+</li>
+<li><p>使用bitmap进行内存管理<br> <img src="https://raw.githubusercontent.com/Yubiao-Li/cloudimg/master/data/20200310160506.png" alt=""></p>
+<ol>
 <li>分配单元越小，bitmap越大</li>
 <li>寻找一个连续的空块是很慢的</li>
-</ol></li>
-<li><p>使用链表进行内存管理 <img src="https://raw.githubusercontent.com/Yubiao-Li/cloudimg/master/data/20200310160750.png" /></p>
-<ol style="list-style-type: decimal">
+</ol>
+</li>
+<li><p>使用链表进行内存管理<br> <img src="https://raw.githubusercontent.com/Yubiao-Li/cloudimg/master/data/20200310160750.png" alt=""></p>
+<ol>
 <li>使用链表记录内存分配情况</li>
-</ol></li>
 </ol>
-<h4 id="空闲块的选择">空闲块的选择</h4>
-<ol style="list-style-type: decimal">
-<li><p>First Fit：选择第一个可用的空洞。缺点：创建更多的空洞</p></li>
-<li><p>Next Fit：从上一个选择的空洞开始继续向下寻找。缺点：比First Fit的效果还差</p></li>
-<li><p>Best Fit。缺点：创建不可用的小空洞</p></li>
-<li><p>Worst Fit。缺点：减少了大型进程能够运行的空洞</p></li>
-<li><p>Quick Fit：为一些常见的请求大小维护单独的列表</p></li>
+</li>
 </ol>
-<h4 id="overlaying">overlaying</h4>
-<ul>
-<li>可以将程序分割成小的片段，交换片段由操作系统完成，但程序员需要把程序手动分割成片段，这提高了编程的复杂度 <img src="https://raw.githubusercontent.com/Yubiao-Li/cloudimg/master/data/20200310210619.png" /></li>
+<h4 id="空闲块的选择"><a href="#空闲块的选择" class="headerlink" title="空闲块的选择"></a>空闲块的选择</h4><ol>
+<li><p>First Fit：选择第一个可用的空洞。缺点：创建更多的空洞</p>
+</li>
+<li><p>Next Fit：从上一个选择的空洞开始继续向下寻找。缺点：比First Fit的效果还差</p>
+</li>
+<li><p>Best Fit。缺点：创建不可用的小空洞</p>
+</li>
+<li><p>Worst Fit。缺点：减少了大型进程能够运行的空洞</p>
+</li>
+<li><p>Quick Fit：为一些常见的请求大小维护单独的列表</p>
+</li>
+</ol>
+<h4 id="overlaying"><a href="#overlaying" class="headerlink" title="overlaying"></a>overlaying</h4><ul>
+<li>可以将程序分割成小的片段，交换片段由操作系统完成，但程序员需要把程序手动分割成片段，这提高了编程的复杂度<br>  <img src="https://raw.githubusercontent.com/Yubiao-Li/cloudimg/master/data/20200310210619.png" alt=""></li>
 </ul>
-<h3 id="虚拟内存">虚拟内存</h3>
-<ol style="list-style-type: decimal">
-<li><p>虚拟内存提供足够的内存给用户所需，所以一般虚拟内存地址空间大于物理内存地址空间</p></li>
-<li>分页是用来实现虚拟内存的一种方式
+<h3 id="虚拟内存"><a href="#虚拟内存" class="headerlink" title="虚拟内存"></a>虚拟内存</h3><ol>
+<li><p>虚拟内存提供足够的内存给用户所需，所以一般虚拟内存地址空间大于物理内存地址空间</p>
+</li>
+<li><p>分页是用来实现虚拟内存的一种方式</p>
 <ul>
 <li>pages:被分割的虚拟内存单元</li>
 <li>page frames:对应的位于物理内存的单元</li>
-</ul></li>
-<li><p>page会轮流被装载到物理内存中，产生的映射存储在page table，page table需要装载到物理内存中，寻找一个没被映射到物理内存的page会产生一次page fault</p></li>
-<li>MMU（memory manangement unit）将虚拟地址翻译为物理地址 <img src="https://raw.githubusercontent.com/Yubiao-Li/cloudimg/master/data/20200311112016.png" />
+</ul>
+</li>
+<li><p>page会轮流被装载到物理内存中，产生的映射存储在page table，page table需要装载到物理内存中，寻找一个没被映射到物理内存的page会产生一次page fault</p>
+</li>
+<li><p>MMU（memory manangement unit）将虚拟地址翻译为物理地址<br> <img src="https://raw.githubusercontent.com/Yubiao-Li/cloudimg/master/data/20200311112016.png" alt=""></p>
 <ul>
-<li>TLB是MMU中的一块高速缓存，在翻译过程中首先寻找TLB <img src="https://raw.githubusercontent.com/Yubiao-Li/cloudimg/master/data/20200311120145.png" /></li>
-</ul></li>
+<li>TLB是MMU中的一块高速缓存，在翻译过程中首先寻找TLB<br><img src="https://raw.githubusercontent.com/Yubiao-Li/cloudimg/master/data/20200311120145.png" alt=""></li>
+</ul>
+</li>
 </ol>
-<h4 id="多级page-table">多级page table</h4>
-<ol style="list-style-type: decimal">
-<li><p>单极页表需要连续的内存空间存储页表项，并且大部分页表项是未使用的</p></li>
-<li><p>多级页表使用一个额外的页表项作为目录，并且只需装载需要的部分page table进入内存中</p></li>
+<h4 id="多级page-table"><a href="#多级page-table" class="headerlink" title="多级page table"></a>多级page table</h4><ol>
+<li><p>单极页表需要连续的内存空间存储页表项，并且大部分页表项是未使用的</p>
+</li>
+<li><p>多级页表使用一个额外的页表项作为目录，并且只需装载需要的部分page table进入内存中</p>
+</li>
 </ol>
-<h4 id="反转页表inverted-page-tables">反转页表（Inverted Page Tables）</h4>
-<ol style="list-style-type: decimal">
-<li><p>每个页表项是哈希索引，哈希索引每一项指向虚拟内存到物理内存的映射，哈希索引的大小与物理内存页的数量相同。所以具有更小的体积，但是需要维护额外的哈希链开销</p></li>
-<li><p>因为一个物理页不可能有多个共享虚拟地址。解决这个问题的方法是允许页表包含一个虚拟地址到物理地址的映射，这意味着对未被映射的虚拟地址的引用会导致页错误</p></li>
+<h4 id="反转页表（Inverted-Page-Tables）"><a href="#反转页表（Inverted-Page-Tables）" class="headerlink" title="反转页表（Inverted Page Tables）"></a>反转页表（Inverted Page Tables）</h4><ol>
+<li><p>每个页表项是哈希索引，哈希索引每一项指向虚拟内存到物理内存的映射，哈希索引的大小与物理内存页的数量相同。所以具有更小的体积，但是需要维护额外的哈希链开销</p>
+</li>
+<li><p>因为一个物理页不可能有多个共享虚拟地址。解决这个问题的方法是允许页表包含一个虚拟地址到物理地址的映射，这意味着对未被映射的虚拟地址的引用会导致页错误</p>
+</li>
 </ol>
-<h3 id="页面置换算法">页面置换算法</h3>
-<ol style="list-style-type: decimal">
-<li><p>Random page replacement：随机替换一个页面</p></li>
-<li><p>First in First Out：替换存在物理内存中最久的page</p></li>
-<li>Not Recently Used：维护两个标记位，一个标记位R标识对象是否被使用过，另一个标记为M标记对象是否被修改过，当一个对象在缓存中被找到时，R置为1，当一个对象被修改，M置为1，优先级如下。该算法认为最近被使用过的对象比最近被修改过的对象更重要
+<h3 id="页面置换算法"><a href="#页面置换算法" class="headerlink" title="页面置换算法"></a>页面置换算法</h3><ol>
+<li><p>Random page replacement：随机替换一个页面</p>
+</li>
+<li><p>First in First Out：替换存在物理内存中最久的page</p>
+</li>
+<li><p>Not Recently Used(NRU)：维护两个标记位，一个标记位R标识对象是否被使用过，另一个标记为M标记对象是否被修改过，当一个对象在缓存中被找到时，R置为1，当一个对象被修改，M置为1，优先级如下。该算法认为最近被使用过的对象比最近被修改过的对象更重要</p>
 <ul>
-<li><ol start="3" style="list-style-type: decimal">
+<li><ol>
 <li>referenced, modified</li>
-</ol></li>
-<li><ol start="2" style="list-style-type: decimal">
+</ol>
+</li>
+<li><ol>
 <li>referenced, not modified</li>
-</ol></li>
-<li><ol style="list-style-type: decimal">
+</ol>
+</li>
+<li><ol>
 <li>not referenced, modified</li>
-</ol></li>
-<li><ol start="0" style="list-style-type: decimal">
-<li>not referenced, not modified &gt; 当缓存已满则按照从下到上的优先级替换page</li>
-</ol></li>
-</ul></li>
-<li>Least Recently Used：替换掉页面中最久没被使用过的page，使用一个链表，如果一个page被访问且在链表中，则将其移到链表头部，如果不在链表中，则插入到链表头部，如果链表满了，则选择移除链表最尾的page
-<ul>
-<li>老化算法：越近使用权重越大 <img src="https://raw.githubusercontent.com/Yubiao-Li/cloudimg/master/data/20200311152650.png" /></li>
-</ul></li>
-<li><p>Not Frequently Used： 最不常用算法，使用一个计数器来记录页面使用状况</p></li>
-<li><p>Working Set：保留最近的工作集页面</p></li>
 </ol>
-<h2 id="文件系统">文件系统</h2>
-<h3 id="文件系统布局">文件系统布局</h3>
-<ol style="list-style-type: decimal">
-<li><p>MBR（(Master Boot Record）在第0个扇区，用于启动计算机</p></li>
-<li><p>partition table用于给出每个分区的开始与结束地址，并将其中一个分区标记为激活</p></li>
-<li><p>每一个分区有自己的文件系统，并且开头为一个boot block &gt; 这个boot block包含一个小程序，引导操作系统进入该分区</p></li>
-<li><p>操作系统启动时，BIOS读取MBR，然后定位激活的分区，读取分区的boot block并执行</p></li>
+</li>
+<li><ol>
+<li>not referenced, not modified<blockquote>
+<p>当缓存已满则按照从下到上的优先级替换page</p>
+</blockquote>
+</li>
 </ol>
-<h3 id="文件实现">文件实现</h3>
-<ul>
+</li>
+</ul>
+</li>
+<li><p>Least Recently Used(LRU)：替换掉页面中最久没被使用过的page</p>
+<ol>
+<li>使用一个链表，如果一个page被访问且在链表中，则将其移到链表头部，如果不在链表中，则插入到链表头部，如果链表满了，则选择移除链表最尾的page</li>
+<li>老化算法：越近使用权重越大<br> <img src="https://raw.githubusercontent.com/Yubiao-Li/cloudimg/master/data/20200311152650.png" alt=""></li>
+</ol>
+</li>
+<li><p>Not Frequently Used(NFU)：最不常用算法，使用一个计数器来记录页面使用状况</p>
+</li>
+<li><p>Working Set：保留最近的工作集页面</p>
+</li>
+</ol>
+<h2 id="文件系统"><a href="#文件系统" class="headerlink" title="文件系统"></a>文件系统</h2><h3 id="文件系统布局"><a href="#文件系统布局" class="headerlink" title="文件系统布局"></a>文件系统布局</h3><ol>
+<li><p>MBR（(Master Boot Record）在第0个扇区，用于启动计算机</p>
+</li>
+<li><p>partition table用于给出每个分区的开始与结束地址，并将其中一个分区标记为激活</p>
+</li>
+<li><p>每一个分区有自己的文件系统，并且开头为一个boot block</p>
+<blockquote>
+<p>这个boot block包含一个小程序，引导操作系统进入该分区</p>
+</blockquote>
+</li>
+<li><p>操作系统启动时，BIOS读取MBR，然后定位激活的分区，读取分区的boot block并执行</p>
+</li>
+</ol>
+<h3 id="文件实现"><a href="#文件实现" class="headerlink" title="文件实现"></a>文件实现</h3><ul>
 <li>文件的实现指的是追踪每个文件位于哪一硬盘块中</li>
 </ul>
-<h4 id="连续分配">连续分配</h4>
-<ol style="list-style-type: decimal">
-<li><p>使用连续的块存储每一个文件</p></li>
-<li><p>优点：实现简单，只需要记录文件起始位置与长度，读取性能很好</p></li>
-<li><p>缺点：产生磁盘碎片，并且需要预先知道文件的最大大小，否则文件大小无法增长</p></li>
-<li><p>Good for CD-ROMs, DVDs and other write-once optical media</p></li>
+<h4 id="连续分配"><a href="#连续分配" class="headerlink" title="连续分配"></a>连续分配</h4><ol>
+<li><p>使用连续的块存储每一个文件</p>
+</li>
+<li><p>优点：实现简单，只需要记录文件起始位置与长度，读取性能很好</p>
+</li>
+<li><p>缺点：产生磁盘碎片，并且需要预先知道文件的最大大小，否则文件大小无法增长</p>
+</li>
+<li><p>Good for CD-ROMs, DVDs and other write-once optical media </p>
+</li>
 </ol>
-<h4 id="linked-list-allocation">Linked List Allocation</h4>
-<ol style="list-style-type: decimal">
-<li><p>用链表链接一串硬盘块来存储文件，块可能存储在硬盘的各个位置，每个块的第一个字指向下个文件块的位置 <img src="https://raw.githubusercontent.com/Yubiao-Li/cloudimg/master/data/20200311161305.png" /></p></li>
-<li><p>优点：没有外部碎片，只需要记录文件的开始块，文件可以无限增长，顺序读取快</p></li>
-<li><p>缺点：随机访问慢，块中的数据量不是2的幂</p></li>
-<li>改进：
-<ol style="list-style-type: decimal">
-<li>Linked List Allocation Using FAT：使用硬盘每个分区的第一个扇区来存储FAT（File Allocation Table），即把每个文件块的指针单独存放在一个文件用作索引
-<ol style="list-style-type: decimal">
-<li><p>FAT需要装载到内存中以减少硬盘寻道</p></li>
-<li><p>FAT的一个条目包含文件块所在的位置以及下一个文件块索引所在的位置</p></li>
-<li><p>优点：整个磁盘块可以用来存储文件数据，只需要记录文件索引的开始块</p></li>
-<li><p>缺点：需要把FAT加载到内存中</p></li>
-</ol></li>
-<li>Indexed Allocation (i-Node)：将文件的所有指针放在一个位置（i节点），所有文件都有自己的i节点 <img src="https://raw.githubusercontent.com/Yubiao-Li/cloudimg/master/data/20200311163322.png" />
-<ol style="list-style-type: decimal">
-<li><p>在打开文件的时候只需要把该文件的i节点加载进内存</p></li>
-<li><p>所有的目录条目只需要存放i节点地址即可</p></li>
-<li><p>优点：支持直接访问，没有外部碎片，只需要文件对应的i节点加载进内存</p></li>
-<li><p>缺点：需要额外的空间开销存放index</p></li>
-</ol></li>
-</ol></li>
+<h4 id="Linked-List-Allocation"><a href="#Linked-List-Allocation" class="headerlink" title="Linked List Allocation"></a>Linked List Allocation</h4><ol>
+<li><p>用链表链接一串硬盘块来存储文件，块可能存储在硬盘的各个位置，每个块的第一个字指向下个文件块的位置<br> <img src="https://raw.githubusercontent.com/Yubiao-Li/cloudimg/master/data/20200311161305.png" alt=""></p>
+</li>
+<li><p>优点：没有外部碎片，只需要记录文件的开始块，文件可以无限增长，顺序读取快</p>
+</li>
+<li><p>缺点：随机访问慢，块中的数据量不是2的幂</p>
+</li>
+<li><p>改进：</p>
+<ol>
+<li><p>Linked List Allocation Using FAT：使用硬盘每个分区的第一个扇区来存储FAT（File Allocation Table），即把<strong>每个文件块的指针</strong>单独存放在一个文件用作索引</p>
+<ol>
+<li><p>FAT需要装载到内存中以减少硬盘寻道</p>
+</li>
+<li><p>FAT的一个条目包含文件块所在的位置以及下一个文件块索引所在的位置</p>
+</li>
+<li><p>优点：整个磁盘块可以用来存储文件数据，只需要记录文件索引的开始块</p>
+</li>
+<li><p>缺点：需要把FAT加载到内存中</p>
+</li>
 </ol>
-<h2 id="io控制">I/O控制</h2>
-<ol style="list-style-type: decimal">
-<li><p>每一个控制寄存器有特殊的I/O端口</p></li>
-<li><p>特别的I/O指令用于读/写这些控制寄存器</p></li>
+</li>
+<li><p>Indexed Allocation (i-Node)：将文件的所有指针放在一个位置（i节点），所有文件都有自己的i节点<br> <img src="https://raw.githubusercontent.com/Yubiao-Li/cloudimg/master/data/20200311163322.png" alt=""></p>
+<ol>
+<li><p>在打开文件的时候只需要把该文件的i节点加载进内存</p>
+</li>
+<li><p>所有的目录条目只需要存放i节点地址即可</p>
+</li>
+<li><p>优点：支持直接访问，没有外部碎片，只需要文件对应的i节点加载进内存</p>
+</li>
+<li><p>缺点：需要额外的空间开销<strong>存放index</strong></p>
+</li>
 </ol>
-<h3 id="separate-io-and-memory-space">Separate I/O and memory space</h3>
-<h3 id="memory-mapped-io">Memory-mapped I/O</h3>
-<ol style="list-style-type: decimal">
-<li><p>优点：无需特别的指令来读写控制寄存器，无需特别的保护机制来保护控制寄存器不受用户的直接访问</p></li>
-<li><p>缺点：如果控制寄存器的值是缓存的会导致问题。</p></li>
+</li>
 </ol>
-<h3 id="io中断">I/O中断</h3>
-<ul>
+</li>
+</ol>
+<h2 id="I-O控制"><a href="#I-O控制" class="headerlink" title="I/O控制"></a>I/O控制</h2><ol>
+<li><p>每一个控制寄存器有特殊的I/O端口</p>
+</li>
+<li><p>特别的I/O指令用于读/写这些控制寄存器</p>
+</li>
+</ol>
+<h3 id="Separate-I-O-and-memory-space"><a href="#Separate-I-O-and-memory-space" class="headerlink" title="Separate I/O and memory space"></a>Separate I/O and memory space</h3><h3 id="Memory-mapped-I-O"><a href="#Memory-mapped-I-O" class="headerlink" title="Memory-mapped I/O"></a>Memory-mapped I/O</h3><ol>
+<li><p>优点：无需特别的指令来读写控制寄存器，无需特别的保护机制来保护控制寄存器不受用户的直接访问</p>
+</li>
+<li><p>缺点：如果控制寄存器的值是缓存的会导致问题。</p>
+</li>
+</ol>
+<h3 id="I-O中断"><a href="#I-O中断" class="headerlink" title="I/O中断"></a>I/O中断</h3><ul>
 <li>使用DMA来作为I/O设备与CPU的中转站，一次传输多个字符，以防CPU被频繁打断</li>
 </ul>
 
@@ -390,7 +500,7 @@
     <div class="content">
         
 <span class="post-time">
-    最后更新时间：<time datetime="2020-03-25T03:20:20.933Z" itemprop="dateUpdated">2020-03-25 11:20:20</time>
+    最后更新时间：<time datetime="2020-09-10T10:30:04.481Z" itemprop="dateUpdated">2020-09-10 18:30:04</time>
 </span><br>
 
 
@@ -728,5 +838,21 @@ MathJax.Hub.Queue(function() {
 
 
 
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<!-- <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
 </body>
 </html>

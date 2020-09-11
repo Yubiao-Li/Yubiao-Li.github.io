@@ -28,13 +28,13 @@
     
     
     <meta name="keywords" content="Markdown">
-    <meta name="description" content="写在前面  之前写Markdown一直使用的是SMMS的图床，十分方便，无需登录，直接上传剪切板中的截图，但是无奈使用过程经常会出现Flood detected. You can only upload 10 images per minute的问题，而且一等就是好久不见恢复   QaKz2F.png  思考了很久觉得这不是长久之计，而且万一以后SMMS停止服务了，保存在上面的图片不">
+    <meta name="description" content="写在前面 之前写Markdown一直使用的是SMMS的图床，十分方便，无需登录，直接上传剪切板中的截图，但是无奈使用过程经常会出现Flood detected. You can only upload 10 images per minute的问题，而且一等就是好久不见恢复     思考了很久觉得这不是长久之计，而且万一以后SMMS停止服务了，保存在上面的图片不就全没了，不太安全。网上百度了一下发">
 <meta name="keywords" content="Markdown">
 <meta property="og:type" content="article">
 <meta property="og:title" content="github + picGo 搭建个人专属图床">
 <meta property="og:url" content="http:&#x2F;&#x2F;yubiao-li.gitee.io&#x2F;2019&#x2F;12&#x2F;08&#x2F;github-picGo-%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E4%B8%93%E5%B1%9E%E5%9B%BE%E5%BA%8A&#x2F;index.html">
 <meta property="og:site_name" content="LYB的部落格">
-<meta property="og:description" content="写在前面  之前写Markdown一直使用的是SMMS的图床，十分方便，无需登录，直接上传剪切板中的截图，但是无奈使用过程经常会出现Flood detected. You can only upload 10 images per minute的问题，而且一等就是好久不见恢复   QaKz2F.png  思考了很久觉得这不是长久之计，而且万一以后SMMS停止服务了，保存在上面的图片不">
+<meta property="og:description" content="写在前面 之前写Markdown一直使用的是SMMS的图床，十分方便，无需登录，直接上传剪切板中的截图，但是无奈使用过程经常会出现Flood detected. You can only upload 10 images per minute的问题，而且一等就是好久不见恢复     思考了很久觉得这不是长久之计，而且万一以后SMMS停止服务了，保存在上面的图片不就全没了，不太安全。网上百度了一下发">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https:&#x2F;&#x2F;s2.ax1x.com&#x2F;2019&#x2F;12&#x2F;08&#x2F;QaKz2F.png">
 <meta property="og:image" content="https:&#x2F;&#x2F;imgconvert.csdnimg.cn&#x2F;aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3llZmNpb24vUGljRGF0YS9tYXN0ZXIvaW1nLzIwMTkwMzExMjIyNTE0LnBuZw">
@@ -197,54 +197,40 @@
 
         </div>
         <div class="post-content" id="post-content" itemprop="postContent">
-            <h2 id="写在前面">写在前面</h2>
-<ul>
+            <h2 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h2><ul>
 <li><p>之前写Markdown一直使用的是SMMS的图床，十分方便，无需登录，直接上传剪切板中的截图，但是无奈使用过程经常会出现<code>Flood detected. You can only upload 10 images per minute</code>的问题，而且一等就是好久不见恢复</p>
-<div class="figure">
-<img src="https://s2.ax1x.com/2019/12/08/QaKz2F.png" alt="QaKz2F.png" />
-<p class="caption">QaKz2F.png</p>
-</div></li>
-<li><p>思考了很久觉得这不是长久之计，而且万一以后SMMS停止服务了，保存在上面的图片不就全没了，不太安全。网上百度了一下发现了新的解决方案，于是就有了这篇文章。</p></li>
+<p>  <img src="https://s2.ax1x.com/2019/12/08/QaKz2F.png" alt="QaKz2F.png"></p>
+</li>
+<li><p>思考了很久觉得这不是长久之计，而且万一以后SMMS停止服务了，保存在上面的图片不就全没了，不太安全。网上百度了一下发现了新的解决方案，于是就有了这篇文章。</p>
+</li>
 </ul>
-<h2 id="优点">优点</h2>
-<ul>
+<h2 id="优点"><a href="#优点" class="headerlink" title="优点"></a>优点</h2><ul>
 <li>因为作者经常使用的是VSCode写博客，所以本方法使用的是 VSCode 的 PicGo 插件 + Github。PicGo是Github大佬写的一个用于上传图片的工具，可以将图片上传到多个图床，这里不细讲。用Github做图床的好处就是，除非Github没了，不然你的图片不会没了，稳定性可以保证。不足之处就是大家会在你的Github上看见一个图床的仓库，里面是各种奇奇怪怪的图片。不过Github仓库不支持图片缩略图预览，所以应该没有人那么无聊去翻你仓库的图片</li>
 </ul>
-<h2 id="步骤">步骤</h2>
-<ol style="list-style-type: decimal">
-<li><p>新建仓库，点击 git 主页右上角的 + 创建 New repository； &gt; 填写仓库信息，例如我就创建了一个 cloudimg 的仓库。这里注意，仓库得设置为 Public 因为后面通过客户端访问算是外部访问，因此无法访问 Private ，这样的话图片传上来之后只能存储不能显示。所以要设置为 Public。</p>
-<div class="figure">
-<img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3llZmNpb24vUGljRGF0YS9tYXN0ZXIvaW1nLzIwMTkwMzExMjIyNTE0LnBuZw" />
-
-</div></li>
-<li><p>创建 token 并复制保存<br />
-<img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3llZmNpb24vUGljRGF0YS9tYXN0ZXIvaW1nLzIwMTkwMzExMjIyOTI1LnBuZw" /></p>
-<p>在页面最下找到 Developer settings，点击进入；</p>
-<div class="figure">
-<img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3llZmNpb24vUGljRGF0YS9tYXN0ZXIvaW1nLzE1NTIzMTQ2OTEyMzIucG5n" />
-
-</div>
-<p>创建Token</p>
-<div class="figure">
-<img src="https://s2.ax1x.com/2019/12/08/QaQznJ.png" alt="QaQznJ.png" />
-<p class="caption">QaQznJ.png</p>
-</div>
-<p>Note随便填写，然后勾选Repo复选框即可</p>
-<div class="figure">
-<img src="https://s2.ax1x.com/2019/12/08/QalenH.png" alt="QalenH.png" />
-<p class="caption">QalenH.png</p>
-</div>
-<p>点击Generate Token，然后就可以看见生成了一个Token，记得复制保存，因为这个Token只会显示一次</p>
-<div class="figure">
-<img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3llZmNpb24vUGljRGF0YS9tYXN0ZXIvaW1nLzIwMTkwMzExMjIzOTAxLnBuZw" />
-
-</div></li>
-<li><p>打开VSCode，搜索安装插件PicGo，并进行一系列配置 <img src="https://s2.ax1x.com/2019/12/08/Qa3l6S.png" alt="Qa3l6S.png" /></p>
-<p>自定义域名：<code>https://raw.githubusercontent.com/[username]/[仓库名]/master</code></p></li>
-<li><p>设置完成后参照PicGo插件的文档介绍，就可以使用相应的快捷键来上传图片啦~。这里试着截个图，然后<code>Ctrl+Alt+U</code>上传剪贴板图片 <img src="https://raw.githubusercontent.com/Yubiao-Li/cloudimg/master/data/20191208162931.png" alt="20191208162931.png" /></p></li>
+<h2 id="步骤"><a href="#步骤" class="headerlink" title="步骤"></a>步骤</h2><ol>
+<li><p>新建仓库，点击 git 主页右上角的 + 创建 New repository；</p>
+<blockquote>
+<p>填写仓库信息，例如我就创建了一个 cloudimg 的仓库。这里注意，仓库得设置为 Public 因为后面通过客户端访问算是外部访问，因此无法访问 Private ，这样的话图片传上来之后只能存储不能显示。所以要设置为 Public。</p>
+</blockquote>
+<p> <img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3llZmNpb24vUGljRGF0YS9tYXN0ZXIvaW1nLzIwMTkwMzExMjIyNTE0LnBuZw" alt=""></p>
+</li>
+<li><p>创建 token 并复制保存<br> <img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3llZmNpb24vUGljRGF0YS9tYXN0ZXIvaW1nLzIwMTkwMzExMjIyOTI1LnBuZw" alt=""></p>
+<p> 在页面最下找到 Developer settings，点击进入；</p>
+<p> <img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3llZmNpb24vUGljRGF0YS9tYXN0ZXIvaW1nLzE1NTIzMTQ2OTEyMzIucG5n" alt=""></p>
+<p> 创建Token</p>
+<p> <img src="https://s2.ax1x.com/2019/12/08/QaQznJ.png" alt="QaQznJ.png"></p>
+<p> Note随便填写，然后勾选Repo复选框即可</p>
+<p> <img src="https://s2.ax1x.com/2019/12/08/QalenH.png" alt="QalenH.png"></p>
+<p> 点击Generate Token，然后就可以看见生成了一个Token，记得复制保存，因为这个Token只会显示一次</p>
+<p> <img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3llZmNpb24vUGljRGF0YS9tYXN0ZXIvaW1nLzIwMTkwMzExMjIzOTAxLnBuZw" alt=""></p>
+</li>
+<li><p>打开VSCode，搜索安装插件PicGo，并进行一系列配置<br> <img src="https://s2.ax1x.com/2019/12/08/Qa3l6S.png" alt="Qa3l6S.png"></p>
+<p> 自定义域名：<code>https://raw.githubusercontent.com/[username]/[仓库名]/master</code></p>
+</li>
+<li><p>设置完成后参照PicGo插件的文档介绍，就可以使用相应的快捷键来上传图片啦~。这里试着截个图，然后<code>Ctrl+Alt+U</code>上传剪贴板图片<br> <img src="https://raw.githubusercontent.com/Yubiao-Li/cloudimg/master/data/20191208162931.png" alt="20191208162931.png"></p>
+</li>
 </ol>
-<h2 id="教程结束">教程结束~~</h2>
-
+<h2 id="教程结束"><a href="#教程结束" class="headerlink" title="教程结束~~"></a>教程结束~~</h2>
         </div>
 
         <blockquote class="post-copyright">
@@ -590,5 +576,21 @@ MathJax.Hub.Queue(function() {
 
 
 
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<!-- <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
 </body>
 </html>

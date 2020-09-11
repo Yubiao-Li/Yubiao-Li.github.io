@@ -28,13 +28,13 @@
     
     
     <meta name="keywords" content="复习笔记">
-    <meta name="description" content="蛮力算法  选择排序 冒泡排序 字符串匹配 Closest-Pair问题 凸包问题  为了解决这个问题，我们必须找到作为多边形顶点的点（极点）。  穷举搜索  分而治之  归并排序  快速排序 二叉树遍历和相关属性 大整数乘法 \[Z&#x3D;X \times Y &#x3D; (X_12^{n&#x2F;2} + X_0) \times (Y_12^{n&#x2F;2} + Y_0) &#x3D; c_22">
+    <meta name="description" content="蛮力算法 选择排序  冒泡排序  字符串匹配  Closest-Pair问题  凸包问题  为了解决这个问题，我们必须找到作为多边形顶点的点（极点）。   穷举搜索   分而治之 归并排序   快速排序  二叉树遍历和相关属性  大整数乘法 Z&#x3D;X \times Y &#x3D; (X_12^{n&#x2F;2} + X_0) \times (Y_12^{n&#x2F;2} + Y_0) &#x3D; c_22^n+c_12^{n&#x2F;2}">
 <meta name="keywords" content="复习笔记">
 <meta property="og:type" content="article">
 <meta property="og:title" content="2019-SCUT-算法设计与分析复习提纲">
 <meta property="og:url" content="http:&#x2F;&#x2F;yubiao-li.gitee.io&#x2F;2019&#x2F;12&#x2F;11&#x2F;2019-SCUT-%E7%AE%97%E6%B3%95%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%88%86%E6%9E%90%E5%A4%8D%E4%B9%A0%E6%8F%90%E7%BA%B2&#x2F;index.html">
 <meta property="og:site_name" content="LYB的部落格">
-<meta property="og:description" content="蛮力算法  选择排序 冒泡排序 字符串匹配 Closest-Pair问题 凸包问题  为了解决这个问题，我们必须找到作为多边形顶点的点（极点）。  穷举搜索  分而治之  归并排序  快速排序 二叉树遍历和相关属性 大整数乘法 \[Z&#x3D;X \times Y &#x3D; (X_12^{n&#x2F;2} + X_0) \times (Y_12^{n&#x2F;2} + Y_0) &#x3D; c_22">
+<meta property="og:description" content="蛮力算法 选择排序  冒泡排序  字符串匹配  Closest-Pair问题  凸包问题  为了解决这个问题，我们必须找到作为多边形顶点的点（极点）。   穷举搜索   分而治之 归并排序   快速排序  二叉树遍历和相关属性  大整数乘法 Z&#x3D;X \times Y &#x3D; (X_12^{n&#x2F;2} + X_0) \times (Y_12^{n&#x2F;2} + Y_0) &#x3D; c_22^n+c_12^{n&#x2F;2}">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https:&#x2F;&#x2F;i.loli.net&#x2F;2019&#x2F;12&#x2F;07&#x2F;biNnU9RBIT7vFXj.png">
 <meta property="og:image" content="https:&#x2F;&#x2F;i.loli.net&#x2F;2019&#x2F;12&#x2F;07&#x2F;cIlWBu8ZnDKfbqp.png">
@@ -232,218 +232,270 @@
 
         </div>
         <div class="post-content" id="post-content" itemprop="postContent">
-            <h2 id="蛮力算法">蛮力算法</h2>
-<ol style="list-style-type: decimal">
-<li><p>选择排序</p></li>
-<li><p>冒泡排序</p></li>
-<li><p>字符串匹配</p></li>
-<li><p>Closest-Pair问题</p></li>
-<li>凸包问题
+            <h2 id="蛮力算法"><a href="#蛮力算法" class="headerlink" title="蛮力算法"></a>蛮力算法</h2><ol>
+<li><p>选择排序</p>
+</li>
+<li><p>冒泡排序</p>
+</li>
+<li><p>字符串匹配</p>
+</li>
+<li><p>Closest-Pair问题</p>
+</li>
+<li><p>凸包问题</p>
 <ul>
 <li>为了解决这个问题，我们必须找到作为多边形顶点的点（极点）。</li>
-</ul></li>
-<li><p>穷举搜索</p></li>
+</ul>
+</li>
+<li><p>穷举搜索</p>
+</li>
 </ol>
-<h2 id="分而治之">分而治之</h2>
-<ol style="list-style-type: decimal">
-<li><p>归并排序 <img src="https://i.loli.net/2019/12/07/biNnU9RBIT7vFXj.png" /></p></li>
-<li><p>快速排序</p></li>
-<li><p>二叉树遍历和相关属性</p></li>
+<h2 id="分而治之"><a href="#分而治之" class="headerlink" title="分而治之"></a>分而治之</h2><ol>
+<li><p>归并排序<br> <img src="https://i.loli.net/2019/12/07/biNnU9RBIT7vFXj.png" alt=""></p>
+</li>
+<li><p>快速排序</p>
+</li>
+<li><p>二叉树遍历和相关属性</p>
+</li>
 <li><p>大整数乘法</p>
-<p><span class="math display">\[Z=X \times Y = (X_12^{n/2} + X_0) \times (Y_12^{n/2} + Y_0) = c_22^n+c_12^{n/2} + c_0\]</span></p>
-<p><span class="math display">\[c_2 = X_1Y_1\]</span></p>
-<p><span class="math display">\[c_1 = (X_1 + X_0) \times (Y_1 + Y_0) - X_1Y_1 - X_0Y_0\]</span></p>
-<p><span class="math display">\[c_0 = X_0Y_0\]</span></p>
-<div class="figure">
-<img src="https://i.loli.net/2019/12/07/cIlWBu8ZnDKfbqp.png" />
-
-</div></li>
-<li><p>strassen矩阵乘法 <img src="https://i.loli.net/2019/12/07/kLHiSJ3vFEK7s6U.png" /></p>
-<p><span class="math display">\[M_1 = (A_{00} + A_{11}) * (B_{00} + B_{11})\]</span></p>
-<p><span class="math display">\[M_2 = (A_{10} + A_{11}) * B_{00}\]</span></p>
-<p><span class="math display">\[M_3 = A_{00} * (B_{01} - B_{11})\]</span></p>
-<p><span class="math display">\[M_4 =  A_{11} * (B_{10} - B_{00})\]</span></p>
-<p><span class="math display">\[M_5 = (A_{00} + A_{01}) * B_{11}\]</span></p>
-<p><span class="math display">\[M_6 = (A_{10} - A_{00}) * (B_{00} + B_{01})\]</span></p>
-<p><span class="math display">\[M_7 = (A_{01} - A_{11}) * (B_{10} + B_{11})\]</span></p></li>
-<li>Closest-Pair
-<ol style="list-style-type: decimal">
-<li><p>使用一条垂线将点集分割为两半</p></li>
-<li><p>分别递归找出两半中点对距离的最小值</p></li>
-<li><p>让<span class="math inline">\(d_1\)</span>和<span class="math inline">\(d_2\)</span>分别为两边点集的最小距离，<span class="math inline">\(d = \min(d_1,d_2)\)</span> <img src="https://i.loli.net/2019/12/07/uN65zLX8ariVOqZ.png" /></p></li>
-<li><p>为了不暴力穷举算出带状区域中的最近点距离，可以优化。<span class="math inline">\(C_1\)</span>和<span class="math inline">\(C_2\)</span>中的点按y坐标的递增顺序存储，在执行下一步时通过合并来维护y坐标。我们可以顺序处理<span class="math inline">\(C_1\)</span>点，而指向<span class="math inline">\(C_2\)</span>列表的指针将扫描一个宽度为2d的间隔，获取最多6个候选点，以计算它们到<span class="math inline">\(C_1\)</span>列表当前点P的距离。 <img src="https://i.loli.net/2019/12/07/XTN7IHlDQveCkJ3.png" /></p></li>
-</ol></li>
-<li>快速凸包算法
-<ol style="list-style-type: decimal">
-<li><p>找出最左最右的顶点，练成一条直线，将点集分割为上下两部分 <img src="https://i.loli.net/2019/12/08/pfkQ5yzAxKvROWD.png" /></p></li>
-<li><p>对于上下两部分，找出距离该直线最远距离的点，该点在凸包点集内，连接该点与直线的两顶点，重复该操作直到直线左边再无顶点 <img src="https://i.loli.net/2019/12/08/7AS3GzZeonUFKRN.png" /></p></li>
-</ol></li>
+<script type="math/tex; mode=display">Z=X \times Y = (X_12^{n/2} + X_0) \times (Y_12^{n/2} + Y_0) = c_22^n+c_12^{n/2} + c_0</script><script type="math/tex; mode=display">c_2 = X_1Y_1</script><script type="math/tex; mode=display">c_1 = (X_1 + X_0) \times (Y_1 + Y_0) - X_1Y_1 - X_0Y_0</script><script type="math/tex; mode=display">c_0 = X_0Y_0</script><p> <img src="https://i.loli.net/2019/12/07/cIlWBu8ZnDKfbqp.png" alt=""></p>
+</li>
+<li><p>strassen矩阵乘法<br> <img src="https://i.loli.net/2019/12/07/kLHiSJ3vFEK7s6U.png" alt=""></p>
+<script type="math/tex; mode=display">M_1 = (A_{00} + A_{11}) * (B_{00} + B_{11})</script><script type="math/tex; mode=display">M_2 = (A_{10} + A_{11}) * B_{00}</script><script type="math/tex; mode=display">M_3 = A_{00} * (B_{01} - B_{11})</script><script type="math/tex; mode=display">M_4 =  A_{11} * (B_{10} - B_{00})</script><script type="math/tex; mode=display">M_5 = (A_{00} + A_{01}) * B_{11}</script><script type="math/tex; mode=display">M_6 = (A_{10} - A_{00}) * (B_{00} + B_{01})</script><script type="math/tex; mode=display">M_7 = (A_{01} - A_{11}) * (B_{10} + B_{11})</script></li>
+<li><p>Closest-Pair</p>
+<ol>
+<li><p>使用一条垂线将点集分割为两半</p>
+</li>
+<li><p>分别递归找出两半中点对距离的最小值</p>
+</li>
+<li><p>让$d_1$和$d_2$分别为两边点集的最小距离，$d = \min(d_1,d_2)$<br> <img src="https://i.loli.net/2019/12/07/uN65zLX8ariVOqZ.png" alt=""></p>
+</li>
+<li><p>为了不暴力穷举算出带状区域中的最近点距离，可以优化。$C_1$和$C_2$中的点按y坐标的递增顺序存储，在执行下一步时通过合并来维护y坐标。我们可以顺序处理$C_1$点，而指向$C_2$列表的指针将扫描一个宽度为2d的间隔，获取最多6个候选点，以计算它们到$C_1$列表当前点P的距离。<br> <img src="https://i.loli.net/2019/12/07/XTN7IHlDQveCkJ3.png" alt=""></p>
+</li>
 </ol>
-<h2 id="减治">减治</h2>
-<ol style="list-style-type: decimal">
-<li><p>插入排序</p></li>
-<li>DFS和BFS
+</li>
+<li><p>快速凸包算法</p>
+<ol>
+<li><p>找出最左最右的顶点，练成一条直线，将点集分割为上下两部分<br> <img src="https://i.loli.net/2019/12/08/pfkQ5yzAxKvROWD.png" alt=""></p>
+</li>
+<li><p>对于上下两部分，找出距离该直线最远距离的点，该点在凸包点集内，连接该点与直线的两顶点，重复该操作直到直线左边再无顶点<br> <img src="https://i.loli.net/2019/12/08/7AS3GzZeonUFKRN.png" alt=""></p>
+</li>
+</ol>
+</li>
+</ol>
+<h2 id="减治"><a href="#减治" class="headerlink" title="减治"></a>减治</h2><ol>
+<li><p>插入排序</p>
+</li>
+<li><p>DFS和BFS</p>
 <ul>
-<li>DFS
-<ol style="list-style-type: decimal">
-<li><p>任意选择图形的一个点作为根</p></li>
-<li><p>通过连续添加顶点和边来形成从这个顶点开始的路径，其中每条新边都与路径中的最后一个顶点和路径中尚未存在的顶点相关联。</p></li>
-<li><p>继续向此路径添加顶点和边，尽可能长。</p></li>
-<li><p>如果这条路径经过图的所有顶点，那么由这条路径组成的树就是一个生成树。</p></li>
-<li><p>如果路径没有经过所有的顶点，则必须添加更多的顶点和边。</p></li>
-<li><p>移动到路径中最后一个顶点的旁边，如果可能的话，从这个顶点开始形成一个新的路径，通过那些没有访问过的顶点。</p></li>
-<li><p>如果不能这样做，移动到路径中的另一个顶点，也就是路径中的两个顶点，然后再试一次。</p></li>
+<li><p>DFS</p>
+<ol>
+<li><p>任意选择图形的一个点作为根</p>
+</li>
+<li><p>通过连续添加顶点和边来形成从这个顶点开始的路径，其中每条新边都与路径中的最后一个顶点和路径中尚未存在的顶点相关联。</p>
+</li>
+<li><p>继续向此路径添加顶点和边，尽可能长。</p>
+</li>
+<li><p>如果这条路径经过图的所有顶点，那么由这条路径组成的树就是一个生成树。</p>
+</li>
+<li><p>如果路径没有经过所有的顶点，则必须添加更多的顶点和边。</p>
+</li>
+<li><p>移动到路径中最后一个顶点的旁边，如果可能的话，从这个顶点开始形成一个新的路径，通过那些没有访问过的顶点。</p>
+</li>
+<li><p>如果不能这样做，移动到路径中的另一个顶点，也就是路径中的两个顶点，然后再试一次。</p>
+</li>
 </ol>
 <ul>
-<li>我们在做dfs的时候，当访问到一个节点时，会出现四种情况：
-<ul>
-<li>1.此节点未被访问过，则此次的访问关系边（发起点——&gt;接受点）称为树边（tree edge）;</li>
+<li>我们在做dfs的时候，当访问到一个节点时，会出现四种情况：<ul>
+<li>1.此节点未被访问过，则此次的访问关系边（发起点——&gt;接受点）称为树边（tree edge）; </li>
 <li>2.此节点被访问过但此节点的子孙还没访问完，换句话说，此次的发起点的源头可以追溯到接收点，则此次访问关系边称为后向边（back edge）；</li>
-</ul></li>
-</ul></li>
-<li>BFS
-<ol style="list-style-type: decimal">
-<li><p>任意选择图形的一个顶点作为根。</p></li>
-<li><p>添加与此顶点相关联的边。此阶段添加的新顶点成为生成树中第1级的顶点。任意的排序他们。</p></li>
-<li><p>对于第一级的每个顶点，按顺序访问，只要它不产生回路，就将这个顶点的每个边添加到树中。</p></li>
-<li><p>在第1级任意排列每个顶点的子结点。这将生成树中第2级的顶点。</p></li>
-<li><p>遵循相同的过程，直到树中的所有顶点都被添加。</p></li>
-</ol></li>
-</ul></li>
-<li><p>拓扑排序 <img src="https://i.loli.net/2019/12/08/zYO8J5eTQdc3BVa.png" /></p></li>
-<li><p>组合生成算法 <img src="https://i.loli.net/2019/12/08/JBu95STmepMjhVy.png" /></p></li>
-<li><p>假硬币问题</p></li>
-<li><p>俄罗斯农民乘法 <img src="https://i.loli.net/2019/12/08/sQlSm1fMKgNaAcZ.png" /></p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>BFS</p>
+<ol>
+<li><p>任意选择图形的一个顶点作为根。</p>
+</li>
+<li><p>添加与此顶点相关联的边。此阶段添加的新顶点成为生成树中第1级的顶点。任意的排序他们。</p>
+</li>
+<li><p>对于第一级的每个顶点，按顺序访问，只要它不产生回路，就将这个顶点的每个边添加到树中。</p>
+</li>
+<li><p>在第1级任意排列每个顶点的子结点。这将生成树中第2级的顶点。</p>
+</li>
+<li><p>遵循相同的过程，直到树中的所有顶点都被添加。</p>
+</li>
+</ol>
+</li>
+</ul>
+</li>
+<li><p>拓扑排序<br> <img src="https://i.loli.net/2019/12/08/zYO8J5eTQdc3BVa.png" alt=""></p>
+</li>
+<li><p>组合生成算法<br> <img src="https://i.loli.net/2019/12/08/JBu95STmepMjhVy.png" alt=""></p>
+</li>
+<li><p>假硬币问题</p>
+</li>
+<li><p>俄罗斯农民乘法<br> <img src="https://i.loli.net/2019/12/08/sQlSm1fMKgNaAcZ.png" alt=""></p>
+</li>
 <li><p>Joseplus问题</p>
 <blockquote>
 <p>让1到n个人站成一个圈。从1号开始，我们每隔M-1个人杀死一个人，直到只剩下一个幸存者。</p>
 </blockquote>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">cir</span><span class="params">(<span class="keyword">int</span> n,<span class="keyword">int</span> m)</span></span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line"><span class="function"></span>&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">    <span class="keyword">int</span> p=<span class="number">0</span>;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">2</span>;i&lt;=n;i++)</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line">    &#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line">        p=(p+m)%i;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">7</span></pre></td><td class="code"><pre><span class="line">    &#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">8</span></pre></td><td class="code"><pre><span class="line">    <span class="keyword">return</span> p+<span class="number">1</span>;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">9</span></pre></td><td class="code"><pre><span class="line">&#125;</span></pre></td></tr></table></figure></li>
+ <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">cir</span><span class="params">(<span class="keyword">int</span> n,<span class="keyword">int</span> m)</span></span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line"><span class="function"></span>&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">    <span class="keyword">int</span> p=<span class="number">0</span>;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">2</span>;i&lt;=n;i++)</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line">    &#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line">        p=(p+m)%i;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">7</span></pre></td><td class="code"><pre><span class="line">    &#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">8</span></pre></td><td class="code"><pre><span class="line">    <span class="keyword">return</span> p+<span class="number">1</span>;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">9</span></pre></td><td class="code"><pre><span class="line">&#125;</span></pre></td></tr></table></figure>
+</li>
 <li><p>One-Pile Nim</p>
 <blockquote>
 <p>有一堆n个筹码。两个玩家轮流从牌堆中取出至少一个和最多m个筹码。(采取的筹码的数量可能因棋而异。)赢家是拿到最后一个筹码的玩家。谁赢了游戏</p>
 </blockquote>
 <ul>
 <li>看筹码的数量，如果筹码的数量刚好是m的倍数，则先拿者必输，否则先拿者必赢</li>
-</ul></li>
+</ul>
+</li>
 </ol>
-<h2 id="转治">转治</h2>
-<ol style="list-style-type: decimal">
+<h2 id="转治"><a href="#转治" class="headerlink" title="转治"></a>转治</h2><ol>
 <li><p>预排序</p>
 <blockquote>
 <p>当对列表进行排序时，涉及列表的许多问题都变得更简单了。</p>
-</blockquote></li>
-<li><p>高斯消元 <img src="https://i.loli.net/2019/12/08/IZvDo1KMtj32wny.png" /></p></li>
-<li>平衡搜索树
+</blockquote>
+</li>
+<li><p>高斯消元<br> <img src="https://i.loli.net/2019/12/08/IZvDo1KMtj32wny.png" alt=""></p>
+</li>
+<li><p>平衡搜索树</p>
 <ul>
-<li><p>AVL tree：是一种二叉搜索树，对于每个节点，其左右子树的高度之差(称为平衡因子)最多为1 <img src="https://i.loli.net/2019/12/08/arUlCPsDyvH3xo8.png" /></p>
+<li><p>AVL tree：是一种二叉搜索树，对于每个节点，其左右子树的高度之差(称为平衡因子)最多为1<br>  <img src="https://i.loli.net/2019/12/08/arUlCPsDyvH3xo8.png" alt=""></p>
 <ul>
-<li><p>如果键插入违反了某个节点上的平衡要求，那么在该节点上扎根的子树将通过四个旋转中的一个进行转换。(对于根位于离新叶子最近的“不平衡”节点的子树，总是执行旋转操作。) <img src="https://s2.ax1x.com/2019/12/08/QauVdx.png" alt="QauVdx.png" /></p>
-<div class="figure">
-<img src="https://s2.ax1x.com/2019/12/08/Qan6Re.png" alt="Qan6Re.png" />
-<p class="caption">Qan6Re.png</p>
-</div></li>
-</ul></li>
-</ul></li>
-<li>堆和堆排序
+<li><p>如果键插入违反了某个节点上的平衡要求，那么在该节点上扎根的子树将通过四个旋转中的一个进行转换。(对于根位于离新叶子最近的“不平衡”节点的子树，总是执行旋转操作。)<br>  <img src="https://s2.ax1x.com/2019/12/08/QauVdx.png" alt="QauVdx.png"></p>
+<p>  <img src="https://s2.ax1x.com/2019/12/08/Qan6Re.png" alt="Qan6Re.png"></p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>堆和堆排序</p>
 <ul>
-<li><p>堆 &gt; 它本质上是完全二叉树的。除最后一层外，所有层都已满，只有最右边的键可能丢失。并且每个节点上的键≥其子节点上的键</p>
+<li><p>堆</p>
+<blockquote>
+<p>它本质上是完全二叉树的。除最后一层外，所有层都已满，只有最右边的键可能丢失。并且每个节点上的键≥其子节点上的键</p>
+</blockquote>
 <ul>
-<li><p>构造堆的算法 <img src="https://raw.githubusercontent.com/Yubiao-Li/cloudimg/master/data/20191208164829.png" alt="20191208164829.png" /></p></li>
-<li><p>插入新值的算法 <img src="https://raw.githubusercontent.com/Yubiao-Li/cloudimg/master/data/20191208165115.png" alt="20191208165115.png" /></p></li>
-<li>堆排序
-<ol style="list-style-type: decimal">
-<li><p>创建一个堆</p></li>
-<li>每次移除最顶的元素，移除n-1次。移除元素的算法：
-<ol style="list-style-type: decimal">
+<li><p>构造堆的算法<br>  <img src="https://raw.githubusercontent.com/Yubiao-Li/cloudimg/master/data/20191208164829.png" alt="20191208164829.png"></p>
+</li>
+<li><p>插入新值的算法<br>  <img src="https://raw.githubusercontent.com/Yubiao-Li/cloudimg/master/data/20191208165115.png" alt="20191208165115.png"></p>
+</li>
+<li><p>堆排序</p>
+<ol>
+<li><p>创建一个堆</p>
+</li>
+<li><p>每次移除最顶的元素，移除n-1次。移除元素的算法：</p>
+<ol>
 <li>交换根元素与最后一个元素</li>
 <li>堆的大小减一</li>
 <li>如果需要，对新的根节点执行siftdown算法（参考构造堆算法）</li>
-</ol></li>
-</ol></li>
-</ul></li>
-</ul></li>
-<li>霍纳法则和二进制指数运算
-<ul>
-<li><p>霍纳法则 <img src="https://raw.githubusercontent.com/Yubiao-Li/cloudimg/master/data/20191208214347.png" alt="20191208214347.png" /></p>
-<div class="figure">
-<img src="https://raw.githubusercontent.com/Yubiao-Li/cloudimg/master/data/20191208214406.png" alt="20191208214406.png" />
-<p class="caption">20191208214406.png</p>
-</div>
-<div class="figure">
-<img src="https://raw.githubusercontent.com/Yubiao-Li/cloudimg/master/data/20191208214420.png" alt="20191208214420.png" />
-<p class="caption">20191208214420.png</p>
-</div></li>
-<li><p>二进制指数运算 <img src="https://raw.githubusercontent.com/Yubiao-Li/cloudimg/master/data/20191208214614.png" alt="20191208214614.png" /></p></li>
-</ul></li>
 </ol>
-<h2 id="时空间权衡">时空间权衡</h2>
-<ol style="list-style-type: decimal">
-<li>计数排序
-<ul>
-<li><p>遍历数组计数比该元素小的元素数量，以此确定该元素应该排在哪个位置 <img src="https://raw.githubusercontent.com/Yubiao-Li/cloudimg/master/data/20191208220621.png" alt="20191208220621.png" /></p>
-<div class="figure">
-<img src="https://raw.githubusercontent.com/Yubiao-Li/cloudimg/master/data/20191208220638.png" alt="20191208220638.png" />
-<p class="caption">20191208220638.png</p>
-</div></li>
-<li>效率很低，为<span class="math inline">\(n^2\)</span>，但在一种情况下很有效：待排序数组的元素来自于一个很小的集合
-<ol style="list-style-type: decimal">
-<li><p>首先计算出各元素频率值与分布位置 <img src="https://raw.githubusercontent.com/Yubiao-Li/cloudimg/master/data/20191208221936.png" alt="20191208221936.png" /></p></li>
-<li><p>然后从右到左处理数组元素，利用分布位置确定元素应放的位置，然后分布位置值减1 <img src="https://raw.githubusercontent.com/Yubiao-Li/cloudimg/master/data/20191208222251.png" alt="20191208222251.png" /></p></li>
-</ol></li>
-</ul></li>
-<li>字符串匹配的输入增强技术
-<ol style="list-style-type: decimal">
-<li>Horspool算法
-<ol style="list-style-type: decimal">
-<li>对于给定长度为m的模式和在模式及文本中用到的字母表，构造移动表 若不匹配，设文本中，对齐模式最后一个字符的元素是字符c，根据c的不同情况确定移动的距离
-<ol style="list-style-type: decimal">
-<li><p>若模式不存在c，则移动距离是它的全部长度</p></li>
-<li><p>若模式存在c，但它不是模式的最后一个字符，移动时把最右的c和文本的c对齐</p></li>
-<li><p>如果c是模式最后一个字符，其他m-1个字符不包括c，移动幅度等于模式全部长度</p></li>
-<li><p>如果c是模式最后一个字符，其他m-1个字符包括c，移动把前m-1的字符中的c和文本中的c对齐</p></li>
+</li>
 </ol>
-<p><span class="math display">\[t(c)=\begin{cases}
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>霍纳法则和二进制指数运算</p>
+<ul>
+<li><p>霍纳法则<br>  <img src="https://raw.githubusercontent.com/Yubiao-Li/cloudimg/master/data/20191208214347.png" alt="20191208214347.png"></p>
+<p>  <img src="https://raw.githubusercontent.com/Yubiao-Li/cloudimg/master/data/20191208214406.png" alt="20191208214406.png"></p>
+<p>  <img src="https://raw.githubusercontent.com/Yubiao-Li/cloudimg/master/data/20191208214420.png" alt="20191208214420.png"></p>
+</li>
+<li><p>二进制指数运算<br>  <img src="https://raw.githubusercontent.com/Yubiao-Li/cloudimg/master/data/20191208214614.png" alt="20191208214614.png"></p>
+</li>
+</ul>
+</li>
+</ol>
+<h2 id="时空间权衡"><a href="#时空间权衡" class="headerlink" title="时空间权衡"></a>时空间权衡</h2><ol>
+<li><p>计数排序</p>
+<ul>
+<li><p>遍历数组计数比该元素小的元素数量，以此确定该元素应该排在哪个位置<br>  <img src="https://raw.githubusercontent.com/Yubiao-Li/cloudimg/master/data/20191208220621.png" alt="20191208220621.png"></p>
+<p>  <img src="https://raw.githubusercontent.com/Yubiao-Li/cloudimg/master/data/20191208220638.png" alt="20191208220638.png"></p>
+</li>
+<li><p>效率很低，为$n^2$，但在一种情况下很有效：待排序数组的元素来自于一个很小的集合</p>
+<ol>
+<li><p>首先计算出各元素频率值与分布位置<br> <img src="https://raw.githubusercontent.com/Yubiao-Li/cloudimg/master/data/20191208221936.png" alt="20191208221936.png"></p>
+</li>
+<li><p>然后从右到左处理数组元素，利用分布位置确定元素应放的位置，然后分布位置值减1<br> <img src="https://raw.githubusercontent.com/Yubiao-Li/cloudimg/master/data/20191208222251.png" alt="20191208222251.png"></p>
+</li>
+</ol>
+</li>
+</ul>
+</li>
+<li><p>字符串匹配的输入增强技术</p>
+<ol>
+<li><p>Horspool算法</p>
+<ol>
+<li><p>对于给定长度为m的模式和在模式及文本中用到的字母表，构造移动表<br> 若不匹配，设文本中，对齐模式最后一个字符的元素是字符c，根据c的不同情况确定移动的距离</p>
+<ol>
+<li><p>若模式不存在c，则移动距离是它的全部长度</p>
+</li>
+<li><p>若模式存在c，但它不是模式的最后一个字符，移动时把最右的c和文本的c对齐</p>
+</li>
+<li><p>如果c是模式最后一个字符，其他m-1个字符不包括c，移动幅度等于模式全部长度</p>
+</li>
+<li><p>如果c是模式最后一个字符，其他m-1个字符包括c，移动把前m-1的字符中的c和文本中的c对齐</p>
+<script type="math/tex; mode=display">t(c)=\begin{cases}
 模式的长度m（如果c不包括在模式的前m-1个字符中）\\
 模式前m-1个字符最右边的c到模式最后一个字符的距离（其他情况下）\\
-\end{cases}
-\]</span></p></li>
-<li><p>将模式与文本的开始处对齐</p></li>
-<li><p>重复以下操作，直到找到匹配的子字符串，或者模式超出最后一个字符或文本。要么匹配，要么遇到一对不匹配的字符串，后一种情况如果c是当前文本和模式最后一个字符对齐的字符，根据移动表移动模式</p></li>
-</ol></li>
+\end{cases}</script></li>
+</ol>
+</li>
+<li><p>将模式与文本的开始处对齐</p>
+</li>
+<li><p>重复以下操作，直到找到匹配的子字符串，或者模式超出最后一个字符或文本。要么匹配，要么遇到一对不匹配的字符串，后一种情况如果c是当前文本和模式最后一个字符对齐的字符，根据移动表移动模式</p>
+</li>
+</ol>
+</li>
 <li><p>Boyer-Moore</p>
 <blockquote>
 <p>与上一个算法的不同之处是，如果在遇到一个不匹配字符之前已经有k个字符匹配成功了，操作不同</p>
 </blockquote>
-假设文本中的这个不匹配的符号为c，我们称之为坏符号
-<ol style="list-style-type: decimal">
-<li><p>如果c不在模式中，我们把模式移动到刚好跳过这个字符的位置。为方便起见用<span class="math inline">\(t_1(c)-k\)</span>来计算移动距离，其中<span class="math inline">\(t_1(c)\)</span>是Horspool算法预先算好的表中的单元格，而k是成功匹配的字符个数</p></li>
-<li><p>如果c在模式中，我们也可以使用<span class="math inline">\(t_1(c)-k\)</span>公式，但是k可能大于<span class="math inline">\(t_1(c)\)</span>我们不希望移动的距离为负数，所以对其稍加改良：<span class="math inline">\(d_1=\max(t_1(c)-k,1)\)</span></p></li>
-<li><p>最后k个匹配成功的字符，记作<span class="math inline">\(suff(k)\)</span>，叫做好后缀移动。考虑一下在模式中存在另一个后继字符不同的<span class="math inline">\(suff(k)\)</span>，移动<span class="math inline">\(d_2\)</span>的距离，<span class="math inline">\(d_2\)</span>是右数第二个<span class="math inline">\(suff(k)\)</span>到最右<span class="math inline">\(suff(k)\)</span>的距离</p></li>
-<li><p>如果不存在<span class="math inline">\(suff(k)\)</span>，我们找出长度 l &lt; k 的最长前缀，如果存在这样的前缀，求出前缀与后缀之间的距离来作为移动距离<span class="math inline">\(d_2\)</span></p></li>
-</ol>
-<p><span class="math display">\[d=\begin{cases}
+<p> 假设文本中的这个不匹配的符号为c，我们称之为坏符号</p>
+<ol>
+<li><p>如果c不在模式中，我们把模式移动到刚好跳过这个字符的位置。为方便起见用$t_1(c)-k$来计算移动距离，其中$t_1(c)$是Horspool算法预先算好的表中的单元格，而k是成功匹配的字符个数</p>
+</li>
+<li><p>如果c在模式中，我们也可以使用$t_1(c)-k$公式，但是k可能大于$t_1(c)$我们不希望移动的距离为负数，所以对其稍加改良：$d_1=\max(t_1(c)-k,1)$</p>
+</li>
+<li><p>最后k个匹配成功的字符，记作$suff(k)$，叫做好后缀移动。考虑一下在模式中存在另一个后继字符不同的$suff(k)$，移动$d_2$的距离，$d_2$是右数第二个$suff(k)$到最右$suff(k)$的距离</p>
+</li>
+<li><p>如果不存在$suff(k)$，我们找出长度 l &lt; k 的最长前缀，如果存在这样的前缀，求出前缀与后缀之间的距离来作为移动距离$d_2$</p>
+<script type="math/tex; mode=display">d=\begin{cases}
 d_1,k=0\\
-\max(d_1,d_2),k&gt;0
-\end{cases}\]</span></p>
-<p>其他步骤与Horspool算法一致</p></li>
-</ol></li>
-<li>散列法
-<ol style="list-style-type: decimal">
-<li><p>开散列：碰撞使用链表</p></li>
-<li><p>闭散列：所有键都存储在散列表本身，而没有使用链表，发生碰撞使用线性探查</p></li>
-</ol></li>
-<li>B树
-<ul>
-<li><p>次数为m，<span class="math inline">\(m\ge2\)</span></p></li>
-<li><p>根要么是叶子，要么有2到m个子节点。</p></li>
-<li><p>除了根节点和叶节点之外，每个节点子节点数在[m/2]和m之间(因此具有[m/2]-1到m-1个键)</p></li>
-<li><p>树是(完全)平衡的；即，它所有的叶子都在同一层上。</p></li>
-<li><p>树的高度<span class="math inline">\(log_m(n+1)-1 \le h \le log_{\lceil\frac{m}{2}\rceil}(n+1)-1\)</span></p></li>
-</ul></li>
+\max(d_1,d_2),k>0
+\end{cases}</script><p>其他步骤与Horspool算法一致</p>
+</li>
 </ol>
-<h2 id="动态规划">动态规划</h2>
-<blockquote>
+</li>
+</ol>
+</li>
+<li><p>散列法</p>
+<ol>
+<li><p>开散列：碰撞使用链表</p>
+</li>
+<li><p>闭散列：所有键都存储在散列表本身，而没有使用链表，发生碰撞使用线性探查</p>
+</li>
+</ol>
+</li>
+<li><p>B树</p>
+<ul>
+<li><p>次数为m，$m\ge2$</p>
+</li>
+<li><p>根要么是叶子，要么有2到m个子节点。</p>
+</li>
+<li><p>除了根节点和叶节点之外，每个节点子节点数在[m/2]和m之间(因此具有[m/2]-1到m-1个键)</p>
+</li>
+<li><p>树是(完全)平衡的；即，它所有的叶子都在同一层上。</p>
+</li>
+<li><p>树的高度$log<em>m(n+1)-1 \le h \le log</em>{\lceil\frac{m}{2}\rceil}(n+1)-1$</p>
+</li>
+</ul>
+</li>
+</ol>
+<h2 id="动态规划"><a href="#动态规划" class="headerlink" title="动态规划"></a>动态规划</h2><blockquote>
 <p>动态规划是解决具有重叠子问题的递归问题的一种通用算法设计技术</p>
 </blockquote>
 <figure class="image-bubble">
@@ -453,191 +505,247 @@ d_1,k=0\\
                 </div>
                 <div class="image-caption">20191209131145.png</div>
             </figure>
-<ol style="list-style-type: decimal">
-<li>计算二项式系数
+<ol>
+<li><p>计算二项式系数</p>
 <ul>
-<li><p>二项式系数是二项式公式的系数: <span class="math inline">\((a + b)^n = C(n,0)a^nb^0 + . . . + C(n,k)a^{n-k}b^k + . . . + C(n,n)a^0b^n\)</span></p>
-<p><span class="math display">\[C(n,k) = C(n-1,k) + C(n-1,k-1) , n &gt; k &gt; 0\]</span></p>
-<p><span class="math display">\[C(n,0) = 1,   C(n,n) = 1 , n \ge 0\]</span></p>
-<div class="figure">
-<img src="https://raw.githubusercontent.com/Yubiao-Li/cloudimg/master/data/20191209132049.png" />
-
-</div></li>
-</ul></li>
-<li>Warshall’s and Floyd’s Algorithm
+<li><p>二项式系数是二项式公式的系数: $(a + b)^n = C(n,0)a^nb^0  + . . . + C(n,k)a^{n-k}b^k + . . . + C(n,n)a^0b^n$</p>
+<script type="math/tex; mode=display">C(n,k) = C(n-1,k) + C(n-1,k-1) , n > k > 0</script><script type="math/tex; mode=display">C(n,0) = 1,   C(n,n) = 1 , n \ge 0</script><p>  <img src="https://raw.githubusercontent.com/Yubiao-Li/cloudimg/master/data/20191209132049.png" alt=""></p>
+</li>
+</ul>
+</li>
+<li><p>Warshall’s and Floyd’s Algorithm</p>
 <ul>
-<li><p>Warshall’s Algorithm <img src="https://raw.githubusercontent.com/Yubiao-Li/cloudimg/master/data/20191209132325.png" /></p></li>
-<li><p>Floyd’s Algorithm：求图上一点到另一点的最短路径，<a href="https://blog.csdn.net/qq_35644234/article/details/60875818" target="_blank" rel="noopener">通过遍历每个图上的节点作为中介节点的方法来计算</a></p></li>
-</ul></li>
+<li><p>Warshall’s Algorithm<br>  <img src="https://raw.githubusercontent.com/Yubiao-Li/cloudimg/master/data/20191209132325.png" alt=""></p>
+</li>
+<li><p>Floyd’s Algorithm：求图上一点到另一点的最短路径，<a href="https://blog.csdn.net/qq_35644234/article/details/60875818" target="_blank" rel="noopener">通过遍历每个图上的节点作为中介节点的方法来计算</a></p>
+</li>
+</ul>
+</li>
 <li><p>最优二叉搜索树</p>
 <blockquote>
 <p>寻找一颗BST使得搜索的时候比较次数最小</p>
 </blockquote>
 <ul>
-<li><p><span class="math inline">\(C(i,j)\)</span>表示在从i到j的子树上平均成功查找的次数，显然我们只关心<span class="math inline">\(C(1,n)\)</span>，但遵循动态规划方法，我们要求求出所有<span class="math inline">\(C(i,j)\)</span> <img src="https://raw.githubusercontent.com/Yubiao-Li/cloudimg/master/data/20191209135137.png" /></p></li>
-<li><p>推导得出以下公式 <span class="math display">\[C(i,j) = \min_{i \le k \le j} (C(i,k-1) + C(k+1,j)) + \sum_{s=i}^j p_s , 1 ≤  i ≤  j ≤ n\]</span></p></li>
+<li><p>$C(i,j)$表示在从i到j的子树上平均成功查找的次数，显然我们只关心$C(1,n)$，但遵循动态规划方法，我们要求求出所有$C(i,j)$<br>  <img src="https://raw.githubusercontent.com/Yubiao-Li/cloudimg/master/data/20191209135137.png" alt=""></p>
+</li>
+<li><p>推导得出以下公式</p>
+<script type="math/tex; mode=display">C(i,j) = \min_{i \le k \le j} (C(i,k-1) + C(k+1,j)) + \sum_{s=i}^j p_s , 1 ≤  i ≤  j ≤ n</script><script type="math/tex; mode=display">C(i,i-1) = 0</script><script type="math/tex; mode=display">C(i,i)=p_i</script></li>
+<li><p>例子：<br>  <img src="https://raw.githubusercontent.com/Yubiao-Li/cloudimg/master/data/20191209140120.png" alt=""></p>
+<ol>
+<li><p>初始表格如下<br> <img src="https://raw.githubusercontent.com/Yubiao-Li/cloudimg/master/data/IMG_20191209_140255.jpg" alt=""></p>
+</li>
+<li><p>我们试着计算$C(1,2)$：</p>
+<script type="math/tex; mode=display">C(1,2)=\begin{cases}
+ k=1: C(1,0) + C(2,2) + \sum_{s=1}^2p_s = 0.5\\
+ k=2: C(2,1) + C(3,2) + \sum_{s=1}^2p_s = 0.4\\
+ \end{cases}</script></li>
+<li><p>主表对应位置填上次数，根表对应位置填上最优根（此处为2），在这颗树中成功查找的平均键值比较次数是0.4</p>
+</li>
+<li><p>重复上面过程得到最终表，即最优树中的平均比较次数为1.7，根据根表可以得到最优BST结构：C(1,4)确定C为第一层的根，以此类推<br> <img src="https://raw.githubusercontent.com/Yubiao-Li/cloudimg/master/data/20191209141002.png" alt=""></p>
+</li>
+</ol>
+</li>
 </ul>
-<p><span class="math display">\[C(i,i-1) = 0\]</span></p>
-<p><span class="math display">\[C(i,i)=p_i\]</span></p>
-<ul>
-<li><p>例子： <img src="https://raw.githubusercontent.com/Yubiao-Li/cloudimg/master/data/20191209140120.png" /></p>
-<ol style="list-style-type: decimal">
-<li><p>初始表格如下 <img src="https://raw.githubusercontent.com/Yubiao-Li/cloudimg/master/data/IMG_20191209_140255.jpg" /></p></li>
-<li><p>我们试着计算<span class="math inline">\(C(1,2)\)</span>： <span class="math display">\[C(1,2)=\begin{cases}
-k=1: C(1,0) + C(2,2) + \sum_{s=1}^2p_s = 0.5\\
-k=2: C(2,1) + C(3,2) + \sum_{s=1}^2p_s = 0.4\\
-\end{cases}\]</span></p></li>
-<li><p>主表对应位置填上次数，根表对应位置填上最优根（此处为2），在这颗树中成功查找的平均键值比较次数是0.4</p></li>
-<li><p>重复上面过程得到最终表，即最优树中的平均比较次数为1.7，根据根表可以得到最优BST结构：C(1,4)确定C为第一层的根，以此类推 <img src="https://raw.githubusercontent.com/Yubiao-Li/cloudimg/master/data/20191209141002.png" /></p></li>
-</ol></li>
-</ul></li>
+</li>
 <li><p>背包问题和记忆功能</p>
 <ul>
-<li><p>背包问题 &gt; 给定n个重量为<span class="math inline">\(w_1,...,w_n\)</span>，价值为<span class="math inline">\(v_1,...,v_n\)</span>的物品和一个承重量为W的背包，求这些物品最有价值的一个子集，并且要能装到背包中</p>
-<ol style="list-style-type: decimal">
-<li>设<span class="math inline">\(F(i,j)\)</span>表示考虑前i个物体和背包承重量为j时的最优解的物品总价值，可以把第i个物体是否放入背包分开进行讨论：
-<ol style="list-style-type: decimal">
-<li><p>不包括第i个物品，则<span class="math inline">\(F(i,j) = F(i-1,j)\)</span></p></li>
-<li><p>包括第i个物品（因此，<span class="math inline">\(j-w_i\ge0\)</span>），则<span class="math inline">\(F(i,j) = v_i + F(i-1, j-w_i)\)</span></p></li>
-</ol>
-<p><span class="math display">\[F(i,j)=\begin{cases}
+<li><p>背包问题</p>
+<blockquote>
+<p>给定n个重量为$w_1,…,w_n$，价值为$v_1,…,v_n$的物品和一个承重量为W的背包，求这些物品最有价值的一个子集，并且要能装到背包中</p>
+</blockquote>
+<ol>
+<li><p>设$F(i,j)$表示考虑前i个物体和背包承重量为j时的最优解的物品总价值，可以把第i个物体是否放入背包分开进行讨论：</p>
+<ol>
+<li><p>不包括第i个物品，则$F(i,j) = F(i-1,j)$</p>
+</li>
+<li><p>包括第i个物品（因此，$j-w_i\ge0$），则$F(i,j) = v_i + F(i-1, j-w_i)$</p>
+<script type="math/tex; mode=display">F(i,j)=\begin{cases}
 \max( F(i-1,j),v_i + F(i-1,j-w_i) ), j-w_i\ge0\\
-F(i-1,j),j-w_i &lt;0\\
-\end{cases}\]</span></p>
-<p>其中可以定义如下初始条件：<span class="math inline">\(F(0,j)=0; F(i,0)=0\)</span></p></li>
-<li><p>我们的目标是计算<span class="math inline">\(F(n,W)\)</span>，这个表可以逐行填也可以逐列填 <img src="https://raw.githubusercontent.com/Yubiao-Li/cloudimg/master/data/20191209143359.png" /></p></li>
-</ol></li>
-<li>记忆功能：只对必要的子问题求解
-<ol style="list-style-type: decimal">
-<li><p>使用自顶向下的方式对问题求解，但需要维护一个类似于自底向上动态规划算法使用的表格，使用null初始化所有单元格。</p></li>
-<li><p>之后一旦需要计算一个新的值，该方法先检查表中相应的单元格。如果该单元格不是“null”，他就从表中取值；否则使用递归调用进行计算，然后把返回的结果记录在表中</p></li>
-</ol></li>
-</ul></li>
+F(i-1,j),j-w_i <0\\
+\end{cases}</script><p>其中可以定义如下初始条件：$F(0,j)=0; F(i,0)=0$</p>
+</li>
 </ol>
-<h2 id="贪婪算法">贪婪算法</h2>
-<ol style="list-style-type: decimal">
-<li>选择贪婪法的前提：
+</li>
+<li><p>我们的目标是计算$F(n,W)$，这个表可以逐行填也可以逐列填<br> <img src="https://raw.githubusercontent.com/Yubiao-Li/cloudimg/master/data/20191209143359.png" alt=""></p>
+</li>
+</ol>
+</li>
+<li><p>记忆功能：只对必要的子问题求解</p>
+<ol>
+<li><p>使用自顶向下的方式对问题求解，但需要维护一个类似于自底向上动态规划算法使用的表格，使用null初始化所有单元格。</p>
+</li>
+<li><p>之后一旦需要计算一个新的值，该方法先检查表中相应的单元格。如果该单元格不是“null”，他就从表中取值；否则使用递归调用进行计算，然后把返回的结果记录在表中</p>
+</li>
+</ol>
+</li>
+</ul>
+</li>
+</ol>
+<h2 id="贪婪算法"><a href="#贪婪算法" class="headerlink" title="贪婪算法"></a>贪婪算法</h2><ol>
+<li><p>选择贪婪法的前提：   </p>
 <ul>
-<li><p>求解问题的全局最优解可以通过局部最优的贪婪选择，从而达到全局最优。</p></li>
-<li><p>贪婪选择：依赖于以往的选择，但不依赖于将来的选择，也不依赖于子问题的解。能够自顶向下的进行操作，将求解问题简化为一个规模更小的子问题。</p></li>
-<li><p>对于一个具体问题，是否选择贪婪法的前提，必须每一步所做的贪婪选择最终能够找到问题的整体最优解。即满足最优子结构性质：如果一个问题最优的解决方案可以通过最优它的子问题的解决方案来获取，那么这个问题就用最优子结构的属性。</p></li>
-</ul></li>
-<li><p>找零问题</p></li>
-<li>最小生成树
-<ol style="list-style-type: decimal">
-<li><p>Prim算法：拓展最小生成树</p></li>
-<li><p>Kruskal算法：使用最短路径连接多个子树</p></li>
-</ol></li>
-<li><p>Dijkstra 算法</p></li>
-<li>哈夫曼编码树
-<ol style="list-style-type: decimal">
-<li><p>初始化n个单节点的树，并为他们标上字母表中的字符。把每个字符的概率记在树的根中，用来指出树的权重（更一般来说，树的权重等于树中所有叶子的概率之和）</p></li>
-<li><p>重复下面的步骤直到只剩一颗单独的树。找到两棵权重最小的数。把它们作为新树中的左右子树，并把权重之和作为新的权重记录在新树的根中</p></li>
-</ol></li>
+<li><p>求解问题的全局最优解可以通过局部最优的贪婪选择，从而达到全局最优。</p>
+</li>
+<li><p>贪婪选择：依赖于以往的选择，但不依赖于将来的选择，也不依赖于子问题的解。能够自顶向下的进行操作，将求解问题简化为一个规模更小的子问题。</p>
+</li>
+<li><p>对于一个具体问题，是否选择贪婪法的前提，必须每一步所做的贪婪选择最终能够找到问题的整体最优解。即满足最优子结构性质：如果一个问题最优的解决方案可以通过最优它的子问题的解决方案来获取，那么这个问题就用最优子结构的属性。</p>
+</li>
+</ul>
+</li>
+<li><p>找零问题</p>
+</li>
+<li><p>最小生成树</p>
+<ol>
+<li><p>Prim算法：拓展最小生成树</p>
+</li>
+<li><p>Kruskal算法：使用最短路径连接多个子树</p>
+</li>
 </ol>
-<h2 id="迭代改进">迭代改进</h2>
-<ol style="list-style-type: decimal">
-<li>单纯形法
+</li>
+<li><p>Dijkstra 算法</p>
+</li>
+<li><p>哈夫曼编码树</p>
+<ol>
+<li><p>初始化n个单节点的树，并为他们标上字母表中的字符。把每个字符的概率记在树的根中，用来指出树的权重（更一般来说，树的权重等于树中所有叶子的概率之和）</p>
+</li>
+<li><p>重复下面的步骤直到只剩一颗单独的树。找到两棵权重最小的数。把它们作为新树中的左右子树，并把权重之和作为新的权重记录在新树的根中</p>
+</li>
+</ol>
+</li>
+</ol>
+<h2 id="迭代改进"><a href="#迭代改进" class="headerlink" title="迭代改进"></a>迭代改进</h2><ol>
+<li><p>单纯形法</p>
 <ul>
 <li><p>问题背景：线性规划</p>
 <blockquote>
 <p>给出一组约束，求极值</p>
 </blockquote>
-<div class="figure">
-<img src="https://raw.githubusercontent.com/Yubiao-Li/cloudimg/master/data/20191209184430.png" />
-
-</div></li>
-<li>步骤
-<ol style="list-style-type: decimal">
-<li><p>将不等式约束转换为等式，求最小值转换为求最大值，即标准化问题</p></li>
-<li><p>对于包含m个等式的n元方程组，我们需要把n-m个变量设置成0，来得到一个m个等式的m元方程。在解方程前被设为0的坐标称为非基本的，解方程得到的坐标称为基本的。如果一个基本解的所有坐标值都非负，那么这个解被称为基本可行解</p></li>
-<li><p>单纯形法处理一系列邻接的极点。可以用一张单纯形表表示。每一行前都标出了该表格代表的基本可行解的基本变量，这个解的基本变量的值则位于最后一列。单纯形表的最后一行称为目标行。一开始，它在前n列填入目标函数的系数，只是符号取反，并在最后一列填入目标函数在初始点的值 <img src="https://raw.githubusercontent.com/Yubiao-Li/cloudimg/master/data/20191209191930.png" /></p></li>
-<li><p>若目标行中无负的单元格，则该值为最优解；否则选择负值最大的单元格（优化算法为下标最小的单元格，这里可以综合考虑），这个新的基本变量被称为输入变量，它所在的列称为主元列，用↑标记主元列</p></li>
-<li><p>选择分离变量，对于主元列上的每个正单元格，将其所在行最后一个单元格除以主元列的单元格，求得一个θ比率，θ比率最小的（相同选下标最小的）即为分离变量，即要变成非基本变量的变量，使用←标记分离变量所在行，称为主元行。记住，如果主元列没有正单元格，则不必计算θ，该问题是无界的</p></li>
-<li><p>将当前表主元化。首先将主元行所有单元格除以主元（主元行与主元列相交单元格）来求得<span class="math inline">\(row_{new}\)</span>，然后使用<span class="math inline">\(row-c * row_{new}\)</span>替换包括目标行在内的每一行，c是各行主元列单元格 <img src="https://raw.githubusercontent.com/Yubiao-Li/cloudimg/master/data/20191209192637.png" /></p></li>
-<li><p>重复使得目标行无负单元格</p></li>
-</ol></li>
-</ul></li>
-<li>最大流量问题
+<p>  <img src="https://raw.githubusercontent.com/Yubiao-Li/cloudimg/master/data/20191209184430.png" alt=""></p>
+</li>
+<li><p>步骤</p>
+<ol>
+<li><p>将不等式约束转换为等式，求最小值转换为求最大值，即标准化问题</p>
+</li>
+<li><p>对于包含m个等式的n元方程组，我们需要把n-m个变量设置成0，来得到一个m个等式的m元方程。在解方程前被设为0的坐标称为非基本的，解方程得到的坐标称为基本的。如果一个基本解的所有坐标值都非负，那么这个解被称为基本可行解</p>
+</li>
+<li><p>单纯形法处理一系列邻接的极点。可以用一张单纯形表表示。每一行前都标出了该表格代表的基本可行解的基本变量，这个解的基本变量的值则位于最后一列。单纯形表的最后一行称为目标行。一开始，它在前n列填入目标函数的系数，只是符号取反，并在最后一列填入目标函数在初始点的值<br> <img src="https://raw.githubusercontent.com/Yubiao-Li/cloudimg/master/data/20191209191930.png" alt=""></p>
+</li>
+<li><p>若目标行中无负的单元格，则该值为最优解；否则选择负值最大的单元格（优化算法为下标最小的单元格，这里可以综合考虑），这个新的基本变量被称为输入变量，它所在的列称为主元列，用↑标记主元列</p>
+</li>
+<li><p>选择分离变量，对于主元列上的每个正单元格，将其所在行最后一个单元格除以主元列的单元格，求得一个θ比率，θ比率最小的（相同选下标最小的）即为分离变量，即要变成非基本变量的变量，使用←标记分离变量所在行，称为主元行。记住，如果主元列没有正单元格，则不必计算θ，该问题是无界的</p>
+</li>
+<li><p>将当前表主元化。首先将主元行所有单元格除以主元（主元行与主元列相交单元格）来求得$row<em>{new}$，然后使用$row-c * row</em>{new}$替换包括目标行在内的每一行，c是各行主元列单元格<br> <img src="https://raw.githubusercontent.com/Yubiao-Li/cloudimg/master/data/20191209192637.png" alt=""></p>
+</li>
+<li><p>重复使得目标行无负单元格</p>
+</li>
+</ol>
+</li>
+</ul>
+</li>
+<li><p>最大流量问题</p>
 <ul>
-<li><p>问题描述： <img src="https://raw.githubusercontent.com/Yubiao-Li/cloudimg/master/data/20191209225757.png" /></p>
+<li><p>问题描述：<br>  <img src="https://raw.githubusercontent.com/Yubiao-Li/cloudimg/master/data/20191209225757.png" alt=""></p>
 <ul>
 <li>没有输入边的顶点：源点</li>
 <li>没有输出边的顶点，汇点</li>
 <li>每条有向边的权重，容量</li>
 <li>流量守恒要求：进入中间顶点的物质总量必须等于离开的物质总量</li>
 <li>要求值即为源点的<strong>最大输出值</strong></li>
-</ul></li>
+</ul>
+</li>
 <li><p>增益路径法（Ford-Fulkerson法）：在每次迭代寻找一条可以传输更多流量的从源点到汇点的路径。这样的路径被称为流量增益路径</p>
 <ul>
-<li>为了求增益路径，我们需要考虑流量网络对应的无向图：
-<ul>
-<li>它们以从i到j的有向边连接，则该边具有正的未使用量<span class="math inline">\(r_{ij}= u_{ij} - x_{ij}\)</span>，称为前向边</li>
-<li>它们以从j到i的有向边连接，则该边具有正的流量<span class="math inline">\(x_{ji}\)</span>（即可以把该边的流量减少<span class="math inline">\(x_{ji}\)</span>个单位），称为后向边</li>
-</ul></li>
+<li>为了求增益路径，我们需要考虑流量网络对应的无向图：<ul>
+<li>它们以从i到j的有向边连接，则该边具有正的未使用量$r<em>{ij}= u</em>{ij} - x_{ij}$，称为前向边</li>
+<li>它们以从j到i的有向边连接，则该边具有正的流量$x<em>{ji}$（即可以把该边的流量减少$x</em>{ji}$个单位），称为后向边   </li>
 </ul>
-<ol style="list-style-type: decimal">
-<li><p>首先找出一条增益路径 1→2→3→6 <img src="https://raw.githubusercontent.com/Yubiao-Li/cloudimg/master/data/20191210100902.png" /></p></li>
-<li><p>填上流量后，找到另一条增益路径 1→4→3←2→5→6 <img src="https://raw.githubusercontent.com/Yubiao-Li/cloudimg/master/data/20191210101020.png" /></p></li>
-<li><p>最终所得结果即为最大流量，可以看到没有别的增益路径了 <img src="https://raw.githubusercontent.com/Yubiao-Li/cloudimg/master/data/20191210101147.png" /></p></li>
-</ol></li>
-<li>最短增益路径法（先标记先扫描算法）：用于解决增益路径法性能退化问题
-<ol style="list-style-type: decimal">
-<li><p>这里的标记意味着用两个记号来标记一个新的顶点，第一个标记指出从源点到被标记顶点还能增加多少流量，第二个标记指出了另一个顶点的名字，为了方便起见，还可以为第二个标记加上+或-号。因此源点总可以标记为 ∞，-</p></li>
-<li><p>解法：使用BFS，每次选择增益最大的路径 <img src="https://raw.githubusercontent.com/Yubiao-Li/cloudimg/master/data/20191210104315.png" /></p>
-<div class="figure">
-<img src="https://raw.githubusercontent.com/Yubiao-Li/cloudimg/master/data/20191210104325.png" />
-
-</div>
-<div class="figure">
-<img src="https://raw.githubusercontent.com/Yubiao-Li/cloudimg/master/data/20191210104337.png" />
-
-</div></li>
-<li>最大流——最小割定理
-<ol style="list-style-type: decimal">
-<li><p>我们把顶点分为两个子集<span class="math inline">\(X\)</span>和<span class="math inline">\(\overline X\)</span>，<span class="math inline">\(X\)</span>包含源点，<span class="math inline">\(\overline X\)</span>包含汇点。所有头在<span class="math inline">\(X\)</span>尾在<span class="math inline">\(\overline X\)</span>的边的集合成为割，记为<span class="math inline">\(C(X,\overline X)\)</span>或者简单记作<span class="math inline">\(C\)</span></p></li>
-<li><p>割的名字来源以下的性质：如果割的所有边删除，网络将不存在从源点到汇点的有向路径</p></li>
-<li><p>割的容量记作<span class="math inline">\(c(X,\overline X)\)</span>，定义为构成割的边的容量和。<strong>必定存在一个最小割容量，且网络中最大流量值等于最小割容量</strong></p></li>
-</ol></li>
-</ol></li>
-</ul></li>
+</li>
+</ul>
+<ol>
+<li><p>首先找出一条增益路径 1→2→3→6<br> <img src="https://raw.githubusercontent.com/Yubiao-Li/cloudimg/master/data/20191210100902.png" alt=""></p>
+</li>
+<li><p>填上流量后，找到另一条增益路径 1→4→3←2→5→6<br> <img src="https://raw.githubusercontent.com/Yubiao-Li/cloudimg/master/data/20191210101020.png" alt=""></p>
+</li>
+<li><p>最终所得结果即为最大流量，可以看到没有别的增益路径了<br> <img src="https://raw.githubusercontent.com/Yubiao-Li/cloudimg/master/data/20191210101147.png" alt=""></p>
+</li>
+</ol>
+</li>
+<li><p>最短增益路径法（先标记先扫描算法）：用于解决增益路径法性能退化问题</p>
+<ol>
+<li><p>这里的标记意味着用两个记号来标记一个新的顶点，第一个标记指出从源点到被标记顶点还能增加多少流量，第二个标记指出了另一个顶点的名字，为了方便起见，还可以为第二个标记加上+或-号。因此源点总可以标记为 ∞，-</p>
+</li>
+<li><p>解法：使用BFS，每次选择增益最大的路径<br> <img src="https://raw.githubusercontent.com/Yubiao-Li/cloudimg/master/data/20191210104315.png" alt=""></p>
+<p> <img src="https://raw.githubusercontent.com/Yubiao-Li/cloudimg/master/data/20191210104325.png" alt=""></p>
+<p> <img src="https://raw.githubusercontent.com/Yubiao-Li/cloudimg/master/data/20191210104337.png" alt=""></p>
+</li>
+<li><p>最大流——最小割定理</p>
+<ol>
+<li><p>我们把顶点分为两个子集$X$和$\overline X$，$X$包含源点，$\overline X$包含汇点。所有头在$X$尾在$\overline X$的边的集合成为割，记为$C(X,\overline X)$或者简单记作$C$</p>
+</li>
+<li><p>割的名字来源以下的性质：如果割的所有边删除，网络将不存在从源点到汇点的有向路径</p>
+</li>
+<li><p>割的容量记作$c(X,\overline X)$，定义为构成割的边的容量和。<strong>必定存在一个最小割容量，且网络中最大流量值等于最小割容量</strong></p>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+</ul>
+</li>
 <li><p>二分图的最大匹配</p>
 <blockquote>
-<p>参考<a href="https://www.cnblogs.com/findview/p/11326578.html" target="_blank" rel="noopener">匈牙利算法</a></p>
+<p>参考<a href="https://www.cnblogs.com/findview/p/11326578.html" target="_blank" rel="noopener">匈牙利算法</a>  </p>
 </blockquote>
-<ol style="list-style-type: decimal">
-<li><p>匹配是图中边的子集，其中任意两边都不共顶点。<strong>最大匹配</strong>是包含最多边的匹配</p></li>
-<li><p>二分图指所有顶点可以分为两个不相交的集合，每条边都连接两个集合各一个顶点，也称为二色图，即可以使用两种颜色使得每条边的两顶点颜色都不同。不难证明，当且仅当图中不存在奇数长度的回路时，图是二色图</p></li>
-<li>步骤
-<ol style="list-style-type: decimal">
-<li><p>从一个初始匹配开始（如空集合），二分图的其中一个点集作为队列出发，对于每一个点，求增益路径</p></li>
+<ol>
+<li><p>匹配是图中边的子集，其中任意两边都不共顶点。<strong>最大匹配</strong>是包含最多边的匹配</p>
+</li>
+<li><p>二分图指所有顶点可以分为两个不相交的集合，每条边都连接两个集合各一个顶点，也称为二色图，即可以使用两种颜色使得每条边的两顶点颜色都不同。不难证明，当且仅当图中不存在奇数长度的回路时，图是二色图</p>
+</li>
+<li><p>步骤</p>
+<ol>
+<li><p>从一个初始匹配开始（如空集合），二分图的其中一个点集作为队列出发，对于每一个点，求增益路径</p>
+</li>
 <li><p>求出一个最长增益路径，将增益路径的所有匹配边断开，所有未匹配边就是新的匹配集合（增益）。</p>
 <blockquote>
 <p>增益路径：从未匹配点开始，按照未匹配边，匹配边交替的模式直到找到一个未匹配点结束。</p>
-</blockquote></li>
-<li><p>若路径长度为偶数（不满足开头结尾为未匹配边），且无法找到别的增益路径，匹配结束</p></li>
-</ol></li>
-</ol></li>
-<li>稳定婚姻问题
-<ol style="list-style-type: decimal">
-<li><p>问题背景：有一个n个男士的集合与n个女士的集合。每个男士有一个对女士的意向排序，同样的每个女士也对男士有一个意向排序。 <img src="https://raw.githubusercontent.com/Yubiao-Li/cloudimg/master/data/20191210115759.png" /></p>
-<p>当然也可以将两个表合并 <img src="https://raw.githubusercontent.com/Yubiao-Li/cloudimg/master/data/20191210115825.png" /></p>
-<p>m行w列的元素包含两个等级：第一个是w在m的优先列表中的位置，第二个是m在w的优先列表中的位置</p>
+</blockquote>
+</li>
+<li><p>若路径长度为偶数（不满足开头结尾为未匹配边），且无法找到别的增益路径，匹配结束</p>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+<li><p>稳定婚姻问题</p>
+<ol>
+<li><p>问题背景：有一个n个男士的集合与n个女士的集合。每个男士有一个对女士的意向排序，同样的每个女士也对男士有一个意向排序。<br> <img src="https://raw.githubusercontent.com/Yubiao-Li/cloudimg/master/data/20191210115759.png" alt=""></p>
+<p> 当然也可以将两个表合并<br> <img src="https://raw.githubusercontent.com/Yubiao-Li/cloudimg/master/data/20191210115825.png" alt=""></p>
+<p> m行w列的元素包含两个等级：第一个是w在m的优先列表中的位置，第二个是m在w的优先列表中的位置</p>
 <ul>
-<li><p>受阻对：如果在匹配M中，男士m和女士w没能匹配但他们都更倾向对方而不是M中的伴侣，那么称(m,w)为受阻对</p></li>
-<li><p>如果婚姻匹配M不存在受阻对，我们说它是稳定的</p></li>
-</ul></li>
-<li>步骤
-<ol style="list-style-type: decimal">
-<li><p>一开始所有的男士和女士都是自由的</p></li>
-<li>如果有自由男士，从中任选一个然后执行以下步骤
-<ol style="list-style-type: decimal">
-<li><p>求婚：选中的自由男士m向w求婚，w是他优先列表上的下一个女士（即优先级最高且之前没有拒绝过他）</p></li>
-<li><p>回应：如果w是自由的，他接受求婚和m配对。她把m和她当前的配偶作比较。如果她更喜欢m，她接受m的求婚，她的前配偶就变成自由人。否则，她拒绝m的求婚，m还是自由的</p></li>
-</ol></li>
-<li><p>返回n个匹配对的集合</p></li>
-</ol></li>
-</ol></li>
+<li><p>受阻对：如果在匹配M中，男士m和女士w没能匹配但他们都更倾向对方而不是M中的伴侣，那么称(m,w)为受阻对</p>
+</li>
+<li><p>如果婚姻匹配M不存在受阻对，我们说它是稳定的</p>
+</li>
+</ul>
+</li>
+<li><p>步骤</p>
+<ol>
+<li><p>一开始所有的男士和女士都是自由的</p>
+</li>
+<li><p>如果有自由男士，从中任选一个然后执行以下步骤</p>
+<ol>
+<li><p>求婚：选中的自由男士m向w求婚，w是他优先列表上的下一个女士（即优先级最高且之前没有拒绝过他）</p>
+</li>
+<li><p>回应：如果w是自由的，他接受求婚和m配对。她把m和她当前的配偶作比较。如果她更喜欢m，她接受m的求婚，她的前配偶就变成自由人。否则，她拒绝m的求婚，m还是自由的</p>
+</li>
+</ol>
+</li>
+<li><p>返回n个匹配对的集合</p>
+</li>
+</ol>
+</li>
+</ol>
+</li>
 </ol>
 
         </div>
@@ -985,5 +1093,21 @@ MathJax.Hub.Queue(function() {
 
 
 
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<!-- <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
 </body>
 </html>
