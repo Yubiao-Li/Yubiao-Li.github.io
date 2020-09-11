@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>http://yubiao-li.gitee.io/2020/09/02/React-concurrent%E6%A8%A1%E5%BC%8F/</loc>
+    <lastmod>2020-09-11</lastmod>
+  </url>  <url>
+    <loc>http://yubiao-li.gitee.io/2020/09/02/HTTP%E5%8D%8F%E8%AE%AE%E7%9A%84%E5%89%8D%E4%B8%96%E4%BB%8A%E7%94%9F/</loc>
+    <lastmod>2020-09-11</lastmod>
+  </url>  <url>
     <loc>http://yubiao-li.gitee.io/2020/03/25/2019-SCUT-%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%A4%8D%E4%B9%A0%E5%A4%A7%E7%BA%B2/</loc>
     <lastmod>2020-09-10</lastmod>
   </url>  <url>
@@ -15,12 +21,6 @@
   </url>  <url>
     <loc>http://yubiao-li.gitee.io/2020/09/02/JS%E5%AE%9E%E7%8E%B0%E4%B8%80%E4%B8%AA%E6%B7%B1%E6%8B%B7%E8%B4%9D/</loc>
     <lastmod>2020-09-04</lastmod>
-  </url>  <url>
-    <loc>http://yubiao-li.gitee.io/2020/09/02/HTTP%E5%8D%8F%E8%AE%AE%E7%9A%84%E5%89%8D%E4%B8%96%E4%BB%8A%E7%94%9F/</loc>
-    <lastmod>2020-09-04</lastmod>
-  </url>  <url>
-    <loc>http://yubiao-li.gitee.io/2020/09/02/React-concurrent%E6%A8%A1%E5%BC%8F/</loc>
-    <lastmod>2020-09-02</lastmod>
   </url>  <url>
     <loc>http://yubiao-li.gitee.io/2020/09/02/React-Hook%E4%B8%8B%E7%9A%84%E5%85%A8%E5%B1%80%E7%8A%B6%E6%80%81%E7%AE%A1%E7%90%86/</loc>
     <lastmod>2020-09-02</lastmod>
